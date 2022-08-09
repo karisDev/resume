@@ -21,15 +21,15 @@ const KnowledgeBox: Component = () => {
           </NavLink>
         </div>
         <div class="front">
-          <div class="skills">
+          <NavLink class="skills" href="/resume/en/skills">
             <h2>Skills</h2>
-          </div>
-          <div class="projects">
+          </NavLink>
+          <NavLink class="projects" href="/resume/en/projects">
             <h2>Projects</h2>
-          </div>
-          <div class="contacts">
+          </NavLink>
+          <NavLink class="contacts" href="/resume/en/contacts">
             <h2>Contacts</h2>
-          </div>
+          </NavLink>
         </div>
         <div class="top">
           {/* // <h2>
