@@ -2,7 +2,7 @@ import { NavLink } from "solid-app-router";
 import { Component } from "solid-js";
 import "../styles/box.scss";
 
-const KnowledgeBox: Component = () => {
+const ResumeBox: Component = () => {
   const isFirstVariant = Math.random() >= 0.5;
 
   return (
@@ -60,4 +60,4 @@ const KnowledgeBox: Component = () => {
   );
 };
 
-export default KnowledgeBox;
+export default ResumeBox;
