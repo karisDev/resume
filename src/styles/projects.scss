@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.projects_page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: $projects-bg;
+  color: $projects-text-color;
+  h1 {
+    font-size: 20px;
+  }
+}

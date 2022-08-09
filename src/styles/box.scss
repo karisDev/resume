@@ -1,6 +1,8 @@
-$box-color-skills-front: #FABC2A;
-$box-color-projects-front: #F05365;
-$box-color-contacts-front: #5376F0;
+@import './variables.scss';
+
+$box-color-skills-front: $skills-bg;
+$box-color-projects-front: $projects-bg;
+$box-color-contacts-front: $contacts-bg;
 $box-color-skills-right: #CB9924;
 $box-color-projects-right: #C64453;
 $box-color-contacts-right: #4A68D2;
@@ -74,7 +76,7 @@ $box-side-bg-color: #221D41;
     }
   }
   
-
+  
   //styling
   background-color: #000;
   background-image:
@@ -125,7 +127,7 @@ $box-side-bg-color: #221D41;
     }
     }
     .front {
-      // 1 px is needed to fix transparent line between front and right
+      // 1 px is needed to fix transparent line between front and right in firefox
       width: calc(100% + 0.1px);
       h2 {
           font-size: 4.5rem;
@@ -142,7 +144,6 @@ $box-side-bg-color: #221D41;
         }
       }
       .top {
-
         font-size: 4.5rem;
         line-height: 6rem;
         h2 {
