@@ -1,0 +1,237 @@
+$box-color-skills-front: #FABC2A;
+$box-color-projects-front: #F05365;
+$box-color-contacts-front: #5376F0;
+$box-color-skills-right: #CB9924;
+$box-color-projects-right: #C64453;
+$box-color-contacts-right: #4A68D2;
+$box-text-color: #fff;
+$box-side-bg-color: #221D41;
+
+.box_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+	top: 0;
+	right: 0;
+  bottom: 0;
+	left: 0;
+  text-transform: uppercase;
+  color: $box-text-color;
+
+  .skills, .projects, .contacts {
+    color: $box-text-color;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: calc(100% / 3);
+    text-decoration: none;
+  }
+  
+  //positioning
+  .box {
+    // transform: rotateX(-90deg);
+    transform: rotateX(-35deg) rotateY(-45deg);
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    transform-style: preserve-3d;
+    // animation: vibing_cube 4s linear infinite; 
+    .left, .right, .top, .back, .front {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+    }
+    .left {
+      transform: rotateY(-90deg) translateZ(15rem);
+      width: 30rem;
+    }
+    .top {
+      transform: rotateX(90deg) translateZ(15rem);
+      width: 30rem;
+      height: 30rem;
+      align-items: center;
+    }
+    .front {
+      transform: translateZ(15rem);
+      flex-direction: column;
+    }
+    .back {
+      transform: translateZ(-15rem);
+      flex-direction: column;
+    }
+    .right {
+      transform: rotateY(90deg) translateZ(15rem);
+      flex-direction: column;
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+  
+
+  //styling
+  background-color: #000;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  
+  .right {
+    .skills {
+      background-color: $box-color-skills-right;
+    }
+    .projects {
+      background-color: $box-color-projects-right;
+    }
+    .contacts {
+      background-color: $box-color-contacts-right;
+    }
+  }
+  .front, .back {
+    .skills {
+      background-color: $box-color-skills-front;
+    }
+    .projects {
+      background-color: $box-color-projects-front;
+    }
+    .contacts {
+      background-color: $box-color-contacts-front;
+    }
+  }
+  .box {
+    .right {
+      h2 {
+        font-size: 4.5rem;
+        padding-left: 1rem;
+      }
+    }
+    .left {
+      background: no-repeat url(../assets/face.jpg);
+      background-size: cover;
+    }
+    .top {
+      background-color: $box-side-bg-color;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    }
+    .front {
+      // 1 px is needed to fix transparent line between front and right
+      width: calc(100% + 0.1px);
+      h2 {
+          font-size: 4.5rem;
+          padding-right: 1rem;
+      }
+    }
+    .variant1 {
+      .front {
+        .skills, .projects, .contacts {
+          justify-content: flex-end;
+        }
+        h2 {
+          padding-right: 1rem;
+        }
+      }
+      .top {
+
+        font-size: 4.5rem;
+        line-height: 6rem;
+        h2 {
+          position: absolute;
+          width: 100%;
+          &:first-child {
+            top: 11.8rem;
+            right: 1.4rem;
+            text-align: end;
+            letter-spacing: -0.14rem;
+            span {
+              letter-spacing: -0.3rem;
+            }
+          }
+          &:last-child {
+            letter-spacing: 0.15rem;
+            left: 1.4rem;
+            top: 5.8rem;
+            span {
+              letter-spacing: -0.55rem;
+            }
+          }
+        }
+      }
+      // centered text. i dont really like it
+      // .top {
+      //   font-size: 4rem;
+      //   h2 {
+      //     position: absolute;
+      //     top: 5.5rem;
+      //     left: 2.5rem;
+      //     transform: rotate(-45deg);
+      //     line-height: 6rem;
+      //     letter-spacing: -0.38rem;
+      //     span {
+      //       &:first-child {
+      //         letter-spacing: 0.09rem;
+      //       }
+      //       &:last-child {
+      //         letter-spacing: -0.15rem;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+    .variant2 {
+      .front {
+        .skills, .projects, .contacts {
+          justify-content: flex-start;
+        }
+        h2 {
+          padding-left: 1rem;
+        }
+      }
+      .top {
+        font-size: 4rem;
+        h2 {
+          position: absolute;
+          line-height: 5rem;
+          &:first-child {
+            right: -6rem;
+            top: 7.35rem;
+            transform: rotate(-90deg);
+            text-align: end;
+            letter-spacing: -0.17rem;
+          }
+          &:last-child {
+            bottom: 1rem;
+            left: 0.5rem;
+          }
+        }
+      }
+      .right {
+        h2 {
+          width: 100%;
+          text-align: end;
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  // hover tbd
+
+@keyframes vibing_cube {
+  0% {
+    transform: rotateX(-35deg) rotateY(0);
+  }
+  100% {
+    transform: rotateX(-35deg) rotateY(365deg);
+  }
+}
