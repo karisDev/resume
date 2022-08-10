@@ -1,6 +1,6 @@
 import { NavLink } from "solid-app-router";
 import { Component } from "solid-js";
-import "../styles/box.scss";
+import "../../styles/box.scss";
 
 const ResumeBox: Component = () => {
   const isFirstVariant = Math.random() >= 0.5;

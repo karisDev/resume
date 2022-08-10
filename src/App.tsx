@@ -4,7 +4,7 @@ import { Navigate, Route, Router, Routes } from "solid-app-router";
 import SkillsPage from "./components/pages/SkillsPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
 import ContactsPage from "./components/pages/ContactsPage";
-import ResumeBox from "./components/ResumeBox";
+import ResumeBox from "./components/pages/ResumeBox";
 
 const App: Component = () => {
   return (
