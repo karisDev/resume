@@ -2,6 +2,11 @@ import "../../styles/projects.scss";
 import cambridge1 from "../../assets/images/cambridge1.png";
 import cambridge2 from "../../assets/images/cambridge2.png";
 import cambridge3 from "../../assets/images/cambridge3.png";
+import tb1 from "../../assets/images/tb1.png";
+import tb2 from "../../assets/images/tb2.png";
+import vkLogo from "../../assets/images/vk.png";
+import telegramLogo from "../../assets/images/telegram.png";
+import githubLogo from "../../assets/images/github.png";
 
 const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
   return (
@@ -16,6 +21,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
           <div class="cambridge__block1">
             <div class="cambridge__block1_content">
               <h1>Cambridge One Solver</h1>
+
               <div class="cambridge__block1_body">
                 <h3>
                   Клиент-серверный проект, в основу которого входит
@@ -23,6 +29,17 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                   сайте{" "}
                   <a href="https://www.cambridgeone.org/">Cambridge One</a>
                 </h3>
+              </div>
+              <div class="cambridge__block1_socials">
+                <a href="https://vk.com/cambridgeonesolver">
+                  <img src={vkLogo} />
+                </a>
+                <a href="https://vk.com/cambridgeonesolver">
+                  <img src={githubLogo} />
+                </a>
+                <a href="https://vk.com/cambridgeonesolver">
+                  <img src={telegramLogo} />
+                </a>
               </div>
             </div>
             <img src={cambridge1} />
@@ -37,9 +54,9 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                   <br />
                   Selenium
                   <br />
-                  Chrome
-                  <br />
                   C# WPF
+                  <br />
+                  Chrome
                 </h3>
                 <div class="cambridge__block2_sep"></div>
                 <h3>
@@ -65,6 +82,18 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
               </h3>
             </div>
             <img src={cambridge3} />
+          </div>
+        </div>
+        <div class="tb">
+          <div class="tb__logo">
+            <img src={tb1} />
+          </div>
+          <div class="tb__block1">
+            <h3>
+              Веб сайт на React TypeScript для продуктивности. Целью было
+              изучить большое количество фреймворков. Самый сложный технически
+              проект. (github pages)
+            </h3>
           </div>
         </div>
       </div>

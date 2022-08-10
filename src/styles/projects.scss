@@ -9,6 +9,8 @@ $cambridge-text-color: #FABC2A;
   width: 100%;
   background-color: $projects-theme;
   color: $projects-text-color;
+  overflow: hidden;
+  overflow-y: scroll;
   h3 {
     font-size: 1.8em;
   }
@@ -24,6 +26,7 @@ $cambridge-text-color: #FABC2A;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4em;
     .projects__title {
       display: flex;
       justify-content: center;
@@ -63,13 +66,21 @@ $cambridge-text-color: #FABC2A;
       flex-direction: column;
       gap: 2em;
       .cambridge__block1 {
-        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: $cambridge-bg-color;
         border-radius: 1em;
         box-sizing: border-box;
         padding: 0 0.5em;
+        .cambridge__block1_socials {
+          margin-top: 0.1em;
+          display: flex;
+          gap: 0.5em;
+          img {
+            height: 2em;
+            width: 2em;
+          }
+        }
         .cambridge__block1_content {
           display: flex;
           flex-direction: column;
@@ -80,12 +91,12 @@ $cambridge-text-color: #FABC2A;
             font-size: 2.3em;
           }
           .cambridge__block1_body {
-            margin-top: 1em;
             display: flex;
           }
         }
         img {
           justify-self: flex-end;
+          align-self: center;
           width: 100%;
         }
       }
@@ -136,13 +147,33 @@ $cambridge-text-color: #FABC2A;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding-left: 0.5em;
+          padding: 0 0.5em;
           box-sizing: border-box;
           h3 {
             span {
               color: $cambridge-text-color;
             }
           }
+        }
+      }
+    }
+    .tb {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      .tb__logo {
+        height: 5em;
+        margin: 0 auto;
+        img {
+          height: 100%;
+        }
+      }
+      .tb__block1 {
+        background-color: red;
+        display: flex;
+        height: 10em;
+        img {
+          height: 100%;
         }
       }
     }
