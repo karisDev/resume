@@ -1,13 +1,127 @@
 @import './variables.scss';
+$cambridge-bg-color: #303030;
+$cambridge-text-color: #FABC2A;
+
 
 .projects_page {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  font-size: 1.6vw;
+  min-height: 100vh;
   width: 100%;
-  background-color: $projects-bg;
+  background-color: $projects-theme;
   color: $projects-text-color;
-  h1 {
-    font-size: 20px;
+  .projects_page__container {
+    max-width: $layout-breakpoint-big;
+    margin: 0 auto;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-overflow: clip;
+    .projects__title {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 10em;
+      max-width: 1500px;
+      margin-top: 2em;
+      h2, h1 {
+        position: absolute;
+        text-transform: uppercase;
+        width: 90%;
+        max-width: 1350px;
+        overflow: hidden;
+      }
+      h2 {
+        &:nth-of-type(1) {
+          font-size: 3.15em;
+          color: $projects-theme;
+          margin-top: 0.05em;
+          margin-left: 0.08em;
+          text-shadow: -0.05em -0.05em 0 $skills-theme;
+        }
+        &:nth-of-type(2) {
+          font-size: 3.7em;
+          margin-top: 0.7em;
+          text-shadow: 0.05em 0 0 $contacts-theme;
+        }
+      }
+      h1 {
+        letter-spacing: -0.04em;
+        text-align: end;
+        text-shadow: 0.04em 0.02em 0 $contacts-theme;
+        font-size: 7.25em;
+        margin-top: -0.17em;
+      }
+    }
+    .cambridge {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      .cambridge__block1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $cambridge-bg-color;
+        border-radius: 1em;
+        overflow: hidden;
+        padding: 0 0.5em;
+        .block1_content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h1 {
+            color: $cambridge-text-color;
+            font-size: 2.3em;
+          }
+          .block1_body {
+            margin-top: 1em;
+            h3 {
+              font-size: 1.8em;
+              a {
+                color: $href-color;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        img {
+          justify-self: flex-end;
+          height: 20em;
+        }
+      }
+      .block2_transition {
+        position: relative;
+        align-self: flex-end;
+        margin-right: 12em;
+        width: 5em;
+        height: 12em;
+        background-color: $cambridge-bg-color;
+        &::after, &::before {
+          position: relative;
+          content: "";
+          border-radius: 1em;
+          display: inline-block;
+          width: 2em;
+          height: 100%;
+          background-color: $projects-theme;
+        }
+        &::before {
+          left: -1em;
+        }
+        &::after {
+          left: 2em;
+        }
+      }
+      .cambridge_block2 {
+        
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint-big) {
+  .projects_page {
+    font-size: 24px;
   }
 }
