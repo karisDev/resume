@@ -32,13 +32,6 @@ const ResumeBox: Component = () => {
           </NavLink>
         </div>
         <div class="top">
-          {/* // <h2>
-            //   <span>Resume</span>
-            //   <br />
-            //   cube куб
-            //   <br />
-            //   <span>резюме</span>
-            // </h2> */}
           <h2>
             <span>Куб</span>
             <br />

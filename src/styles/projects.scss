@@ -1,7 +1,7 @@
 @import './variables.scss';
 $cambridge-bg-color: #303030;
 $cambridge-text-color: #FABC2A;
-
+$tb-bg-color: #212121;
 
 .projects_page {
   font-size: 1.6vw;
@@ -11,6 +11,7 @@ $cambridge-text-color: #FABC2A;
   color: $projects-text-color;
   overflow: hidden;
   overflow-y: scroll;
+  padding-bottom: 4em;
   h3 {
     font-size: 1.8em;
   }
@@ -26,39 +27,35 @@ $cambridge-text-color: #FABC2A;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4em;
     .projects__title {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 100%;
-      height: 8em;
-      max-width: 1500px;
-      h2, h1 {
-        position: absolute;
-        text-transform: uppercase;
-        width: 90%;
-        max-width: 1350px;
-      }
-      h2 {
-        &:nth-of-type(1) {
-          font-size: 3.15em;
-          color: $projects-theme;
-          margin-top: 0.05em;
-          margin-left: 0.08em;
-          text-shadow: -0.05em -0.05em 0 $skills-theme;
-        }
-        &:nth-of-type(2) {
-          font-size: 3.7em;
-          margin-top: 0.7em;
-          text-shadow: 0.05em 0 0 $contacts-theme;
+      text-transform: uppercase;
+      .projects__title_col {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          position: relative;
+          text-align: end;
+          &:nth-of-type(1) {
+            top: 0.35em;
+            font-size: 3.15em;
+            color: $skills-theme;
+            text-shadow: -0.05em 0 0 $contacts-theme;
+          }
+          &:nth-of-type(2) {
+            bottom: 0.1em;
+            font-size: 3.7em;
+            text-shadow: 0.05em 0 0 $contacts-theme;
+          }
         }
       }
       h1 {
         letter-spacing: -0.04em;
-        text-align: end;
         text-shadow: 0.04em 0.02em 0 $contacts-theme;
-        font-size: 7.3em;
-        margin-top: -0.17em;
+        font-size: 7em;
       }
     }
     .cambridge {
@@ -73,7 +70,7 @@ $cambridge-text-color: #FABC2A;
         box-sizing: border-box;
         padding: 0 0.5em;
         .cambridge__block1_socials {
-          margin-top: 0.1em;
+          margin-top: 0.2em;
           display: flex;
           gap: 0.5em;
           img {
@@ -158,6 +155,8 @@ $cambridge-text-color: #FABC2A;
       }
     }
     .tb {
+      margin-top: 4em;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 2em;
@@ -169,11 +168,49 @@ $cambridge-text-color: #FABC2A;
         }
       }
       .tb__block1 {
-        background-color: red;
-        display: flex;
-        height: 10em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        padding: 0 0.5em;
+        box-sizing: border-box;
+        background-color: $tb-bg-color;
+        border-radius: 1em;
+        overflow: hidden;
         img {
+          width: 100%;
+        }
+        .tb__block1_content {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .tb__block1_socials img {
+            margin-top: 0.5em;
+            height: 3em;
+            width: 3em;
+          }
+        }
+      }
+      .tb__block2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 30em;
+        justify-content: center;
+        align-items: center;
+        img {
+          justify-self: center;
+          overflow: hidden;
+          max-height: 100%;
+          max-width: 100%;
+        }
+        .tb__block2_content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
           height: 100%;
+        }
+        h3 {
+          width: 100%;
         }
       }
     }
