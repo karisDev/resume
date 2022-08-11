@@ -8,6 +8,9 @@ import cambridge3 from "../../assets/images/cambridge3.png";
 import tb1 from "../../assets/images/tb1.png";
 import tb2 from "../../assets/images/tb2.png";
 import tb3 from "../../assets/images/tb3.png";
+import cube_with_logo from "../../assets/images/cube_with_logo.png";
+import { createEffect, createSignal, JSX } from "solid-js";
+import { NavLink, useNavigate } from "solid-app-router";
 
 const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
   return (
@@ -145,7 +148,16 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
             </div>
           </div>
         </div>
-        <div id="box" class="box_project"></div>
+        <div id="cube" class="cube">
+          <div class="cube__title">и конечно же...</div>
+          <NavLink href="/resume">
+            <img src={cube_with_logo} />
+          </NavLink>
+          <h3>
+            SCSS&nbsp;&nbsp;SolidJS&nbsp;&nbsp;TypeScript&nbsp;&nbsp;3D
+            transform
+          </h3>
+        </div>
       </div>
     </div>
   );

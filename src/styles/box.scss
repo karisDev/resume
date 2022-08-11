@@ -29,7 +29,7 @@ $box-side-bg-color: #221D41;
     width: 100%;
     display: flex;
     align-items: center;
-    height: calc(100% / 3);
+    flex: 1;
     text-decoration: none;
   }
   
@@ -170,26 +170,6 @@ $box-side-bg-color: #221D41;
           }
         }
       }
-      // centered text. i dont really like it
-      // .top {
-      //   font-size: 4rem;
-      //   h2 {
-      //     position: absolute;
-      //     top: 5.5rem;
-      //     left: 2.5rem;
-      //     transform: rotate(-45deg);
-      //     line-height: 6rem;
-      //     letter-spacing: -0.38rem;
-      //     span {
-      //       &:first-child {
-      //         letter-spacing: 0.09rem;
-      //       }
-      //       &:last-child {
-      //         letter-spacing: -0.15rem;
-      //       }
-      //     }
-      //   }
-      // }
     }
     .variant2 {
       .front {

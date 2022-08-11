@@ -12,7 +12,6 @@ $tb-light-theme: #f1f1f1;
   color: $projects-text-color;
   overflow: hidden;
   overflow-y: scroll;
-  padding-bottom: 4em;
   h3 {
     font-size: 1.8em;
   }
@@ -28,6 +27,8 @@ $tb-light-theme: #f1f1f1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4em;
+    padding-bottom: 2em;
     .projects__title {
       display: flex;
       justify-content: center;
@@ -275,6 +276,26 @@ $tb-light-theme: #f1f1f1;
           padding: 1em;
           box-sizing: border-box;
           border-radius: 1em;
+        }
+      }
+    }
+    .cube {
+      display: flex;
+      flex-direction: column;
+      height: aut;
+      width: 100%;
+      align-items: center;
+      gap: 2em;
+      .cube__title {
+        font-size: 4em;
+      }
+      a {
+        width: 50%;
+        border-radius: 1em;
+        cursor: pointer;
+        img {
+          border-radius: 1em;
+          width: 100%;
         }
       }
     }
