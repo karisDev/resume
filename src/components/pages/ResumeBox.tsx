@@ -1,35 +1,82 @@
-import { NavLink } from "solid-app-router";
-import { Component } from "solid-js";
+import { NavLink, useNavigate } from "solid-app-router";
+import { Component, createSignal } from "solid-js";
 import "../../styles/box.scss";
 
 const ResumeBox: Component = () => {
+  const navigate = useNavigate();
   const isFirstVariant = Math.random() >= 0.5;
+  const [fillBox, setFillBox] = createSignal("");
+  const [navigating, setNavigating] = createSignal(false);
 
+  const mouseOver = (target: string) => {
+    if (!navigating()) setFillBox(target);
+  };
+  const mouseLeave = () => {
+    if (!navigating()) setFillBox("");
+  };
+  const beforeNavigate = async (href: string) => {
+    await timeout(1000);
+    navigate(href);
+  };
+
+  function timeout(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
   return (
-    <div class="box_container">
+    <div class={"box_container " + fillBox()}>
       <div class={isFirstVariant ? "box variant1" : "box variant2"}>
         <div class="left"></div>
         <div class="right">
-          <NavLink class="skills" href="/resume/ru/skills">
+          <div
+            class="skills"
+            onClick={() => beforeNavigate("/resume/ru/skills")}
+            onMouseEnter={() => mouseOver("fill_skills")}
+            onMouseLeave={mouseLeave}
+          >
             <h2>Скилы</h2>
-          </NavLink>
-          <NavLink class="projects" href="/resume/ru/projects">
+          </div>
+          <div
+            class="projects"
+            onClick={() => beforeNavigate("/resume/ru/projects")}
+            onMouseEnter={() => mouseOver("fill_projects")}
+            onMouseLeave={mouseLeave}
+          >
             <h2>Проекты</h2>
-          </NavLink>
-          <NavLink class="contacts" href="/resume/ru/contacts">
+          </div>
+          <div
+            class="contacts"
+            onClick={() => beforeNavigate("/resume/ru/contacts")}
+            onMouseEnter={() => mouseOver("fill_contacts")}
+            onMouseLeave={mouseLeave}
+          >
             <h2>Контакты</h2>
-          </NavLink>
+          </div>
         </div>
         <div class="front">
-          <NavLink class="skills" href="/resume/en/skills">
+          <div
+            class="skills"
+            onClick={() => beforeNavigate("/resume/ru/skills")}
+            onMouseEnter={() => mouseOver("fill_skills")}
+            onMouseLeave={mouseLeave}
+          >
             <h2>Skills</h2>
-          </NavLink>
-          <NavLink class="projects" href="/resume/en/projects">
+          </div>
+          <div
+            class="projects"
+            onClick={() => beforeNavigate("/resume/en/projects")}
+            onMouseEnter={() => mouseOver("fill_projects")}
+            onMouseLeave={mouseLeave}
+          >
             <h2>Projects</h2>
-          </NavLink>
-          <NavLink class="contacts" href="/resume/en/contacts">
+          </div>
+          <div
+            class="contacts"
+            onClick={() => beforeNavigate("/resume/en/contacts")}
+            onMouseEnter={() => mouseOver("fill_contacts")}
+            onMouseLeave={mouseLeave}
+          >
             <h2>Contacts</h2>
-          </NavLink>
+          </div>
         </div>
         <div class="top">
           <h2>

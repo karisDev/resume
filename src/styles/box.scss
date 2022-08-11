@@ -27,8 +27,12 @@ $box-side-bg-color: #221D41;
     align-items: center;
     flex: 1;
     text-decoration: none;
+    z-index: 2;
   }
-  
+  h2 {
+    z-index: 2;
+    user-select: none;
+  }
   //positioning
   .box {
     // transform: rotateX(-90deg);
@@ -38,7 +42,8 @@ $box-side-bg-color: #221D41;
     height: 30rem;
     transform-style: preserve-3d;
     z-index: 100;
-    // animation: vibing_cube 4s linear infinite; 
+    animation: cube_intro 3s ease-out, cube_breathe 8s ease-in-out 3s infinite;
+    // animation: vibing_cube 4s linear infinite;
     .left, .right, .top, .back, .front {
       display: flex;
       position: absolute;
@@ -85,13 +90,17 @@ $box-side-bg-color: #221D41;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   
   .right {
+    cursor: pointer;
     background: $box-color-right;
   }
   .front, .back {
+    cursor: pointer;
     background: $box-color-front;
-
   }
   .box {
+    h2 {
+      transition: opacity 0.3s ease-in-out;
+    }
     .right {
       h2 {
         font-size: 4.5rem;
@@ -107,7 +116,6 @@ $box-side-bg-color: #221D41;
       align-items: flex-start;
       flex-direction: column;
     }
-    }
     .front {
       // 0.1 px is needed to fix transparent line between front and right in firefox
       width: calc(100% + 0.1px);
@@ -116,7 +124,7 @@ $box-side-bg-color: #221D41;
           padding-right: 1rem;
       }
     }
-    .variant1 {
+    &.variant1 {
       .front {
         .skills, .projects, .contacts {
           justify-content: flex-end;
@@ -151,7 +159,7 @@ $box-side-bg-color: #221D41;
         }
       }
     }
-    .variant2 {
+    &.variant2 {
       .front {
         .skills, .projects, .contacts {
           justify-content: flex-start;
@@ -187,19 +195,92 @@ $box-side-bg-color: #221D41;
       }
     }
   }
+}
 
 // hover tbd
-.skills, .projects, .contacts {
-  &:hover {
-    $box-color-projects-right: red !important;
+.front:after,
+.top:after,
+.right:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+}
+.fill_contacts {
+  .front:after,
+  .top:after,
+  .right:after {
+    background: $contacts-theme;
+    opacity: 1;
+  }
+  h2 {
+    opacity: 0;
+  }
+  .top h2,
+  .contacts h2 {
+    opacity: 1;
+  }
+}
+.fill_skills {
+  .front:after,
+  .top:after,
+  .right:after {
+    background: $skills-theme;
+    opacity: 1;
+  }
+  h2 {
+    opacity: 0;
+  }
+  .top h2,
+  .skills h2 {
+    opacity: 1;
+  }
+}
+.fill_projects {
+  .front:after,
+  .top:after,
+  .right:after {
+    background: $projects-theme;
+    opacity: 1;
+  }
+  h2 {
+    opacity: 0;
+  }
+  .top h2,
+  .projects h2 {
+    opacity: 1;
   }
 }
 
-@keyframes vibing_cube {
+@keyframes cube_vibing {
   0% {
     transform: rotateX(-35deg) rotateY(0);
   }
   100% {
     transform: rotateX(-35deg) rotateY(365deg);
+  }
+}
+@keyframes cube_intro {
+  0% {
+    transform: rotateX(0) rotateY(100deg) translateY(-100vh);
+  }
+  100% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
+  }
+}
+@keyframes cube_breathe {
+  0% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateY(2em);
+  }
+  100% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
   }
 }
