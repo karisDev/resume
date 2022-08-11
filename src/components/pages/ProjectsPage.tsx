@@ -87,13 +87,15 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
         </div>
         <div id="tb" class="tb">
           <div class="tb__logo">
-            <img src={tb1} />
+            <h2>Task</h2>
+            <h2>Board</h2>
+            {/* <img src={tb1} /> */}
           </div>
           <div class="tb__block1">
             <div class="tb__block1_content">
               <h3>
                 Веб сайт на React для продуктивности. Целью было изучить как
-                можно больше библиотек. Самый сложный технически проект.
+                можно больше практик. Самый сложный технически проект.
                 Приложение доступно на{" "}
                 <a href="https://karisdev.github.io/react-task-board/">
                   Github Pages
@@ -105,11 +107,32 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                 </a>
               </div>
             </div>
-            <img src={tb2} />
+            <img src={tb1} />
           </div>
           <div class="tb__block2">
-            <img src={tb3} />
+            <img src={tb2} />
             <div class="tb__block2_content">
+              <div>
+                <ul>
+                  <li>TypeScript</li>
+                  <li>i18n</li>
+                  <li>Firebase</li>
+                  <li>Router Dom</li>
+                  <li>Material UI</li>
+                </ul>
+                <ul>
+                  <li>React Hooks</li>
+                  <li>Env</li>
+                  <li>Cookies</li>
+                  <li>Prettier</li>
+                  <li>Github Pages</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tb__block3">
+            <img src={tb3} />
+            <div class="tb__block3_content">
               <h3>
                 Адаптивный дизайн
                 <br />
@@ -122,6 +145,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
             </div>
           </div>
         </div>
+        <div id="box" class="box_project"></div>
       </div>
     </div>
   );

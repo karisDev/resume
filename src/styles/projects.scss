@@ -1,7 +1,8 @@
 @import './variables.scss';
 $cambridge-bg-color: #303030;
 $cambridge-text-color: #FABC2A;
-$tb-bg-color: #212121;
+$tb-dark-theme: #212121;
+$tb-light-theme: #f1f1f1;
 
 .projects_page {
   font-size: 1.6vw;
@@ -136,15 +137,19 @@ $tb-bg-color: #212121;
       .cambridge__block3 {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 1em;
         img {
           width: 100%;
           border-radius: 1em;
         }
         .cambridge__block3_content {
+          background-color: #7f46f9;
+          border-radius: 1em;
+          align-self: center;
+          padding: 1em 0.5em;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0 0.5em;
           box-sizing: border-box;
           h3 {
             span {
@@ -161,8 +166,29 @@ $tb-bg-color: #212121;
       flex-direction: column;
       gap: 2em;
       .tb__logo {
-        height: 5em;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-transform: uppercase;
         margin: 0 auto;
+        box-sizing: border-box;
+        h2 {
+          font-size: 3em;
+          padding: 0.2em 0.2em;
+          &:first-child {
+            background-color: $tb-dark-theme;
+            color: $tb-light-theme;
+            justify-self: flex-end;
+          }
+          &:last-child {
+            background-color: $tb-light-theme;
+            color: $tb-dark-theme;
+            justify-self: flex-start;
+          }
+        }
+
         img {
           height: 100%;
         }
@@ -170,16 +196,17 @@ $tb-bg-color: #212121;
       .tb__block1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1em;
-        padding: 0 0.5em;
         box-sizing: border-box;
-        background-color: $tb-bg-color;
-        border-radius: 1em;
         overflow: hidden;
-        img {
+        border-radius: 1em;
+          img {
           width: 100%;
         }
         .tb__block1_content {
+          background-color: $tb-dark-theme;
+          color: $tb-light-theme;
+          box-sizing: border-box;
+          padding: 0 0.5em;
           display: flex;
           justify-content: center;
           flex-direction: column;
@@ -193,24 +220,61 @@ $tb-bg-color: #212121;
       .tb__block2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: 30em;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        h3 {
+          padding-left: 0.7em;
+          font-size: 2em;
+        }
+        .tb__block2_content {
+          margin: 0 0.5em;
+          display: flex;
+          flex-direction: column;
+          div {
+            display: flex;
+            overflow: hidden;
+            border-radius: 1em;
+            ul {
+              list-style: none;
+              font-size: 1.8em;
+              background-color: $tb-dark-theme;
+              width: 100%;
+              color: $tb-light-theme;
+              padding: 0.7em;
+              &:last-child {
+                background-color: $tb-light-theme;
+                color: $tb-dark-theme;
+              }
+            }
+          }
+        }
+        img {
+          border-radius: 1em;
+          width: 100%;
+        }
+      }
+      .tb__block3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 28em;
         justify-content: center;
         align-items: center;
         img {
           justify-self: center;
           overflow: hidden;
-          max-height: 100%;
-          max-width: 100%;
+          height: 100%;
         }
-        .tb__block2_content {
+        .tb__block3_content {
+          margin: 0 0.5em;
+          background-color: $tb-light-theme;
+          color: $tb-dark-theme;
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 100%;
-          height: 100%;
-        }
-        h3 {
-          width: 100%;
+          padding: 1em;
+          box-sizing: border-box;
+          border-radius: 1em;
         }
       }
     }
