@@ -7,15 +7,32 @@ const ResumeBox: Component = () => {
   const isFirstVariant = Math.random() >= 0.5;
   const [fillBox, setFillBox] = createSignal("");
   const [navigating, setNavigating] = createSignal(false);
-
+  const [navigatingColor, setNavigatingColor] = createSignal("");
   const mouseOver = (target: string) => {
-    if (!navigating()) setFillBox(target);
+    setFillBox(target);
   };
   const mouseLeave = () => {
-    if (!navigating()) setFillBox("");
+    setFillBox("");
   };
   const beforeNavigate = async (href: string) => {
-    await timeout(1000);
+    switch (href) {
+      case "/resume/ru/skills":
+      case "/resume/en/skills":
+        setNavigatingColor("box_open fill_skills");
+        break;
+      case "/resume/ru/projects":
+      case "/resume/en/projects":
+        setNavigatingColor("box_open fill_projects");
+        break;
+      case "/resume/ru/contacts":
+      case "/resume/en/contacts":
+        setNavigatingColor("box_open fill_contacts");
+        break;
+    }
+    var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+    if (isFirefox) {
+      await timeout(4000);
+    }
     navigate(href);
   };
 
@@ -23,7 +40,12 @@ const ResumeBox: Component = () => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
   return (
-    <div class={"box_container " + fillBox()}>
+    <div
+      class={
+        "box_container " +
+        (navigatingColor() == "" ? fillBox() : navigatingColor())
+      }
+    >
       <div class={isFirstVariant ? "box variant1" : "box variant2"}>
         <div class="left"></div>
         <div class="right">
@@ -78,24 +100,29 @@ const ResumeBox: Component = () => {
             <h2>Contacts</h2>
           </div>
         </div>
-        <div class="top">
-          <h2>
-            <span>Куб</span>
-            <br />
-            Резюме
-          </h2>
-          <h2>
-            Resume
-            <br />
-            <span>Cube</span>
-          </h2>
+        {/* used to offset in different origins */}
+        <div class="top_holder">
+          <div class="top">
+            <h2>
+              <span>Куб</span>
+              <br />
+              Резюме
+            </h2>
+            <h2>
+              Resume
+              <br />
+              <span>Cube</span>
+            </h2>
+          </div>
         </div>
         <div class="back">
           <div class="skills"></div>
           <div class="projects"></div>
           <div class="contacts"></div>
         </div>
+        <div class="bottom"></div>
       </div>
+      <div class="box_opened"></div>
     </div>
   );
 };

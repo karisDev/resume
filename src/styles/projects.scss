@@ -10,8 +10,15 @@ $tb-light-theme: #f1f1f1;
   width: 100%;
   background-color: $projects-theme;
   color: $projects-text-color;
-  overflow: hidden;
-  overflow-y: scroll;
+  .mask {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    animation: appear 1s;
+    background-color: $projects-theme;
+    opacity: 0;
+  }
   h3 {
     font-size: 1.8em;
   }
@@ -299,6 +306,14 @@ $tb-light-theme: #f1f1f1;
         }
       }
     }
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
