@@ -5,6 +5,11 @@ $box-color-front: linear-gradient(0deg,  $contacts-theme 0,  $contacts-theme 33%
 $box-text-color: #fff;
 $box-side-bg-color: #221D41;
 
+.mouse_catcher {
+  position: absolute;
+  width: 50em;
+  height: 50em;
+}
 .box_container {
   display: flex;
   justify-content: center;
@@ -102,9 +107,6 @@ $box-side-bg-color: #221D41;
     cursor: pointer;
     background: $box-color-right;
   }
-  .back {
-    background-color: $box-side-bg-color;
-  }
   .front {
     cursor: pointer;
     background: $box-color-front;
@@ -119,6 +121,7 @@ $box-side-bg-color: #221D41;
         padding-left: 1rem;
       }
     }
+    // picture is actually needed to hide border bug
     .left {
       background: no-repeat url(../assets/face.jpg);
       background-size: cover;
@@ -209,7 +212,7 @@ $box-side-bg-color: #221D41;
   }
 }
 
-// hover tbd
+// hover
 .front:after,
 .top:after,
 .right:after {
@@ -226,6 +229,7 @@ $box-side-bg-color: #221D41;
 .fill_contacts {
   .box_opened,
   .bottom,
+  .back,
   .front:after,
   .top:after,
   .right:after {
@@ -243,6 +247,7 @@ $box-side-bg-color: #221D41;
 .fill_skills {
   .box_opened,
   .bottom,
+  .back,
   .front:after,
   .top:after,
   .right:after {
@@ -260,6 +265,7 @@ $box-side-bg-color: #221D41;
 .fill_projects {
   .box_opened,
   .bottom,
+  .back,
   .front:after,
   .top:after,
   .right:after {

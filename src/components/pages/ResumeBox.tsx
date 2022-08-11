@@ -53,7 +53,6 @@ const ResumeBox: Component = () => {
             class="skills"
             onClick={() => beforeNavigate("/resume/ru/skills")}
             onMouseEnter={() => mouseOver("fill_skills")}
-            onMouseLeave={mouseLeave}
           >
             <h2>Скилы</h2>
           </div>
@@ -61,7 +60,6 @@ const ResumeBox: Component = () => {
             class="projects"
             onClick={() => beforeNavigate("/resume/ru/projects")}
             onMouseEnter={() => mouseOver("fill_projects")}
-            onMouseLeave={mouseLeave}
           >
             <h2>Проекты</h2>
           </div>
@@ -69,7 +67,6 @@ const ResumeBox: Component = () => {
             class="contacts"
             onClick={() => beforeNavigate("/resume/ru/contacts")}
             onMouseEnter={() => mouseOver("fill_contacts")}
-            onMouseLeave={mouseLeave}
           >
             <h2>Контакты</h2>
           </div>
@@ -79,7 +76,6 @@ const ResumeBox: Component = () => {
             class="skills"
             onClick={() => beforeNavigate("/resume/ru/skills")}
             onMouseEnter={() => mouseOver("fill_skills")}
-            onMouseLeave={mouseLeave}
           >
             <h2>Skills</h2>
           </div>
@@ -87,7 +83,6 @@ const ResumeBox: Component = () => {
             class="projects"
             onClick={() => beforeNavigate("/resume/en/projects")}
             onMouseEnter={() => mouseOver("fill_projects")}
-            onMouseLeave={mouseLeave}
           >
             <h2>Projects</h2>
           </div>
@@ -95,13 +90,12 @@ const ResumeBox: Component = () => {
             class="contacts"
             onClick={() => beforeNavigate("/resume/en/contacts")}
             onMouseEnter={() => mouseOver("fill_contacts")}
-            onMouseLeave={mouseLeave}
           >
             <h2>Contacts</h2>
           </div>
         </div>
         {/* used to offset in different origins */}
-        <div class="top_holder">
+        <div class="top_holder" onMouseEnter={mouseLeave}>
           <div class="top">
             <h2>
               <span>Куб</span>
@@ -123,6 +117,9 @@ const ResumeBox: Component = () => {
         <div class="bottom"></div>
       </div>
       <div class="box_opened"></div>
+      {/* detect mouse outside the box to change
+      color. improves webkit perfomance  */}
+      <div class="mouse_catcher" onMouseEnter={mouseLeave}></div>
     </div>
   );
 };
