@@ -1,11 +1,7 @@
 @import './variables.scss';
 
-$box-color-skills-front: $skills-theme;
-$box-color-projects-front: $projects-theme;
-$box-color-contacts-front: $contacts-theme;
-$box-color-skills-right: #CB9924;
-$box-color-projects-right: #4A68D2;
-$box-color-contacts-right: #C64453;
+$box-color-right: linear-gradient(0deg,  #C64453 0,  #C64453 33%, #4A68D2 33%, #4A68D2 66%,  #CB9924 66%,  #CB9924 100%);
+$box-color-front: linear-gradient(0deg,  $contacts-theme 0,  $contacts-theme 33%, $projects-theme 33%, $projects-theme 66%,  $skills-theme 66%,  $skills-theme 100%);
 $box-text-color: #fff;
 $box-side-bg-color: #221D41;
 
@@ -78,7 +74,6 @@ $box-side-bg-color: #221D41;
     }
   }
   
-  
   //styling
   background-color: #000;
   background-image:
@@ -90,26 +85,11 @@ $box-side-bg-color: #221D41;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   
   .right {
-    .skills {
-      background-color: $box-color-skills-right;
-    }
-    .projects {
-      background-color: $box-color-projects-right;
-    }
-    .contacts {
-      background-color: $box-color-contacts-right;
-    }
+    background: $box-color-right;
   }
   .front, .back {
-    .skills {
-      background-color: $box-color-skills-front;
-    }
-    .projects {
-      background-color: $box-color-projects-front;
-    }
-    .contacts {
-      background-color: $box-color-contacts-front;
-    }
+    background: $box-color-front;
+
   }
   .box {
     .right {
@@ -129,7 +109,7 @@ $box-side-bg-color: #221D41;
     }
     }
     .front {
-      // 1 px is needed to fix transparent line between front and right in firefox
+      // 0.1 px is needed to fix transparent line between front and right in firefox
       width: calc(100% + 0.1px);
       h2 {
           font-size: 4.5rem;
@@ -208,7 +188,12 @@ $box-side-bg-color: #221D41;
     }
   }
 
-  // hover tbd
+// hover tbd
+.skills, .projects, .contacts {
+  &:hover {
+    $box-color-projects-right: red !important;
+  }
+}
 
 @keyframes vibing_cube {
   0% {
