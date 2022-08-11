@@ -29,10 +29,7 @@ const ResumeBox: Component = () => {
         setNavigatingColor("box_open fill_contacts");
         break;
     }
-    var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
-    if (isFirefox) {
-      await timeout(4000);
-    }
+    await timeout(3000);
     navigate(href);
   };
 

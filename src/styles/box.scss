@@ -47,7 +47,7 @@ $box-side-bg-color: #221D41;
     height: 30rem;
     transform-style: preserve-3d;
     z-index: 100;
-    animation: cube_intro 1.5s ease-out;
+    animation: cube_intro 2s ease-out, cube_breathe 8s 2s ease-in-out infinite;
     // animation: cube_vibing 4s linear infinite;
     .left, .right, .top, .back, .front, .bottom {
       display: flex;
@@ -132,8 +132,7 @@ $box-side-bg-color: #221D41;
       flex-direction: column;
     }
     .front {
-      // 0.1 px is needed to fix transparent line between front and right in firefox
-      width: calc(100% + 0.1px);
+      width: 100%;
       h2 {
           font-size: 4.5rem;
           padding-right: 1rem;
@@ -287,13 +286,12 @@ $box-side-bg-color: #221D41;
     transform: rotateX(90deg);
   }
   .box {
-    animation: none;
-    transition: all 2s ease-in-out 1s !important;
-    transform: rotateX(-90deg) !important;
+    animation: cube_open_camera_rotate 2s ease-in-out;
+    transform: rotateX(-90deg);
   }
   .box_opened {
     position: absolute;
-    animation: fill_screen 1s 3s;
+    animation: fill_screen 1s 2s;
   }
 }
 @keyframes fill_screen {
@@ -316,7 +314,10 @@ $box-side-bg-color: #221D41;
 }
 @keyframes cube_intro {
   0% {
-    transform: rotateX(0) rotateY(100deg) translateY(-100vh);
+    transform: rotateX(0) rotateY(-100deg) translateY(-100vh);
+  }
+  50% {
+    transform: rotateX(-50deg) rotateY(-45deg) translateY(5vh);
   }
   100% {
     transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
@@ -333,7 +334,14 @@ $box-side-bg-color: #221D41;
     transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
   }
 }
-
+@keyframes cube_open_camera_rotate {
+  0% {
+    transform: rotateX(-35deg) rotateY(-45deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
 // top {} animation: cube_open 1s ease-in-out infinite;
 @keyframes cube_open {
   0% {
