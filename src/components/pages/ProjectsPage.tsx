@@ -85,7 +85,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                 <br />
                 Человек в группе: <span>200+</span>
                 <br />
-                Огромное спасибо всем, кто пожертвовал деньги
+                Огромное спасибо спонсорам
                 <br />
                 <a href="https://www.vk.com/cambridgeonesolver">Группа ВК</a>
               </h3>

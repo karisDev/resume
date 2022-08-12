@@ -7,6 +7,7 @@
   background-color: $about-theme;
   display: flex;
   justify-content: center;
+  padding-bottom: 4em;
   .mask {
     position: absolute;
     top: 0;
@@ -68,21 +69,45 @@
         grid-template-columns: auto 1fr;
         align-items: center;
         background-color: #fff;
-        color: #000;
+        color: #242424;
         padding: 1em 1em;
         border-radius: 1em;
         gap: 1em;
-        h3 {
-          font-size: 1.3em;
+        .education_date {
+          width: 4em;
+          h3 {
+            text-align: center;
+            font-size: 1.3em;
+          }
         }
         h2 {
           font-size: 1.5em;
         }
         .education_content {
           display: flex;
+          flex: 1;
           flex-direction: column;
           align-items: flex-end;
           text-align: end;
+        }
+      }
+    }
+    .about__languages {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      .languages_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding-top: 1em;
+        h2 {
+          background-color: #fff;
+          color: #242424;
+          padding: 0.5em 1em;
+          border-radius: 0.5em;
+          font-size: 1.8em;
+          text-transform: uppercase;
         }
       }
     }

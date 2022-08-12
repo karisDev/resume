@@ -1,0 +1,71 @@
+@import "./variables.scss";
+
+.navigation {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  animation: navigation_slide_in 0.5s ease-out;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: red;
+  height: 200px;
+  width: 70px;
+  overflow: hidden;
+  a {
+    width: 50px;
+    font-size: 0;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    &:nth-child(1) {
+      height: 70px;
+      padding: 0;
+      img {
+        height: 70px;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $about-theme;
+    }
+    &:nth-child(3) {
+      background-color: $projects-theme;
+    }
+    &:nth-child(4) {
+      background-color: $contacts-theme;
+    }
+  }
+  &:hover {
+    button {
+      font-size: initial;
+    }
+  }
+}
+@keyframes navigation_slide_in {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.button_default {
+  color: #fff;
+  cursor: pointer;
+  padding: 1em;
+  outline: none;
+  border-radius: 0;
+  font-size: inherit;
+  background-color: transparent;
+  &:after {
+    content: '';
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    border: 1px solid black;
+  }
+}

@@ -71,7 +71,7 @@ const ResumeBox: Component = () => {
         <div class="front">
           <div
             class="about"
-            onClick={() => beforeNavigate("/resume/ru/about")}
+            onClick={() => beforeNavigate("/resume/en/about")}
             onMouseEnter={() => mouseOver("fill_about")}
           >
             <h2>Обо мне</h2>
