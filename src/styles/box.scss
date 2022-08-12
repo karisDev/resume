@@ -8,7 +8,7 @@ $box-side-bg-color: #221D41;
 .mouse_catcher {
   position: absolute;
   width: 50em;
-  height: 50em;
+  height: 70em;
 }
 .box_container {
   display: flex;
@@ -336,6 +336,10 @@ $box-side-bg-color: #221D41;
 }
 @keyframes cube_open_camera_rotate {
   0% {
+    transform: rotateX(-35deg) rotateY(-45deg);
+  }
+  // delay is not working properly
+  50% {
     transform: rotateX(-35deg) rotateY(-45deg);
   }
   100% {

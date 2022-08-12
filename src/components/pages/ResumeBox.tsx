@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "solid-app-router";
+import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
 import "../../styles/box.scss";
 
@@ -51,7 +51,7 @@ const ResumeBox: Component = () => {
             onClick={() => beforeNavigate("/resume/ru/skills")}
             onMouseEnter={() => mouseOver("fill_skills")}
           >
-            <h2>Скилы</h2>
+            <h2>Обо мне</h2>
           </div>
           <div
             class="projects"
@@ -74,7 +74,7 @@ const ResumeBox: Component = () => {
             onClick={() => beforeNavigate("/resume/ru/skills")}
             onMouseEnter={() => mouseOver("fill_skills")}
           >
-            <h2>Skills</h2>
+            <h2>About me</h2>
           </div>
           <div
             class="projects"

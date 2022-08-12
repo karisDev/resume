@@ -196,7 +196,6 @@ $tb-light-theme: #f1f1f1;
             justify-self: flex-start;
           }
         }
-
         img {
           height: 100%;
         }
@@ -308,6 +307,7 @@ $tb-light-theme: #f1f1f1;
     }
   }
 }
+
 @keyframes appear {
   0% {
     opacity: 1;

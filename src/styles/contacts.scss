@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.contacts_page {
+  font-size: 1.6vw;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: $contacts-theme;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .contacts_title {
+    height: 8em;
+    display: flex;
+    h1 {
+      text-transform: uppercase;
+      font-size: 8em;
+    }
+    img {
+      height: 15em;
+      position: absolute;
+    }
+  }
+  .mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    animation: appear 1s;
+    background-color: $contacts-theme;
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint-big) {
+  .contacts_page {
+    font-size: 24px;
+  }
+}
