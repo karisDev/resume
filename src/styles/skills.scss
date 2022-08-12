@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+.skills_page {
+  font-size: 1.6vw;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: $skills-theme;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: $skills-theme;
+    animation: appear 1s;
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
