@@ -16,9 +16,9 @@ const ResumeBox: Component = () => {
   };
   const beforeNavigate = async (href: string) => {
     switch (href) {
-      case "/resume/ru/skills":
-      case "/resume/en/skills":
-        setNavigatingColor("box_open fill_skills");
+      case "/resume/ru/about":
+      case "/resume/en/about":
+        setNavigatingColor("box_open fill_about");
         break;
       case "/resume/ru/projects":
       case "/resume/en/projects":
@@ -47,9 +47,9 @@ const ResumeBox: Component = () => {
         <div class="left"></div>
         <div class="right">
           <div
-            class="skills"
-            onClick={() => beforeNavigate("/resume/ru/skills")}
-            onMouseEnter={() => mouseOver("fill_skills")}
+            class="about"
+            onClick={() => beforeNavigate("/resume/ru/about")}
+            onMouseEnter={() => mouseOver("fill_about")}
           >
             <h2>Обо мне</h2>
           </div>
@@ -70,9 +70,9 @@ const ResumeBox: Component = () => {
         </div>
         <div class="front">
           <div
-            class="skills"
-            onClick={() => beforeNavigate("/resume/ru/skills")}
-            onMouseEnter={() => mouseOver("fill_skills")}
+            class="about"
+            onClick={() => beforeNavigate("/resume/ru/about")}
+            onMouseEnter={() => mouseOver("fill_about")}
           >
             <h2>About me</h2>
           </div>
@@ -107,7 +107,7 @@ const ResumeBox: Component = () => {
           </div>
         </div>
         <div class="back">
-          <div class="skills"></div>
+          <div class="about"></div>
           <div class="projects"></div>
           <div class="contacts"></div>
         </div>

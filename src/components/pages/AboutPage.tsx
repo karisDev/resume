@@ -1,17 +1,18 @@
 import { createSignal } from "solid-js";
-import "../../styles/skills.scss";
+import "../../styles/about.scss";
 
-const SkillsPage = ({ russian }: { russian?: boolean | undefined }) => {
+const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const [maskHide, setMaskHide] = createSignal(false);
   setTimeout(() => {
     setMaskHide(true);
   }, 1000);
   return (
-    <div class="skills_page">
+    <div class="about_page">
       {!maskHide() && <div class="mask"></div>}
-      <h1>about</h1>
+      <div class=""></div>
+      <h1>Обо мне</h1>
     </div>
   );
 };
 
-export default SkillsPage;
+export default AboutPage;

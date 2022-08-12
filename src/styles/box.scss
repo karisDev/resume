@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 $box-color-right: linear-gradient(0deg,  #C64453 0,  #C64453 33%, #4A68D2 33%, #4A68D2 66%,  #CB9924 66%,  #CB9924 100%);
-$box-color-front: linear-gradient(0deg,  $contacts-theme 0,  $contacts-theme 33%, $projects-theme 33%, $projects-theme 66%,  $skills-theme 66%,  $skills-theme 100%);
+$box-color-front: linear-gradient(0deg,  $contacts-theme 0,  $contacts-theme 33%, $projects-theme 33%, $projects-theme 66%,  $about-theme 66%,  $about-theme 100%);
 $box-text-color: #fff;
 $box-side-bg-color: #221D41;
 
@@ -24,7 +24,7 @@ $box-side-bg-color: #221D41;
   text-transform: uppercase;
   color: $box-text-color;
 
-  .skills, .projects, .contacts {
+  .about, .projects, .contacts {
     color: $box-text-color;
     position: relative;
     width: 100%;
@@ -140,7 +140,7 @@ $box-side-bg-color: #221D41;
     }
     &.variant1 {
       .front {
-        .skills, .projects, .contacts {
+        .about, .projects, .contacts {
           justify-content: flex-end;
         }
         h2 {
@@ -175,7 +175,7 @@ $box-side-bg-color: #221D41;
     }
     &.variant2 {
       .front {
-        .skills, .projects, .contacts {
+        .about, .projects, .contacts {
           justify-content: flex-start;
         }
         h2 {
@@ -243,21 +243,21 @@ $box-side-bg-color: #221D41;
     opacity: 1;
   }
 }
-.fill_skills {
+.fill_about {
   .box_opened,
   .bottom,
   .back,
   .front:after,
   .top:after,
   .right:after {
-    background: $skills-theme;
+    background: $about-theme;
     opacity: 1;
   }
   h2 {
     opacity: 0;
   }
   .top h2,
-  .skills h2 {
+  .about h2 {
     opacity: 1;
   }
 }
