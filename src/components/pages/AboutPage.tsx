@@ -28,7 +28,6 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                 красивых и интуитивных интерфейсов. Еще очень люблю английский
                 язык.
               </h3>
-              <ButtonDefault>hey</ButtonDefault>
             </div>
             <img src={my_photo} />
           </div>
@@ -63,14 +62,13 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
             </div>
           </div>
           <div class="about__languages">
-            <h2>Языки программирования</h2>
+            <h2>Любимые ЯП</h2>
             <div class="languages_wrapper">
               <h2>Python</h2>
               <h2>TypeScript</h2>
               <h2>JavaScript</h2>
               <h2>C#</h2>
               <h2>Rust</h2>
-              <h2>Quick basic</h2>
             </div>
           </div>
           <div class="about__continue"></div>
