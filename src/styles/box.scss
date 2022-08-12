@@ -40,7 +40,7 @@ $box-text-color: #fff;
   //positioning
   .box {
     transform: rotateX(-35deg) rotateY(-45deg);
-    // transform: rotateX(-35deg) rotateY(10deg);
+    // transform: rotateX(-90deg);
     position: relative;
     width: 30rem;
     height: 30rem;
@@ -175,15 +175,15 @@ $box-text-color: #fff;
           position: absolute;
           line-height: 5rem;
           &:first-child {
-            right: -6rem;
-            top: 7.35rem;
+            right: -6.1rem;
+            top: 7.5rem;
             transform: rotate(-90deg);
             text-align: end;
-            letter-spacing: -0.17rem;
           }
           &:last-child {
             bottom: 1rem;
-            left: 0.5rem;
+            left: 0.4rem;
+            letter-spacing: -0.17rem;
           }
         }
       }
@@ -292,13 +292,17 @@ $box-text-color: #fff;
   .box_opened {
     position: absolute;
     z-index: 100;
-    animation: fill_screen 1s 2s;
+    animation: fill_screen 2s 2s;
   }
 }
 @keyframes fill_screen {
   0% {
     width: 30em;
     height: 30em;
+  }
+  50% {
+    width: 100vw;
+    height: 100vh;
   }
   100% {
     width: 100vw;

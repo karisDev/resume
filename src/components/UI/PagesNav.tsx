@@ -1,5 +1,5 @@
 import { NavLink } from "solid-app-router";
-import { Component, For } from "solid-js";
+import { Component, createEffect, createSignal, For } from "solid-js";
 import cube from "../../assets/images/cube_transparent.png";
 import "../../styles/buttons.scss";
 
@@ -7,7 +7,17 @@ interface PagesNavProps {
   russian?: boolean;
 }
 const PagesNav: Component<PagesNavProps> = ({ russian }) => {
+  const [translatedPage, setTranslatedPage] = createSignal("");
   const letters = (russian ? "КУБ\xa0РЕЗЮМЕ" : "RESUME\xa0BOX").split("");
+
+  setTimeout(() => {
+    const currentPage = window.location.pathname;
+    if (russian) {
+      setTranslatedPage(currentPage.replace("/ru/", "/en/"));
+    } else {
+      setTranslatedPage(currentPage.replace("/en/", "/ru/"));
+    }
+  }, 500);
   return (
     <div class="navigation">
       <NavLink href="/resume/home">
@@ -24,6 +34,9 @@ const PagesNav: Component<PagesNavProps> = ({ russian }) => {
       </NavLink>
       <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/contacts"}>
         {russian ? "Конткаты" : "Contacts"}
+      </NavLink>
+      <NavLink href={translatedPage()}>
+        {russian ? "English" : "Русский"}
       </NavLink>
     </div>
   );

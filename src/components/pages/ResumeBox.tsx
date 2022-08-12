@@ -49,29 +49,6 @@ const ResumeBox: Component = () => {
         <div class="right">
           <div
             class="about"
-            onClick={() => beforeNavigate("/resume/ru/about")}
-            onMouseEnter={() => mouseOver("fill_about")}
-          >
-            <h2>Обо мне</h2>
-          </div>
-          <div
-            class="projects"
-            onClick={() => beforeNavigate("/resume/ru/projects")}
-            onMouseEnter={() => mouseOver("fill_projects")}
-          >
-            <h2>Проекты</h2>
-          </div>
-          <div
-            class="contacts"
-            onClick={() => beforeNavigate("/resume/ru/contacts")}
-            onMouseEnter={() => mouseOver("fill_contacts")}
-          >
-            <h2>Контакты</h2>
-          </div>
-        </div>
-        <div class="front">
-          <div
-            class="about"
             onClick={() => beforeNavigate("/resume/en/about")}
             onMouseEnter={() => mouseOver("fill_about")}
           >
@@ -92,19 +69,59 @@ const ResumeBox: Component = () => {
             <h2>Contacts</h2>
           </div>
         </div>
+        <div class="front">
+          <div
+            class="about"
+            onClick={() => beforeNavigate("/resume/ru/about")}
+            onMouseEnter={() => mouseOver("fill_about")}
+          >
+            <h2>Обо мне</h2>
+          </div>
+          <div
+            class="projects"
+            onClick={() => beforeNavigate("/resume/ru/projects")}
+            onMouseEnter={() => mouseOver("fill_projects")}
+          >
+            <h2>Проекты</h2>
+          </div>
+          <div
+            class="contacts"
+            onClick={() => beforeNavigate("/resume/ru/contacts")}
+            onMouseEnter={() => mouseOver("fill_contacts")}
+          >
+            <h2>Контакты</h2>
+          </div>
+        </div>
         {/* used to offset in different origins */}
         <div class="top_holder" onMouseEnter={mouseLeave}>
           <div class="top">
-            <h2>
-              <span>Куб</span>
-              <br />
-              Резюме
-            </h2>
-            <h2>
-              Resume
-              <br />
-              <span>Cube</span>
-            </h2>
+            {isFirstVariant ? (
+              <>
+                <h2>
+                  <span>Куб</span>
+                  <br />
+                  Резюме
+                </h2>
+                <h2>
+                  Resume
+                  <br />
+                  <span>Cube</span>
+                </h2>
+              </>
+            ) : (
+              <>
+                <h2>
+                  <span>Cube</span>
+                  <br />
+                  Resume
+                </h2>
+                <h2>
+                  Резюме
+                  <br />
+                  <span>Куб</span>
+                </h2>
+              </>
+            )}
           </div>
         </div>
         <div class="back">
