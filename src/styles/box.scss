@@ -70,12 +70,6 @@ $box-text-color: #fff;
       height: 30rem;
       align-items: center;
     }
-    // .top {
-    //   transform: rotateX(90deg) translateZ(15rem);
-    //   width: 30rem;
-    //   height: 30rem;
-    //   align-items: center;
-    // }
     .front {
       transform: translateZ(15rem);
       flex-direction: column;
@@ -101,7 +95,6 @@ $box-text-color: #fff;
   radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-  
   .right {
     cursor: pointer;
     background: $box-color-right;
@@ -119,11 +112,6 @@ $box-text-color: #fff;
         font-size: 4.5rem;
         padding-left: 1rem;
       }
-    }
-    // picture is actually needed to hide border bug
-    .left {
-      background: no-repeat url(../assets/face.jpg);
-      background-size: cover;
     }
     .top {
       background-color: $box-theme;
@@ -209,11 +197,21 @@ $box-text-color: #fff;
     }
   }
 }
+.watermark {
+  text-transform: none;
+  position: absolute;
+  font-size: 3rem;
+  bottom: 0;
+  right: 0;
+}
 
 // hover
-.front:after,
-.top:after,
-.right:after {
+.bottom::after,
+.back::after,
+.left::after,
+.front::after,
+.top::after,
+.right::after {
   content: '';
   position: absolute;
   left: 0px;
@@ -226,11 +224,12 @@ $box-text-color: #fff;
 }
 .fill_contacts {
   .box_opened,
-  .bottom,
-  .back,
-  .front:after,
-  .top:after,
-  .right:after {
+  .bottom::after,
+  .back::after,
+  .left::after,
+  .front::after,
+  .top::after,
+  .right::after {
     background: $contacts-theme;
     opacity: 1;
   }
@@ -244,11 +243,12 @@ $box-text-color: #fff;
 }
 .fill_about {
   .box_opened,
-  .bottom,
-  .back,
-  .front:after,
-  .top:after,
-  .right:after {
+  .bottom::after,
+  .back::after,
+  .left::after,
+  .front::after,
+  .top::after,
+  .right::after {
     background: $about-theme;
     opacity: 1;
   }
@@ -262,11 +262,12 @@ $box-text-color: #fff;
 }
 .fill_projects {
   .box_opened,
-  .bottom,
-  .back,
-  .front:after,
-  .top:after,
-  .right:after {
+  .bottom::after,
+  .back::after,
+  .left::after,
+  .front::after,
+  .top::after,
+  .right::after {
     background: $projects-theme;
     opacity: 1;
   }
@@ -290,6 +291,7 @@ $box-text-color: #fff;
   }
   .box_opened {
     position: absolute;
+    z-index: 100;
     animation: fill_screen 1s 2s;
   }
 }

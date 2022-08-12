@@ -1,6 +1,7 @@
 import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
 import "../../styles/box.scss";
+import Watermark from "../UI/Watermark";
 
 const ResumeBox: Component = () => {
   const navigate = useNavigate();
@@ -117,6 +118,7 @@ const ResumeBox: Component = () => {
       {/* detect mouse outside the box to change
       color. improves webkit perfomance  */}
       <div class="mouse_catcher" onMouseEnter={mouseLeave}></div>
+      <Watermark />
     </div>
   );
 };
