@@ -253,12 +253,11 @@ $tb-light-theme: #f1f1f1;
           height: 100%;
         }
         .tb__block3_content {
+          width: max-content;
+          justify-self: center;
           margin: 0 0.5em;
           background-color: $tb-light-theme;
           color: $tb-dark-theme;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           padding: 1em;
           box-sizing: border-box;
           border-radius: 1em;

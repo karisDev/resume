@@ -9,11 +9,13 @@ import tb1 from "../../assets/images/tb1.png";
 import tb2 from "../../assets/images/tb2.png";
 import tb3 from "../../assets/images/tb3.png";
 import cube_with_logo from "../../assets/images/cube_with_logo.png";
-import { createEffect, createSignal, JSX } from "solid-js";
-import { NavLink, useNavigate } from "solid-app-router";
+import { createSignal } from "solid-js";
+import { NavLink } from "solid-app-router";
 import PagesNav from "../UI/PagesNav";
+import translation from "../../assets/translation.json";
 
 const ProjectsPage = ({ russian }: { russian?: boolean }) => {
+  const t = russian ? translation.ru : translation.en;
   const [maskHide, setMaskHide] = createSignal(false);
   setTimeout(() => {
     setMaskHide(true);
@@ -25,7 +27,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
         {!maskHide() && <div class="mask"></div>}
         <div class="projects_page__container">
           <div class="projects__title">
-            <h1>Мои лучшие проекты</h1>
+            <h1>{t.projects_title}</h1>
           </div>
           <div id="cambridge" class="cambridge">
             <div class="cambridge__block1">
@@ -33,9 +35,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
                 <h1>Cambridge One Solver</h1>
                 <div class="cambridge__block1_body">
                   <h3>
-                    Клиент-серверный проект, в основу которого входит
-                    автоматизация браузера с целью ввода правильных ответов на
-                    сайте{" "}
+                    {t.projects_cos_description}{" "}
                     <a href="https://www.cambridgeone.org/">Cambridge One</a>
                   </h3>
                 </div>
@@ -58,7 +58,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               <div class="cambridge__block2_content">
                 <div class="cambridge__block2_holder">
                   <h3>
-                    <span>Фронт</span>
+                    <span>{t.projects_cos_front}</span>
                     <br />
                     Selenium
                     <br />
@@ -68,7 +68,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
                   </h3>
                   <div class="cambridge__block2_sep"></div>
                   <h3>
-                    <span>Бэк</span>
+                    <span>{t.projects_cos_back}</span>
                     <br />
                     Python
                   </h3>
@@ -78,15 +78,17 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
             <div class="cambridge__block3">
               <div class="cambridge__block3_content">
                 <h3>
-                  Решенных тестов: <span>120 000+</span>
+                  {t.projects_cos_count_tests}: <span>120 000+</span>
                   <br />
-                  Пользователей: <span>900+</span>
+                  {t.projects_cos_count_users}: <span>900+</span>
                   <br />
-                  Человек в группе: <span>200+</span>
+                  {t.projects_cos_count_group_members}: <span>200+</span>
                   <br />
-                  Огромное спасибо спонсорам
+                  {t.projects_cos_thanks}
                   <br />
-                  <a href="https://www.vk.com/cambridgeonesolver">Группа ВК</a>
+                  <a href="https://www.vk.com/cambridgeonesolver">
+                    {t.projects_cos_vk_group}
+                  </a>
                 </h3>
               </div>
               <img src={cambridge3} />
@@ -101,9 +103,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
             <div class="tb__block1">
               <div class="tb__block1_content">
                 <h3>
-                  Веб сайт на React для продуктивности. Целью было изучить как
-                  можно больше практик. Самый сложный технически проект.
-                  Приложение доступно на{" "}
+                  {t.projects_tb_description}{" "}
                   <a href="https://karisdev.github.io/react-task-board/">
                     Github Pages
                   </a>
@@ -141,19 +141,19 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               <img src={tb3} />
               <div class="tb__block3_content">
                 <h3>
-                  Адаптивный дизайн
+                  {t.projects_tb_statement_1}
                   <br />
-                  Облачное хранилище
+                  {t.projects_tb_statement_2}
                   <br />
-                  Динамическая тема
+                  {t.projects_tb_statement_3}
                   <br />
-                  Поддержка нескольких языков
+                  {t.projects_tb_statement_4}
                 </h3>
               </div>
             </div>
           </div>
           <div id="cube" class="cube">
-            <div class="cube__title">и конечно же...</div>
+            <div class="cube__title">{t.projects_box_intro}</div>
             <NavLink href="/resume">
               <img src={cube_with_logo} />
             </NavLink>

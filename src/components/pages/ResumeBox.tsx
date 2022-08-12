@@ -75,21 +75,21 @@ const ResumeBox: Component = () => {
             onClick={() => beforeNavigate("/resume/en/about")}
             onMouseEnter={() => mouseOver("fill_about")}
           >
-            <h2>Обо мне</h2>
+            <h2>About me</h2>
           </div>
           <div
             class="projects"
             onClick={() => beforeNavigate("/resume/en/projects")}
             onMouseEnter={() => mouseOver("fill_projects")}
           >
-            <h2>Проекты</h2>
+            <h2>Projects</h2>
           </div>
           <div
             class="contacts"
             onClick={() => beforeNavigate("/resume/en/contacts")}
             onMouseEnter={() => mouseOver("fill_contacts")}
           >
-            <h2>Контакты</h2>
+            <h2>Contacts</h2>
           </div>
         </div>
         {/* used to offset in different origins */}

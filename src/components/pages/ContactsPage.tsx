@@ -2,8 +2,10 @@ import "../../styles/contacts.scss";
 import operator from "../../assets/images/operator.png";
 import { createSignal } from "solid-js";
 import PagesNav from "../UI/PagesNav";
+import translation from "../../assets/translation.json";
 
 const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
+  const t = russian ? translation.ru : translation.en;
   const [maskHide, setMaskHide] = createSignal(false);
   setTimeout(() => {
     setMaskHide(true);
@@ -15,13 +17,15 @@ const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
         {!maskHide() && <div class="mask"></div>}
         <div class="contacts__title">
           <img src={operator} />
-          <h1>Контакты</h1>
+          <h1>{t.contacts_title}</h1>
         </div>
         <div class="contacts__socials">
-          <h3>Связаться через соц. сети:</h3>
-          <h3>telegram: biskwiq</h3>
+          <h3>{t.contacts_via}</h3>
+          <br />
+          <h3>telegram: @biskwiq</h3>
           <h3>email: kirill@duck.com</h3>
-          <h3>страница скоро будет готова</h3>
+          <br />
+          <h3>{t.contacts_under_development}</h3>
         </div>
       </div>
     </>
