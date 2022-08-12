@@ -1,16 +1,29 @@
-import { useNavigate } from "solid-app-router";
+import { NavLink, useNavigate } from "solid-app-router";
+import { Component, For } from "solid-js";
 import cube from "../../assets/images/cube_transparent.png";
-
-const PagesNav = () => {
+interface PagesNavProps {
+  isEnglish?: boolean;
+}
+const PagesNav: Component<PagesNavProps> = (isEnglish) => {
   const navigate = useNavigate();
+  const letters = (isEnglish ? "RESUME\xa0BOX" : "КУБ\xa0РЕЗЮМЕ").split("");
   return (
     <div class="navigation">
-      <a onClick={() => navigate("/resume/home")}>
-        <img src={cube} />
-      </a>
-      <a>About</a>
-      <a>Projects</a>
-      <a>Contacts</a>
+      <NavLink href="/resume/home">
+        <>
+          <img src={cube} />
+          <For each={letters}>{(char) => <span>{char}</span>}</For>
+        </>
+      </NavLink>
+      <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/about"}>
+        About
+      </NavLink>
+      <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/projects"}>
+        Projects
+      </NavLink>
+      <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/contacts"}>
+        Contacts
+      </NavLink>
     </div>
   );
 };
