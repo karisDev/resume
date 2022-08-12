@@ -1,11 +1,10 @@
-import { NavLink, useNavigate } from "solid-app-router";
+import { NavLink } from "solid-app-router";
 import { Component, For } from "solid-js";
 import cube from "../../assets/images/cube_transparent.png";
 interface PagesNavProps {
   isEnglish?: boolean;
 }
 const PagesNav: Component<PagesNavProps> = (isEnglish) => {
-  const navigate = useNavigate();
   const letters = (isEnglish ? "RESUME\xa0BOX" : "КУБ\xa0РЕЗЮМЕ").split("");
   return (
     <div class="navigation">
