@@ -1,6 +1,8 @@
 import { NavLink } from "solid-app-router";
 import { Component, For } from "solid-js";
 import cube from "../../assets/images/cube_transparent.png";
+import "../../styles/buttons.scss";
+
 interface PagesNavProps {
   isEnglish?: boolean;
 }
