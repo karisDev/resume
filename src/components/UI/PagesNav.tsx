@@ -6,6 +6,7 @@ interface PagesNavProps {
 }
 const PagesNav: Component<PagesNavProps> = (isEnglish) => {
   const letters = (isEnglish ? "RESUME\xa0BOX" : "КУБ\xa0РЕЗЮМЕ").split("");
+  console.log("/resume/" + (isEnglish ? "en" : "ru") + "/about");
   return (
     <div class="navigation">
       <NavLink href="/resume/home">

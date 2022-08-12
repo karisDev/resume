@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
 .navigation {
+  z-index: 100;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -28,42 +29,52 @@
     padding-left: 10px;
     opacity: 1;
     min-height: 60px;
+    text-shadow: 0 0 4px #000;
     img {
       height: 60px;
       margin-right: 10px;
     }
+    span {
+      opacity: 0;
+    }
     span:hover {
       &:nth-child(3n + 2) {
         color: $about-theme;
+        text-shadow: 0 0 4px $about-theme;
       }
       &:nth-child(3n) {
         color: $projects-theme;
+        text-shadow: 0 0 4px $projects-theme;
       }
       &:nth-child(3n + 1) {
         color: $contacts-theme;
-      }
+        text-shadow: 0 0 4px $contacts-theme;
     }
+    }
+  }
+  &:nth-child(2) {
+    background: linear-gradient(to left, $box-theme 45%, $about-theme 0%) right;
+    background-size: 200% 100%;
+  }
+  &:nth-child(3) {
+    background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%) right;
+    background-size: 200% 100%;
+  }
+  &:nth-child(4) {
+    background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%) right;
+    background-size: 200% 100%;
   }
   }
   &:hover {
     max-width: 1000px;
     max-height: 1000px;
     a {
+      span {
+        opacity: 1;
+      }
       opacity: 1;
       &:nth-child(1) {
         background-color: $box-theme;
-      }
-      &:nth-child(2) {
-        background: linear-gradient(to left, $box-theme 45%, $about-theme 0%) right;
-        background-size: 200% 100%;
-      }
-      &:nth-child(3) {
-        background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%) right;
-        background-size: 200% 100%;
-      }
-      &:nth-child(4) {
-        background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%) right;
-        background-size: 200% 100%;
       }
       &:hover {
         background-position: left;
