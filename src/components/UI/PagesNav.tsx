@@ -9,20 +9,18 @@ const PagesNav: Component<PagesNavProps> = (isEnglish) => {
   return (
     <div class="navigation">
       <NavLink href="/resume/home">
-        <>
-          <img src={cube} />
-          <For each={letters}>
-            {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
-          </For>
-        </>
+        <img src={cube} />
+        <For each={letters}>
+          {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
+        </For>
       </NavLink>
-      <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/about"}>
+      <NavLink href={"/resume/" + (isEnglish ? "en" : "ru") + "/about"}>
         About
       </NavLink>
-      <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/projects"}>
+      <NavLink href={"/resume/" + (isEnglish ? "en" : "ru") + "/projects"}>
         Projects
       </NavLink>
-      <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/contacts"}>
+      <NavLink href={"/resume/" + (isEnglish ? "en" : "ru") + "/contacts"}>
         Contacts
       </NavLink>
     </div>

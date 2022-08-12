@@ -5,18 +5,15 @@
   display: flex;
   flex-direction: column;
   animation: navigation_slide_in 0.5s ease-out;
-  transition: background 0.3s ease-in-out;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 0 0 15px 0;
-  max-width: 70px;
   max-height: 80px;
   font-size: 20px;
   text-transform: uppercase;
   a {
   opacity: 0;
   overflow: hidden;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -25,8 +22,10 @@
   outline: none;
   text-decoration: none;
   color: #fff;
+  padding-left: 30px;
   word-wrap: normal;
   &:nth-child(1) {
+    padding-left: 10px;
     opacity: 1;
     min-height: 60px;
     img {
@@ -49,23 +48,25 @@
   &:hover {
     max-width: 1000px;
     max-height: 1000px;
-    background-color: $box-theme;
     a {
       opacity: 1;
+      &:nth-child(1) {
+        background-color: $box-theme;
+      }
       &:nth-child(2) {
-        background: linear-gradient(to right, $box-theme 50%, $about-theme 50%) left;
+        background: linear-gradient(to left, $box-theme 45%, $about-theme 0%) right;
         background-size: 200% 100%;
       }
       &:nth-child(3) {
-        background: linear-gradient(to right, $box-theme 50%, $projects-theme 50%) left;
+        background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%) right;
         background-size: 200% 100%;
       }
       &:nth-child(4) {
-        background: linear-gradient(to right, $box-theme 50%, $contacts-theme 50%) left;
+        background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%) right;
         background-size: 200% 100%;
       }
       &:hover {
-        background-position: right;
+        background-position: left;
       }
     }
   }
