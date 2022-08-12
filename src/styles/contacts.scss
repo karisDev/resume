@@ -29,9 +29,9 @@
     right: 0;
     height: 100%;
     width: 100%;
-    animation: appear 1s;
+    z-index: 100;
     background-color: $contacts-theme;
-    opacity: 0;
+    animation: appear 1s;
   }
 }
 

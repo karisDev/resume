@@ -13,9 +13,13 @@ import { createEffect, createSignal, JSX } from "solid-js";
 import { NavLink, useNavigate } from "solid-app-router";
 
 const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
+  const [maskHide, setMaskHide] = createSignal(false);
+  setTimeout(() => {
+    setMaskHide(true);
+  }, 1000);
   return (
     <div class="projects_page">
-      <div class="mask"></div>
+      {!maskHide() && <div class="mask"></div>}
       <div class="projects_page__container">
         <div class="projects__title">
           <div class="projects__title_col">
