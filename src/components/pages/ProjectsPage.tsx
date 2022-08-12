@@ -13,23 +13,19 @@ import { createEffect, createSignal, JSX } from "solid-js";
 import { NavLink, useNavigate } from "solid-app-router";
 import PagesNav from "../UI/PagesNav";
 
-const ProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
+const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   const [maskHide, setMaskHide] = createSignal(false);
   setTimeout(() => {
     setMaskHide(true);
   }, 1000);
   return (
     <>
-      <PagesNav />
+      <PagesNav russian={russian} />
       <div class="projects_page">
         {!maskHide() && <div class="mask"></div>}
         <div class="projects_page__container">
           <div class="projects__title">
-            <div class="projects__title_col">
-              <h2>Мои любимые</h2>
-              <h2>Мои лучшие</h2>
-            </div>
-            <h1>Проекты</h1>
+            <h1>Мои лучшие проекты</h1>
           </div>
           <div id="cambridge" class="cambridge">
             <div class="cambridge__block1">

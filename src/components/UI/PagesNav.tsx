@@ -4,10 +4,10 @@ import cube from "../../assets/images/cube_transparent.png";
 import "../../styles/buttons.scss";
 
 interface PagesNavProps {
-  english: boolean;
+  russian?: boolean;
 }
-const PagesNav: Component<PagesNavProps> = ({ english }) => {
-  const letters = (english ? "RESUME\xa0BOX" : "КУБ\xa0РЕЗЮМЕ").split("");
+const PagesNav: Component<PagesNavProps> = ({ russian }) => {
+  const letters = (russian ? "КУБ\xa0РЕЗЮМЕ" : "RESUME\xa0BOX").split("");
   return (
     <div class="navigation">
       <NavLink href="/resume/home">
@@ -16,14 +16,14 @@ const PagesNav: Component<PagesNavProps> = ({ english }) => {
           {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
         </For>
       </NavLink>
-      <NavLink href={"/resume/" + (english ? "en" : "ru") + "/about"}>
-        {english ? "About" : "Обо мне"}
+      <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/about"}>
+        {russian ? "Обо мне" : "About"}
       </NavLink>
-      <NavLink href={"/resume/" + (english ? "en" : "ru") + "/projects"}>
-        {english ? "Projects" : "Проекты"}
+      <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/projects"}>
+        {russian ? "Проекты" : "Projects"}
       </NavLink>
-      <NavLink href={"/resume/" + (english ? "en" : "ru") + "/contacts"}>
-        {english ? "Contacts" : "Конткаты"}
+      <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/contacts"}>
+        {russian ? "Конткаты" : "Contacts"}
       </NavLink>
     </div>
   );

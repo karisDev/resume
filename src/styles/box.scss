@@ -317,8 +317,8 @@ $box-text-color: #fff;
   0% {
     transform: rotateX(0) rotateY(-100deg) translateY(-100vh);
   }
-  50% {
-    transform: rotateX(-50deg) rotateY(-45deg) translateY(5vh);
+  75% {
+    transform: rotateX(-45deg) rotateY(-45deg) translateY(3vh);
   }
   100% {
     transform: rotateX(-35deg) rotateY(-45deg) translateY(0);

@@ -3,15 +3,17 @@ import my_photo from "../../assets/me.png";
 import "../../styles/about.scss";
 import ButtonDefault from "../UI/ButtonDefault";
 import PagesNav from "../UI/PagesNav";
+import translation from "../../assets/translation.json";
 
 const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
+  const t = russian ? translation.ru : translation.en;
   const [maskHide, setMaskHide] = createSignal(false);
   setTimeout(() => {
     setMaskHide(true);
   }, 1000);
   return (
     <>
-      <PagesNav />
+      <PagesNav russian={russian} />
       <div class="about_page">
         {!maskHide() && <div class="mask"></div>}
         <div class="about__content">

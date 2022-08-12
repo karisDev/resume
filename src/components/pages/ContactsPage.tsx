@@ -10,7 +10,7 @@ const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
   }, 1000);
   return (
     <>
-      <PagesNav />
+      <PagesNav russian={russian} />
       <div class="contacts_page">
         {!maskHide() && <div class="mask"></div>}
         <div class="contacts__title">
