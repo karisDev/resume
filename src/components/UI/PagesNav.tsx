@@ -11,7 +11,9 @@ const PagesNav: Component<PagesNavProps> = (isEnglish) => {
       <NavLink href="/resume/home">
         <>
           <img src={cube} />
-          <For each={letters}>{(char) => <span>{char}</span>}</For>
+          <For each={letters}>
+            {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
+          </For>
         </>
       </NavLink>
       <NavLink href={"/resume/" + isEnglish ? "en" : "rus" + "/about"}>
