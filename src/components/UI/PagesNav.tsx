@@ -20,7 +20,7 @@ const PagesNav: Component<PagesNavProps> = ({ russian }) => {
   }, 500);
   return (
     <div class="navigation">
-      <NavLink href="/resume/home">
+      <NavLink href="/resume/">
         <img src={cube} />
         <For each={letters}>
           {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
