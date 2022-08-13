@@ -10,7 +10,8 @@ $tb-light-theme: #f1f1f1;
   width: 100%;
   background-color: $projects-theme;
   color: $projects-text-color;
-  padding-top: 70px;
+  padding-top: 15px;
+  padding-bottom: $navbar-height;
   .mask {
     position: absolute;
     top: 0;
@@ -36,7 +37,6 @@ $tb-light-theme: #f1f1f1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4em;
     padding-bottom: 2em;
     .projects__title {
       width: 100%;
@@ -50,6 +50,7 @@ $tb-light-theme: #f1f1f1;
     .cambridge {
       display: flex;
       flex-direction: column;
+      margin-top: 2em;
       gap: 2em;
       .cambridge__block1 {
         display: grid;
@@ -243,7 +244,7 @@ $tb-light-theme: #f1f1f1;
       }
       .tb__block3 {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         height: 28em;
         justify-content: center;
         align-items: center;
@@ -253,9 +254,11 @@ $tb-light-theme: #f1f1f1;
           height: 100%;
         }
         .tb__block3_content {
+          max-width: 100%;
+          margin: 0 0.5em;
           width: max-content;
           justify-self: center;
-          margin: 0 0.5em;
+          display: flex;
           background-color: $tb-light-theme;
           color: $tb-dark-theme;
           padding: 1em;
@@ -271,6 +274,7 @@ $tb-light-theme: #f1f1f1;
       width: 100%;
       align-items: center;
       gap: 2em;
+      margin-top: 6em;
       .cube__title {
         font-size: 4em;
       }

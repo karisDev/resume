@@ -1,91 +1,147 @@
 @import "./variables.scss";
 
-.navigation {
-  z-index: 100;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  animation: navigation_slide_in 0.5s ease-out;
-  box-sizing: border-box;
-  overflow: hidden;
-  max-height: 80px;
-  font-size: 20px;
-  text-transform: uppercase;
-  a {
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
+// navbar wide screen
+@media screen and (min-width: $layout-breakpoint-small) {
+  .navigation {
+    z-index: 100;
+    position: fixed;
     display: flex;
-    align-items: center;
-    padding: 10px;
-    text-align: left;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    color: #fff;
-    padding-left: 30px;
-    word-wrap: normal;
-    &:nth-child(1) {
-      padding-left: 10px;
-      opacity: 1;
-      min-height: 60px;
-      text-shadow: 0 0 4px #000;
-      img {
-        height: 60px;
-        margin-right: 10px;
-      }
-      span {
-        opacity: 0;
-      }
-      // color each letter a different color
-      span:hover {
-        &:nth-child(3n + 2) {
-          color: $about-theme;
-          text-shadow: 0 0 4px $about-theme;
-        }
-        &:nth-child(3n) {
-          color: $projects-theme;
-          text-shadow: 0 0 4px $projects-theme;
-        }
-        &:nth-child(3n + 1) {
-          color: $contacts-theme;
-          text-shadow: 0 0 4px $contacts-theme;
-        }
-      }
-    }
-    &:nth-child(2) {
-      background: linear-gradient(to left, $box-theme 45%, $about-theme 0%) right;
-      background-size: 200% 100%;
-    }
-    &:nth-child(3) {
-      background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%) right;
-      background-size: 200% 100%;
-    }
-    &:nth-child(4) {
-      background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%) right;
-      background-size: 200% 100%;
-    }
-    &:nth-child(5) {
-      background-color: $box-theme;
-    }
-  }
-  &:hover {
-    max-width: 1000px;
-    max-height: 1000px;
+    flex-direction: column;
+    animation: navigation_slide_in 0.5s ease-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 80px;
+    font-size: 20px;
+    text-transform: uppercase;
     a {
-      span {
-        opacity: 1;
-      }
-      opacity: 1;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      text-align: left;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      color: #fff;
+      padding-left: 30px;
+      word-wrap: normal;
       &:nth-child(1) {
+        padding-left: 10px;
+        opacity: 1;
+        min-height: 60px;
+        text-shadow: 0 0 4px #000;
+        img {
+          height: 60px;
+          margin-right: 10px;
+        }
+        span {
+          opacity: 0;
+        }
+        // color each letter a different color
+        span:hover {
+          &:nth-child(3n + 2) {
+            color: $about-theme;
+            text-shadow: 0 0 4px $about-theme;
+          }
+          &:nth-child(3n) {
+            color: $projects-theme;
+            text-shadow: 0 0 4px $projects-theme;
+          }
+          &:nth-child(3n + 1) {
+            color: $contacts-theme;
+            text-shadow: 0 0 4px $contacts-theme;
+          }
+        }
+      }
+      &:nth-child(2) {
+        background: linear-gradient(to left, $box-theme 45%, $about-theme 0%) right;
+        background-size: 200% 100%;
+      }
+      &:nth-child(3) {
+        background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%) right;
+        background-size: 200% 100%;
+      }
+      &:nth-child(4) {
+        background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%) right;
+        background-size: 200% 100%;
+      }
+      &:nth-child(5) {
         background-color: $box-theme;
       }
-      &:hover {
-        background-position: left;
+    }
+    &:hover {
+      max-width: 1000px;
+      max-height: 1000px;
+      a {
+        span {
+          opacity: 1;
+        }
+        opacity: 1;
+        &:nth-child(1) {
+          background-color: $box-theme;
+        }
+        &:hover {
+          background-position: left;
+        }
       }
     }
   }
 }
+// navbar small screen
+@media screen and (max-width: $layout-breakpoint-small) {
+  .navigation {
+    position: fixed;
+    display: grid;
+    grid-auto-flow: column;
+    bottom: 0;
+    width: 100%;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    height: $navbar-height;
+    box-sizing: border-box;
+    animation: navigation_mobile_slide_in 0.5s ease-out;
+    img {
+      max-height: calc($navbar-height - 5px);
+      height: 10vw;
+    }
+    a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+      &:nth-child(1) {
+        font-size: 0;
+        background: linear-gradient(to bottom, transparent 0%, $box-theme 100%);
+      }
+      &:nth-child(2){
+        background: linear-gradient(to bottom, transparent 0%, $about-theme 100%);
+      }
+      &:nth-child(3){
+        background: linear-gradient(to bottom, transparent 0%, $projects-theme 100%);
+      }
+      &:nth-child(4){
+        background: linear-gradient(to bottom, transparent 0%, $contacts-theme 100%);
+      }
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes navigation_mobile_slide_in {
+  0% {
+    transform: translateY($navbar-height);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes navigation_slide_in {
   0% {
     transform: translateX(-100px);
