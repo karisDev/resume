@@ -2,10 +2,10 @@
   "en": {
     "about_title": "About me",
     "about_name": "Kireev Kirill",
-    "about_prof": "Frontend dev, 20 yo",
-    "about_general": "Origin in Moscow. Started programming from the 5th grade in Quick Basic. In love with automating things and creating beautiful and intuitive interfaces. I also really like English.",
+    "about_prof": "Frontend dev, 20 y/o",
+    "about_general": "Hi, I'm from Moscow. Started programming in 5th grade in Quick Basic. In love with automating things and creating beautiful and intuitive interfaces. I also really like the English language.",
     "about_education": "Education",
-    "about_3_course": "3 course",
+    "about_3_course": "3 years",
     "about_program_infrastructure": "Software infrastructure",
     "about_croc": "CROC",
     "about_speciality": "Information Systems and Technologies",
@@ -14,7 +14,7 @@
     "about_colledge": "Moscow College of Business Technologies",
     "about_fav_pl": "Favorite programming languages",
     "projects_title": "My best projects",
-    "projects_cos_description": "Client-server desktop app, which is based on the automation of the browser with a goal of filling in the correct answers on the site",
+    "projects_cos_description": "Client-server desktop app, which is based on the automation of the browser with a goal of filling in the correct answers on",
     "projects_cos_front": "Frontend",
     "projects_cos_back": "Backend",
     "projects_cos_count_tests": "Solved tests",
@@ -22,7 +22,7 @@
     "projects_cos_count_group_members": "People following",
     "projects_cos_thanks": "Thank you so much for your support!",
     "projects_cos_vk_group": "VK group",
-    "projects_tb_description": "Website on React for productivity. The goal was to learn as many as possible. The most technically difficult project. The app is available on",
+    "projects_tb_description": "Productivity website made with React. The goal was to learn as much as possible. The most technically difficult project. The app is available on",
     "projects_tb_statement_1": "Adaptive design",
     "projects_tb_statement_2": "Cloud storage",
     "projects_tb_statement_3": "Dynamic theme",
@@ -30,7 +30,7 @@
     "projects_box_intro": "and of course...",
     "contacts_title": "Contacts",
     "contacts_via": "Contact me via:",
-    "contacts_under_development": "this page is yet to be developed"
+    "contacts_under_development": "this page is under construction"
   },
   "ru": {
     "about_title": "Обо мне",
