@@ -40,12 +40,12 @@ $box-text-color: #fff;
   //positioning
   .box {
     transform: rotateX(-35deg) rotateY(-45deg);
-    // transform: rotateX(-90deg);
+    // transform: rotateX(90deg);
     position: relative;
     width: 30rem;
     height: 30rem;
+    z-index: 10;
     transform-style: preserve-3d;
-    z-index: 100;
     animation: cube_intro 2s ease-out, cube_breathe 8s 2s ease-in-out infinite;
     // animation: cube_vibing 4s linear infinite;
     .left, .right, .top, .back, .front, .bottom {
@@ -55,7 +55,6 @@ $box-text-color: #fff;
       left: 0;
       width: 100%;
       height: 100%;
-      transform-style: preserve-3d;
     }
     .bottom {
       transform: rotateX(90deg) translateZ(-15em);
