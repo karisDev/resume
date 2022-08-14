@@ -109,7 +109,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
                   </a>
                 </h3>
                 <div class="tb__block1_socials">
-                  <a href="https://github.com/karisDev/CambridgeOneSolver">
+                  <a href="https://github.com/karisDev/react-task-board">
                     <img src={githubLogo} />
                   </a>
                 </div>
