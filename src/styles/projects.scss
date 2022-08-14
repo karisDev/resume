@@ -5,7 +5,7 @@ $tb-dark-theme: #212121;
 $tb-light-theme: #f1f1f1;
 
 .projects_page {
-  font-size: 1.6vw;
+  font-size: 1.4vw;
   min-height: 100vh;
   width: 100%;
   background-color: $projects-theme;
@@ -33,7 +33,7 @@ $tb-light-theme: #f1f1f1;
     max-width: $layout-content-max-width;
     margin: 0 auto;
     height: 100%;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
