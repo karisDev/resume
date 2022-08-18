@@ -7,9 +7,11 @@ import translation from "../../assets/translation.json";
 const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
   const t = russian ? translation.ru : translation.en;
   const [maskHide, setMaskHide] = createSignal(false);
+
   setTimeout(() => {
     setMaskHide(true);
   }, 1000);
+
   return (
     <>
       <PagesNav russian={russian} />

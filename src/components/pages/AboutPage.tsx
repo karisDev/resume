@@ -8,6 +8,7 @@ import translation from "../../assets/translation.json";
 const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const t = russian ? translation.ru : translation.en;
   const [maskHide, setMaskHide] = createSignal(false);
+
   setTimeout(() => {
     setMaskHide(true);
   }, 1000);

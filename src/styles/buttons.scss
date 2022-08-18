@@ -7,7 +7,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    animation: navigation_slide_in 0.5s ease-out;
+    animation: navigation_desktop_slide_in 0.5s ease-out;
     box-sizing: border-box;
     overflow: hidden;
     max-height: 80px;
@@ -142,7 +142,7 @@
   }
 }
 
-@keyframes navigation_slide_in {
+@keyframes navigation_desktop_slide_in {
   0% {
     transform: translateX(-100px);
   }
@@ -150,6 +150,7 @@
     transform: translateX(0);
   }
 }
+
 .button_default {
   color: #fff;
   cursor: pointer;
