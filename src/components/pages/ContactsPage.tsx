@@ -90,7 +90,6 @@ const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
             <h3>{t.contacts_via}</h3>
             <br />
             <h3>telegram: @biskwiq</h3>
-            <h3>email: kirill@duck.com</h3>
             <br />
             {/* <h3>{t.contacts_under_development}</h3> */}
           </div>

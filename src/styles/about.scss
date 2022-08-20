@@ -8,7 +8,7 @@
   background-color: $about-theme;
   display: flex;
   justify-content: center;
-  padding-bottom: 4em;
+  padding-bottom: calc($navbar-height + 10px);
   .mask {
     position: absolute;
     top: 0;
@@ -144,6 +144,9 @@
     font-size: $layout-breakpoint-font-size;
     .about__content {
       width: 95%;
+      h1 {
+        font-size: 2em;
+      }
       .about__general {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "title image" "content content";
@@ -182,6 +185,7 @@
       }
     .about__languages {
       .languages_wrapper {
+        gap: 0.5em;
         h2 {
           font-size: 1.2em;
         }

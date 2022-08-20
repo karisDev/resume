@@ -11,7 +11,7 @@ const App: Component = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/resume" element={<ResumeBox />} />
+          <Route path="/resume/cube" element={<ResumeBox />} />
           <Route path="/resume/ru/about" element={<AboutPage russian />} />
           <Route
             path="/resume/ru/projects"
@@ -24,7 +24,7 @@ const App: Component = () => {
           <Route path="/resume/en/about" element={<AboutPage />} />
           <Route path="/resume/en/projects" element={<ProjectsPage />} />
           <Route path="/resume/en/contacts" element={<ContactsPage />} />
-          <Route path="/*" element={<Navigate href="/resume" />} />
+          <Route path="/*" element={<Navigate href="/resume/cube" />} />
         </Routes>
       </Router>
     </>

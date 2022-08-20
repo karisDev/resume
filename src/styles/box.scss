@@ -41,12 +41,13 @@ $box-text-color: #fff;
   .box {
     transform: rotateX(-35deg) rotateY(-45deg);
     // transform: rotateX(90deg);
+    will-change: transform;
     position: relative;
     width: 30rem;
     height: 30rem;
     z-index: 10;
     transform-style: preserve-3d;
-    animation: cube_intro 2s ease-out, cube_breathe 8s 2s ease-in-out infinite;
+    animation: cube_intro 2s ease-out;
     // animation: cube_vibing 4s linear infinite;
     .left, .right, .top, .back, .front, .bottom {
       display: flex;
@@ -294,6 +295,11 @@ $box-text-color: #fff;
     animation: fill_screen 2s 2s;
   }
 }
+.box_breathe {
+  z-index: 50;
+  animation: cube_breathe 8s 2s ease-in-out infinite;
+}
+
 @keyframes fill_screen {
   0% {
     width: 30em;
@@ -321,7 +327,7 @@ $box-text-color: #fff;
     transform: rotateX(0) rotateY(-100deg) translateY(-100vh);
   }
   75% {
-    transform: rotateX(-40deg) rotateY(-45deg) translateY(3vh);
+    transform: rotateX(-40deg) rotateY(-45deg) translateY(2vh);
   }
   100% {
     transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
@@ -329,21 +335,21 @@ $box-text-color: #fff;
 }
 @keyframes cube_breathe {
   0% {
-    transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
+    transform: translateY(0);
   }
   50% {
-    transform: rotateX(-35deg) rotateY(-45deg) translateY(2em);
+    transform: translateY(2em);
   }
   100% {
-    transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
+    transform: translateY(0);
   }
 }
 @keyframes cube_open_camera_rotate {
-  0% {
-    transform: rotateX(-35deg) rotateY(-45deg);
-  }
+  // 0% {
+  //   transform: rotateX(-35deg) rotateY(-45deg);
+  // }
   // delay is not working properly
-  50% {
+  0% {
     transform: rotateX(-35deg) rotateY(-45deg);
   }
   100% {

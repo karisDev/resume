@@ -6,15 +6,17 @@
   min-height: 100vh;
   width: 100%;
   background-color: $contacts-theme;
+  box-sizing: border-box;
+  padding-bottom: calc($navbar-height + 10px);
   .contacts_content {
     max-width: $layout-content-max-width;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    width: 40em;
+    width: 80%;
     .contacts__title {
-      height: 8em;
+      height: 14em;
       display: flex;
       h1 {
         margin-top: 0.2em;
@@ -29,7 +31,6 @@
       }
     }
     .contacts__socials {
-      margin-top: 10em;
       width: 100%;
       h3 {
         font-size: 2em;
@@ -70,6 +71,9 @@
           &:focus {
             background-color: lighten($color: $contacts-input-hover, $amount: 10%);
           }
+        }
+        textarea {
+          flex-grow: 1;
         }
         button {
           transition: background-color 0.2s ease-in-out;
@@ -126,5 +130,29 @@
 @media screen and (min-width: $layout-breakpoint-big) {
   .contacts_page {
     font-size: $layout-breakpoint-font-size;
+  }
+}
+@media screen and (max-width: $layout-breakpoint-small) {
+  .contacts_page {
+    font-size: 14px;
+    .contacts_content {
+      width: 95%;
+      .contacts__title {
+        height: 10em;
+        h1 {
+          font-size: 4em;
+        }
+        img {
+          height: 8em;
+        }
+      }
+      .contacts__form {
+        form {
+          input, textarea {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
   }
 }

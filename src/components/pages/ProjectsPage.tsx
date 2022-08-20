@@ -30,7 +30,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
             <h1>{t.projects_title}</h1>
           </div>
           <div id="cambridge" class="cambridge">
-            <div class="cambridge__block1">
+            <div class="split_grid cambridge__block1">
               <div class="cambridge__block1_content">
                 <h1>Cambridge One Solver</h1>
                 <div class="cambridge__block1_body">
@@ -53,7 +53,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               </div>
               <img src={cambridge1} />
             </div>
-            <div class="cambridge__block2">
+            <div class="split_grid cambridge__block2">
               <img src={cambridge2} />
               <div class="cambridge__block2_content">
                 <div class="cambridge__block2_holder">
@@ -75,7 +75,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
                 </div>
               </div>
             </div>
-            <div class="cambridge__block3">
+            <div class="split_grid cambridge__block3">
               <div class="cambridge__block3_content">
                 <h3>
                   {t.projects_cos_count_tests}: <span>120 000+</span>
@@ -100,7 +100,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               <h2>Board</h2>
               {/* <img src={tb1} /> */}
             </div>
-            <div class="tb__block1">
+            <div class="split_grid tb__block1">
               <div class="tb__block1_content">
                 <h3>
                   {t.projects_tb_description}{" "}
@@ -116,7 +116,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               </div>
               <img src={tb1} />
             </div>
-            <div class="tb__block2">
+            <div class="split_grid tb__block2">
               <img src={tb2} />
               <div class="tb__block2_content">
                 <div>
@@ -137,7 +137,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
                 </div>
               </div>
             </div>
-            <div class="tb__block3">
+            <div class="split_grid tb__block3">
               <img src={tb3} />
               <div class="tb__block3_content">
                 <h3>
@@ -154,7 +154,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
           </div>
           <div id="cube" class="cube">
             <div class="cube__title">{t.projects_box_intro}</div>
-            <NavLink href="/resume">
+            <NavLink href="/resume/home">
               <img src={cube_with_logo} />
             </NavLink>
             <h3>

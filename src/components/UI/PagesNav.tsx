@@ -8,7 +8,7 @@ interface PagesNavProps {
 }
 const PagesNav: Component<PagesNavProps> = ({ russian }) => {
   const [translatedPage, setTranslatedPage] = createSignal("");
-  const letters = (russian ? "КУБ\xa0РЕЗЮМЕ" : "RESUME\xa0BOX").split("");
+  const letters = (russian ? "КУБ\xa0РЕЗЮМЕ" : "RESUME\xa0CUBE").split("");
 
   setTimeout(() => {
     const currentPage = window.location.pathname;
@@ -20,7 +20,7 @@ const PagesNav: Component<PagesNavProps> = ({ russian }) => {
   }, 500);
   return (
     <div class="navigation">
-      <NavLink href="/resume/">
+      <NavLink href="/resume/cube">
         <img src={cube} />
         <For each={letters}>
           {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
