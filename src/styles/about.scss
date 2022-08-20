@@ -40,23 +40,29 @@
     }
     .about__general {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-areas: "title image" "content image";
+      grid-template-rows: auto 1fr;
       gap: 1em;
       width: 100%;
       img {
+        grid-area: image;
         border-radius: 1em;
         height: 30em;
         justify-self: flex-end;
       }
+      h4 {
+        font-size: 1.3em;
+      }
+      h3 {
+        margin-top: 1em;
+        font-size: 1.8em;
+      }
+      .general_title {
+        grid-area: title;
+      }
       .general_content {
+        grid-area: content;
         width: 100%;
-        h4 {
-          font-size: 1.3em;
-        }
-        h3 {
-          margin-top: 1em;
-          font-size: 1.8em;
-        }
         button {
           margin-top: 1em;
           min-width: 12em;
@@ -131,5 +137,56 @@
 @media screen and (min-width: $layout-breakpoint-big) {
   .about_page {
     font-size: $layout-breakpoint-font-size;
+  }
+}
+@media screen and (max-width: $layout-breakpoint-small) {
+  .about_page {
+    font-size: $layout-breakpoint-font-size;
+    .about__content {
+      width: 95%;
+      .about__general {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title image" "content content";
+        img {
+          width: 100%;
+          height: auto;
+          justify-self: flex-start;
+        }
+        .general_content {
+          display: flex;
+          flex-direction: column;
+          h3 {
+            margin-top: 0;
+            font-size: 1.4em;
+          }
+          button {
+            border-radius: 0.75em;
+          }
+        }
+      }
+      .about__education {
+        .education_item {
+          padding: 1em 0.5em;
+          .education_date {
+            width: auto;
+            h3 {
+              font-size: 1em;
+            }
+          }
+          .education_content {
+            h2 {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    .about__languages {
+      .languages_wrapper {
+        h2 {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
   }
 }

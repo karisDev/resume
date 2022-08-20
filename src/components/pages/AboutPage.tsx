@@ -24,9 +24,11 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
             <h1>{t.about_title}</h1>
           </div>
           <div class="about__general">
-            <div class="general_content">
+            <div class="general_title">
               <h2>{t.about_name}</h2>
               <h4>{t.about_prof}</h4>
+            </div>
+            <div class="general_content">
               <h3>{t.about_general}</h3>
               <ButtonDefault onClick={() => window.open(resumeUrl)}>
                 {t.about_full_resume}

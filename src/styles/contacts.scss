@@ -67,6 +67,9 @@
           &::placeholder {
             text-transform: uppercase;
           }
+          &:focus {
+            background-color: lighten($color: $contacts-input-hover, $amount: 10%);
+          }
         }
         button {
           transition: background-color 0.2s ease-in-out;

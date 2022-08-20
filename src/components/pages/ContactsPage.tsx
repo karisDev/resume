@@ -31,7 +31,7 @@ const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
     // validation
     const re =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!re.test(email.value)) {
+    if (email.value != "" && !re.test(email.value)) {
       email.focus();
       return;
     }
