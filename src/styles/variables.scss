@@ -1,13 +1,28 @@
 $font-heading: 'Exo 2', sans-serif; 
 $box-theme: #221D41;
-$about-theme: #FABC2A;
-$projects-theme: #5376F0;
-$contacts-theme: #F05365;
+$about-theme: #FFBA08;
+$projects-theme: #1C8DD9;
+$contacts-theme: #FF595E;
+// make $about-theme color more darker
+$about-darker: adjust-color($about-theme, $blackness: 10%);
+$projects-darker: adjust-color($projects-theme, $blackness: 10%);
+$contacts-darker: adjust-color($contacts-theme, $blackness: 10%);
+
+// old colors
+//4392F1 1C8DD9
+// $about-theme: #FABC2A;
+// $projects-theme: #5376F0;
+// $contacts-theme: #F05365;
+// $about-darker: #CB9924;
+// $projects-darker: #4A68D2;
+// $contacts-darker: #C64453;
+
+$contacts-input-hover: #272838;
 $projects-text-color: #fff;
 $layout-breakpoint-small: 750px;
 $layout-breakpoint-big: 1300px;
 // width of content
-$layout-content-max-width: 1000px;
-$layout-breakpoint-font-size: 16px;
+$layout-content-max-width: 900px;
+$layout-breakpoint-font-size: 17px;
 $href-color: #40F4FF;
 $navbar-height: 60px;

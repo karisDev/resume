@@ -6,6 +6,8 @@ import PagesNav from "../UI/PagesNav";
 import translation from "../../assets/translation.json";
 
 const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
+  const resumeUrl =
+    "https://docs.google.com/document/d/1pKpImdxYfvlC2JvJl45pVnfhGKpyAvgh1SZSEQ52Paw/edit?usp=sharing";
   const t = russian ? translation.ru : translation.en;
   const [maskHide, setMaskHide] = createSignal(false);
 
@@ -26,6 +28,9 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
               <h2>{t.about_name}</h2>
               <h4>{t.about_prof}</h4>
               <h3>{t.about_general}</h3>
+              <ButtonDefault onClick={() => window.open(resumeUrl)}>
+                {t.about_full_resume}
+              </ButtonDefault>
             </div>
             <img src={my_photo} />
           </div>
@@ -69,7 +74,6 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
               <h2>Rust</h2>
             </div>
           </div>
-          <div class="about__continue"></div>
         </div>
       </div>
     </>

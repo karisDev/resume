@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-$box-color-right: linear-gradient(0deg,  #C64453 0,  #C64453 33%, #4A68D2 33%, #4A68D2 66%,  #CB9924 66%,  #CB9924 100%);
+$box-color-right: linear-gradient(0deg,  $contacts-darker 0,  $contacts-darker 33%, $projects-darker 33%, $projects-darker 66%,  $about-darker 66%,  $about-darker 100%);
 $box-color-front: linear-gradient(0deg,  $contacts-theme 0,  $contacts-theme 33%, $projects-theme 33%, $projects-theme 66%,  $about-theme 66%,  $about-theme 100%);
 $box-text-color: #fff;
 

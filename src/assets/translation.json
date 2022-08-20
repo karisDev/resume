@@ -1,7 +1,7 @@
 {
   "en": {
     "about_title": "About me",
-    "about_name": "Kireev Kirill",
+    "about_name": "Kirill",
     "about_prof": "Frontend dev, 20 y/o",
     "about_general": "Hi, I'm from Moscow. Started programming in 5th grade in Quick Basic. In love with automating things and creating beautiful and intuitive interfaces. I also really like the English language.",
     "about_education": "Education",
@@ -13,6 +13,7 @@
     "about_bank_agent": "3rd category agent of the bank",
     "about_colledge": "Moscow College of Business Technologies",
     "about_fav_pl": "Favorite programming languages",
+    "about_full_resume": "Full resume",
     "projects_title": "My best projects",
     "projects_cos_description": "Client-server desktop app, which is based on the automation of the browser with a goal of filling in the correct answers on",
     "projects_cos_front": "Frontend",
@@ -30,11 +31,19 @@
     "projects_box_intro": "and of course...",
     "contacts_title": "Contacts",
     "contacts_via": "Contact me via:",
-    "contacts_under_development": "this page is under construction"
+    "contacts_under_development": "this page is under construction",
+    "contacts_email_title": "title",
+    "contacts_email": "email",
+    "contacts_message": "message",
+    "contacts_send_form": "send",
+    "contacts_suggest_form": "...or through the form",
+    "contacts_email_send_error": "Error sending email",
+    "contacts_email_send_success": "Thank you for your message! I will answer you as soon as possible.",
+    "contacts_email_send_sending": "Sending..."
   },
   "ru": {
     "about_title": "Обо мне",
-    "about_name": "Киреев Кирилл",
+    "about_name": "Кирилл",
     "about_prof": "Frontend разработчик, 20 лет",
     "about_general": "Родился и живу в Москве. Начал заниматься программированием c 5 класса на Quick Basic. Любовь к автоматизации и созданию красивых и интуитивных интерфейсов. Еще очень люблю английский язык.",
     "about_education": "Образование",
@@ -46,6 +55,7 @@
     "about_bank_agent": "Агент банка 3 разряда",
     "about_colledge": "Московский колледж бизнес-технологий",
     "about_fav_pl": "Любимые ЯП",
+    "about_full_resume": "Полное резюме",
     "projects_title": "Мои лучшие проекты",
     "projects_cos_description": "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте",
     "projects_cos_front": "Фронт",
@@ -63,6 +73,14 @@
     "projects_box_intro": "и конечно же...",
     "contacts_title": "Контакты",
     "contacts_via": "Связаться через соц. сети:",
-    "contacts_under_development": "страница в разработке"
+    "contacts_under_development": "страница в разработке",
+    "contacts_email_title": "заголовок",
+    "contacts_email": "почта",
+    "contacts_message": "сообщение",
+    "contacts_send_form": "отправить",
+    "contacts_suggest_form": "...или через форму",
+    "contacts_email_send_error": "Ошибка при отправке письма",
+    "contacts_email_send_success": "Письмо успешно отправлено! Я отвечу в ближайшее время.",
+    "contacts_email_send_sending": "Отправка..."
   }
 }

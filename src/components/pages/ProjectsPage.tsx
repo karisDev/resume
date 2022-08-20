@@ -159,7 +159,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
             </NavLink>
             <h3>
               SCSS&nbsp;&nbsp;SolidJS&nbsp;&nbsp;TypeScript&nbsp;&nbsp;3D
-              transform
+              transform&nbsp;&nbsp;Formspree
             </h3>
           </div>
         </div>

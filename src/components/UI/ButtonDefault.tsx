@@ -1,9 +1,13 @@
 import "../../styles/buttons.scss";
 import { Component, JSX } from "solid-js";
 
-const ButtonDefault = (props: JSX.ButtonHTMLAttributes<HTMLButtonElement>) => {
+const ButtonDefault: Component<JSX.ButtonHTMLAttributes<HTMLButtonElement>> = (
+  props
+) => {
   return (
-    <button class={"button_default " + props.class}>{props.children}</button>
+    <button class={"button_default " + props.class} {...props}>
+      {props.children}
+    </button>
   );
 };
 
