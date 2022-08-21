@@ -12,3 +12,8 @@
 html {
   font-size: 1.6vmin;
 }
+@media screen and (max-width: $layout-breakpoint-small) {
+  html {
+    font-size: 2vmin;
+  }
+}
