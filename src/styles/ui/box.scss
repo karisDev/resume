@@ -316,12 +316,13 @@ $cube-sides: (".left", ".right", ".top", ".back", ".front", ".bottom");
     height: 30em;
   }
   50% {
-    width: 100vw;
-    height: 100vh;
+    // intentional so that animation doesn't end too quickly on user
+    width: 110vw;
+    height: 110vh;
   }
   100% {
-    width: 100vw;
-    height: 100vh;
+    width: 110vw;
+    height: 110vh;
   }
 }
 @keyframes cube_vibing {
