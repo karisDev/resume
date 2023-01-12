@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-heading;
+}
+#root,
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html {
+  font-size: 1.6vmin;
+}
+@media screen and (max-width: $layout-breakpoint-small) {
+  html {
+    font-size: 2vmin;
+  }
+}
+
+@import "./ui/buttons.scss";
+@import "./ui/box.scss";
+@import "./ui/inputs.scss";
+
+@import "./pages/about.scss";
+@import "./pages/contacts.scss";
+@import "./pages/projects.scss";

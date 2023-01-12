@@ -1,5 +1,4 @@
 import { Component, JSX } from "solid-js";
-import "../../styles/inputs.scss";
 
 interface TextareaDeafultProps
   extends JSX.TextareaHTMLAttributes<HTMLTextAreaElement> {

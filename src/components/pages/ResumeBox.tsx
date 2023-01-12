@@ -1,7 +1,6 @@
 import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
-import "../../styles/box.scss";
-import Watermark from "../UI/Watermark";
+import Watermark from "../ui/Watermark";
 
 const ResumeBox: Component = () => {
   const navigate = useNavigate();

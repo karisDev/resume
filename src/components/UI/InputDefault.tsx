@@ -1,5 +1,4 @@
 import { Component, JSX } from "solid-js";
-import "../../styles/inputs.scss";
 
 const InputDefault: Component<JSX.InputHTMLAttributes<HTMLInputElement>> = (
   props

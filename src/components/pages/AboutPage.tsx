@@ -1,8 +1,7 @@
 import { createSignal } from "solid-js";
 import my_photo from "../../assets/me.png";
-import "../../styles/about.scss";
-import ButtonDefault from "../UI/ButtonDefault";
-import PagesNav from "../UI/PagesNav";
+import ButtonDefault from "../ui/ButtonDefault";
+import PagesNav from "../ui/PagesNav";
 import translation from "../../assets/translation.json";
 
 const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {

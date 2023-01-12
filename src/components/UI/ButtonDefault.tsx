@@ -1,4 +1,3 @@
-import "../../styles/buttons.scss";
 import { Component, JSX } from "solid-js";
 
 const ButtonDefault: Component<JSX.ButtonHTMLAttributes<HTMLButtonElement>> = (

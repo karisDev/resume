@@ -1,5 +1,5 @@
-import "./styles/App.scss";
-import { Component, createSignal } from "solid-js";
+import "./styles/index.scss";
+import { Component } from "solid-js";
 import { Navigate, Route, Router, Routes } from "solid-app-router";
 import AboutPage from "./components/pages/AboutPage";
 import ProjectsPage from "./components/pages/ProjectsPage";

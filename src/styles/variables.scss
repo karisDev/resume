@@ -1,9 +1,9 @@
-$font-heading: 'Exo 2', sans-serif; 
-$box-theme: #221D41;
-$about-theme: #FFBA08;
-$projects-theme: #1C8DD9;
-$contacts-theme: #FF595E;
-// make $about-theme color more darker
+$font-heading: "Exo 2", sans-serif;
+$box-theme: #221d41;
+$about-theme: #ffba08;
+$projects-theme: #1c8dd9;
+$contacts-theme: #ff595e;
+// darker colors for left side of the box
 $about-darker: adjust-color($about-theme, $blackness: 10%);
 $projects-darker: adjust-color($projects-theme, $blackness: 10%);
 $contacts-darker: adjust-color($contacts-theme, $blackness: 10%);
@@ -24,5 +24,5 @@ $layout-breakpoint-big: 1100px;
 // width of content
 $layout-content-max-width: 900px;
 $layout-breakpoint-font-size: 16px;
-$href-color: #40F4FF;
+$href-color: #40f4ff;
 $navbar-height: 60px;

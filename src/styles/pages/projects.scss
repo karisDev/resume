@@ -1,6 +1,5 @@
-@import './variables.scss';
 $cambridge-bg-color: #303030;
-$cambridge-text-color: #FABC2A;
+$cambridge-text-color: #fabc2a;
 $tb-dark-theme: #212121;
 $tb-light-theme: #f1f1f1;
 
@@ -322,7 +321,7 @@ $tb-light-theme: #f1f1f1;
             padding: 0.5em;
             img {
               border-radius: 0;
-              background-color: transparent
+              background-color: transparent;
             }
           }
           img {

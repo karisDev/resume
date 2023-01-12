@@ -1,7 +1,21 @@
-@import './variables.scss';
-
-$box-color-right: linear-gradient(0deg,  $contacts-darker 0,  $contacts-darker 33%, $projects-darker 33%, $projects-darker 66%,  $about-darker 66%,  $about-darker 100%);
-$box-color-front: linear-gradient(0deg,  $contacts-theme 0,  $contacts-theme 33%, $projects-theme 33%, $projects-theme 66%,  $about-theme 66%,  $about-theme 100%);
+$box-color-right: linear-gradient(
+  0deg,
+  $contacts-darker 0,
+  $contacts-darker 33%,
+  $projects-darker 33%,
+  $projects-darker 66%,
+  $about-darker 66%,
+  $about-darker 100%
+);
+$box-color-front: linear-gradient(
+  0deg,
+  $contacts-theme 0,
+  $contacts-theme 33%,
+  $projects-theme 33%,
+  $projects-theme 66%,
+  $about-theme 66%,
+  $about-theme 100%
+);
 $box-text-color: #fff;
 
 .mouse_catcher {
@@ -16,14 +30,16 @@ $box-text-color: #fff;
   position: fixed;
   height: 100%;
   width: 100%;
-	top: 0;
-	right: 0;
+  top: 0;
+  right: 0;
   bottom: 0;
-	left: 0;
+  left: 0;
   text-transform: uppercase;
   color: $box-text-color;
 
-  .about, .projects, .contacts {
+  .about,
+  .projects,
+  .contacts {
     color: $box-text-color;
     position: relative;
     width: 100%;
@@ -49,7 +65,12 @@ $box-text-color: #fff;
     transform-style: preserve-3d;
     animation: cube_intro 2s ease-out;
     // animation: cube_vibing 4s linear infinite;
-    .left, .right, .top, .back, .front, .bottom {
+    .left,
+    .right,
+    .top,
+    .back,
+    .front,
+    .bottom {
       display: flex;
       position: absolute;
       top: 0;
@@ -85,15 +106,22 @@ $box-text-color: #fff;
       height: 30rem;
     }
   }
-  
+
   //styling
   background-color: #000;
-  background-image:
-  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   .right {
     cursor: pointer;
@@ -121,13 +149,15 @@ $box-text-color: #fff;
     .front {
       width: 100%;
       h2 {
-          font-size: 4.5rem;
-          padding-right: 1rem;
+        font-size: 4.5rem;
+        padding-right: 1rem;
       }
     }
     &.variant1 {
       .front {
-        .about, .projects, .contacts {
+        .about,
+        .projects,
+        .contacts {
           justify-content: flex-end;
         }
         h2 {
@@ -162,7 +192,9 @@ $box-text-color: #fff;
     }
     &.variant2 {
       .front {
-        .about, .projects, .contacts {
+        .about,
+        .projects,
+        .contacts {
           justify-content: flex-start;
         }
         h2 {
@@ -212,7 +244,7 @@ $box-text-color: #fff;
 .front::after,
 .top::after,
 .right::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0px;
   top: 0px;

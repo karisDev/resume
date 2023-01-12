@@ -1,4 +1,3 @@
-import "../../styles/projects.scss";
 import vkLogo from "../../assets/images/vk.png";
 import telegramLogo from "../../assets/images/telegram.png";
 import githubLogo from "../../assets/images/github.png";
@@ -11,7 +10,7 @@ import tb3 from "../../assets/images/tb3.png";
 import cube_with_logo from "../../assets/images/cube_with_logo.png";
 import { createSignal } from "solid-js";
 import { NavLink } from "solid-app-router";
-import PagesNav from "../UI/PagesNav";
+import PagesNav from "../ui/PagesNav";
 import translation from "../../assets/translation.json";
 
 const ProjectsPage = ({ russian }: { russian?: boolean }) => {

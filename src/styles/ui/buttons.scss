@@ -1,5 +1,3 @@
-@import "./variables.scss";
-
 // navbar wide screen
 @media screen and (min-width: $layout-breakpoint-small) {
   .navigation {
@@ -56,15 +54,18 @@
         }
       }
       &:nth-child(2) {
-        background: linear-gradient(to left, $box-theme 45%, $about-theme 0%) right;
+        background: linear-gradient(to left, $box-theme 45%, $about-theme 0%)
+          right;
         background-size: 200% 100%;
       }
       &:nth-child(3) {
-        background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%) right;
+        background: linear-gradient(to left, $box-theme 45%, $projects-theme 0%)
+          right;
         background-size: 200% 100%;
       }
       &:nth-child(4) {
-        background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%) right;
+        background: linear-gradient(to left, $box-theme 45%, $contacts-theme 0%)
+          right;
         background-size: 200% 100%;
       }
       &:nth-child(5) {
@@ -117,14 +118,26 @@
         font-size: 0;
         background: linear-gradient(to bottom, transparent 0%, $box-theme 100%);
       }
-      &:nth-child(2){
-        background: linear-gradient(to bottom, transparent 0%, $about-theme 100%);
+      &:nth-child(2) {
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          $about-theme 100%
+        );
       }
-      &:nth-child(3){
-        background: linear-gradient(to bottom, transparent 0%, $projects-theme 100%);
+      &:nth-child(3) {
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          $projects-theme 100%
+        );
       }
-      &:nth-child(4){
-        background: linear-gradient(to bottom, transparent 0%, $contacts-theme 100%);
+      &:nth-child(4) {
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          $contacts-theme 100%
+        );
       }
       &:nth-child(5) {
         display: none;
@@ -169,7 +182,7 @@
     background-color: transparent;
   }
   &:hover:not(:active) {
-    transform: translate(-.25em,-.25em);
-    box-shadow: .25em .25em #000;
+    transform: translate(-0.25em, -0.25em);
+    box-shadow: 0.25em 0.25em #000;
   }
 }
