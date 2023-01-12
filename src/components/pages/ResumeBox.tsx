@@ -7,7 +7,7 @@ const ResumeBox: Component = () => {
   const isFirstVariant = Math.random() >= 0.5;
   const [fillBox, setFillBox] = createSignal("");
   const [navigating, setNavigating] = createSignal(false);
-  const [navigatingColor, setNavigatingColor] = createSignal("");
+  const [navigatingColorClasses, setNavigatingColorClasses] = createSignal("");
   const mouseOver = (target: string) => {
     setFillBox(target);
   };
@@ -15,20 +15,8 @@ const ResumeBox: Component = () => {
     setFillBox("");
   };
   const beforeNavigate = async (href: string) => {
-    switch (href) {
-      case "/resume/ru/about":
-      case "/resume/en/about":
-        setNavigatingColor("box_open fill_about");
-        break;
-      case "/resume/ru/projects":
-      case "/resume/en/projects":
-        setNavigatingColor("box_open fill_projects");
-        break;
-      case "/resume/ru/contacts":
-      case "/resume/en/contacts":
-        setNavigatingColor("box_open fill_contacts");
-        break;
-    }
+    const color = href.split("/").pop() as string;
+    setNavigatingColorClasses("box_open fill_" + color);
     await timeout(3000);
     navigate(href);
   };
@@ -40,9 +28,10 @@ const ResumeBox: Component = () => {
     <div
       class={
         "box_container " +
-        (navigatingColor() == "" ? fillBox() : navigatingColor())
+        (navigatingColorClasses() == "" ? fillBox() : navigatingColorClasses())
       }
     >
+      <div class="box_opened"></div>
       <div class="box_breathe">
         <div class={isFirstVariant ? "box variant1" : "box variant2"}>
           <div class="left"></div>
@@ -132,7 +121,6 @@ const ResumeBox: Component = () => {
           <div class="bottom"></div>
         </div>
       </div>
-      <div class="box_opened"></div>
       {/* detect mouse outside the box to change
       color. improves webkit perfomance  */}
       <div class="mouse_catcher" onMouseEnter={mouseLeave}></div>

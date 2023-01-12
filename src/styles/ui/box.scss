@@ -23,6 +23,7 @@ $box-text-color: #fff;
   width: 50em;
   height: 70em;
 }
+
 .box_container {
   display: flex;
   justify-content: center;
@@ -359,7 +360,7 @@ $box-text-color: #fff;
     transform: rotateX(0) rotateY(-100deg) translateY(-100vh);
   }
   75% {
-    transform: rotateX(-40deg) rotateY(-45deg) translateY(2vh);
+    transform: rotateX(-38deg) rotateY(-45deg) translateY(2vh);
   }
   100% {
     transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
