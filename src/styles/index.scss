@@ -20,10 +20,9 @@ html {
   }
 }
 
-@import "./ui/buttons.scss";
-@import "./ui/box.scss";
-@import "./ui/inputs.scss";
-
-@import "./pages/about.scss";
-@import "./pages/contacts.scss";
-@import "./pages/projects.scss";
+@import "ui/buttons.scss";
+@import "ui/box.scss";
+@import "ui/inputs.scss";
+@import "pages/about.scss";
+@import "pages/contacts.scss";
+@import "pages/projects.scss";

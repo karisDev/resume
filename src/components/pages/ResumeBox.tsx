@@ -6,7 +6,6 @@ const ResumeBox: Component = () => {
   const navigate = useNavigate();
   const isFirstVariant = Math.random() >= 0.5;
   const [fillBox, setFillBox] = createSignal("");
-  const [navigating, setNavigating] = createSignal(false);
   const [navigatingColorClasses, setNavigatingColorClasses] = createSignal("");
   const mouseOver = (target: string) => {
     setFillBox(target);
