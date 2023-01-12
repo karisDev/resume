@@ -37,12 +37,8 @@
         span {
           opacity: 0;
         }
-        // color each letter a different color
+        // color each letter different
         span:hover {
-          &:nth-child(3n + 2) {
-            color: $about-theme;
-            text-shadow: 0 0 4px $about-theme;
-          }
           &:nth-child(3n) {
             color: $projects-theme;
             text-shadow: 0 0 4px $projects-theme;
@@ -50,6 +46,10 @@
           &:nth-child(3n + 1) {
             color: $contacts-theme;
             text-shadow: 0 0 4px $contacts-theme;
+          }
+          &:nth-child(3n + 2) {
+            color: $about-theme;
+            text-shadow: 0 0 4px $about-theme;
           }
         }
       }

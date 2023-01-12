@@ -24,14 +24,19 @@ const ResumeBox: Component = () => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
   return (
-    <div
-      class={
-        "box_container " +
-        (navigatingColorClasses() == "" ? fillBox() : navigatingColorClasses())
-      }
-    >
-      <div class="box_opened"></div>
-      <div class="box_breathe">
+    <>
+      <div class="box_background">
+        <Watermark />
+      </div>
+      <div
+        class={
+          "box_container box_breathe " +
+          (navigatingColorClasses() == ""
+            ? fillBox()
+            : navigatingColorClasses())
+        }
+      >
+        <div class="box_opened"></div>
         <div class={isFirstVariant ? "box variant1" : "box variant2"}>
           <div class="left"></div>
           <div class="right">
@@ -119,12 +124,11 @@ const ResumeBox: Component = () => {
           </div>
           <div class="bottom"></div>
         </div>
-      </div>
-      {/* detect mouse outside the box to change
+        {/* detect mouse outside the box to change
       color. improves webkit perfomance  */}
-      <div class="mouse_catcher" onMouseEnter={mouseLeave}></div>
-      <Watermark />
-    </div>
+        <div class="mouse_catcher" onMouseEnter={mouseLeave}></div>
+      </div>
+    </>
   );
 };
 
