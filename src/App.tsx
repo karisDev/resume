@@ -5,6 +5,7 @@ import AboutPage from "./components/pages/AboutPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
 import ContactsPage from "./components/pages/ContactsPage";
 import ResumeBox from "./components/pages/ResumeBox";
+import NewAboutPage from "./components/pages/NewAboutPage";
 
 const App: Component = () => {
   return (
@@ -13,6 +14,10 @@ const App: Component = () => {
         <Routes>
           <Route path="/resume/cube" element={<ResumeBox />} />
           <Route path="/resume/ru/about" element={<AboutPage russian />} />
+          <Route
+            path="/resume/ru/newabout"
+            element={<NewAboutPage russian />}
+          />
           <Route
             path="/resume/ru/projects"
             element={<ProjectsPage russian />}

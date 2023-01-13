@@ -32,11 +32,13 @@ html {
   background-color: $contacts-theme;
 }
 
-@import "ui/buttons.scss";
-@import "ui/box.scss";
-@import "ui/inputs.scss";
-@import "ui/mask.scss";
+@import "typography";
 
-@import "pages/about.scss";
-@import "pages/contacts.scss";
-@import "pages/projects.scss";
+@import "ui/buttons";
+@import "ui/box";
+@import "ui/inputs";
+@import "ui/mask";
+
+@import "pages/about";
+@import "pages/contacts";
+@import "pages/projects";
