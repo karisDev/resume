@@ -8,22 +8,19 @@ import tb1 from "../../assets/images/tb1.png";
 import tb2 from "../../assets/images/tb2.png";
 import tb3 from "../../assets/images/tb3.png";
 import cube_with_logo from "../../assets/images/cube_with_logo.png";
-import { createSignal } from "solid-js";
 import { NavLink } from "solid-app-router";
 import PagesNav from "../ui/PagesNav";
 import translation from "../../assets/translation.json";
+import Mask from "../ui/Mask";
 
 const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   const t = russian ? translation.ru : translation.en;
-  const [maskHide, setMaskHide] = createSignal(false);
-  setTimeout(() => {
-    setMaskHide(true);
-  }, 1000);
+
   return (
     <>
       <PagesNav russian={russian} />
       <div class="projects_page">
-        {!maskHide() && <div class="mask"></div>}
+        <Mask colorClass="projects_color" />
         <div class="projects_page__container">
           <div class="projects__title">
             <h1>{t.projects_title}</h1>

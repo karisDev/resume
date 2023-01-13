@@ -1,23 +1,20 @@
-import { createSignal } from "solid-js";
 import my_photo from "../../assets/me.png";
 import ButtonDefault from "../ui/ButtonDefault";
 import PagesNav from "../ui/PagesNav";
 import translation from "../../assets/translation.json";
+import Mask from "../ui/Mask";
 
 const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const resumeUrl =
     "https://docs.google.com/document/d/1pKpImdxYfvlC2JvJl45pVnfhGKpyAvgh1SZSEQ52Paw/edit?usp=sharing";
   const t = russian ? translation.ru : translation.en;
-  const [maskHide, setMaskHide] = createSignal(false);
 
-  setTimeout(() => {
-    setMaskHide(true);
-  }, 1000);
   return (
     <>
       <PagesNav russian={russian} />
       <div class="about_page">
-        {!maskHide() && <div class="mask"></div>}
+        <Mask colorClass="about_color" />
+        {/* {!maskHide() && <div class="mask"></div>} */}
         <div class="about__content">
           <div class="about__title">
             <h1>{t.about_title}</h1>

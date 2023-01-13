@@ -20,9 +20,23 @@ html {
   }
 }
 
+.about_color {
+  background-color: $about-theme;
+}
+
+.projects_color {
+  background-color: $projects-theme;
+}
+
+.contacts_color {
+  background-color: $contacts-theme;
+}
+
 @import "ui/buttons.scss";
 @import "ui/box.scss";
 @import "ui/inputs.scss";
+@import "ui/mask.scss";
+
 @import "pages/about.scss";
 @import "pages/contacts.scss";
 @import "pages/projects.scss";

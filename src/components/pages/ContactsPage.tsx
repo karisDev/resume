@@ -4,6 +4,7 @@ import PagesNav from "../ui/PagesNav";
 import translation from "../../assets/translation.json";
 import InputDefault from "../ui/InputDefault";
 import TextareaDeafult from "../ui/TextareaDeault";
+import Mask from "../ui/Mask";
 
 enum emailStatus {
   filling,
@@ -14,7 +15,6 @@ enum emailStatus {
 
 const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
   const t = russian ? translation.ru : translation.en;
-  const [maskHide, setMaskHide] = createSignal(false);
   const [emailState, setEmailState] = createSignal(emailStatus.filling);
 
   const formSubmit: JSX.EventHandler<HTMLFormElement, Event> = (e) => {
@@ -72,12 +72,9 @@ const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
     setEmailState(emailStatus.sending);
   };
 
-  setTimeout(() => {
-    setMaskHide(true);
-  }, 1000);
-
   return (
     <>
+      <Mask colorClass="contacts_color" />
       <PagesNav russian={russian} />
       <div class="contacts_page">
         <div class="contacts_content">
@@ -118,7 +115,6 @@ const ContactsPage = ({ russian }: { russian?: boolean | undefined }) => {
             </form>
           </div>
         </div>
-        {!maskHide() && <div class="mask"></div>}
       </div>
     </>
   );

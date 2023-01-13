@@ -322,12 +322,12 @@ $cube-sides: (".left", ".right", ".top", ".back", ".front", ".bottom");
   }
   50% {
     // intentional so that animation doesn't end too quickly on user
-    width: 110vw;
-    height: 110vh;
+    width: 105vw;
+    height: 105vh;
   }
   100% {
-    width: 110vw;
-    height: 110vh;
+    width: 105vw;
+    height: 105vh;
   }
 }
 @keyframes cube_vibing {
@@ -342,8 +342,8 @@ $cube-sides: (".left", ".right", ".top", ".back", ".front", ".bottom");
   0% {
     transform: rotateX(0) rotateY(-100deg) translateY(-100vh);
   }
-  75% {
-    transform: rotateX(-38deg) rotateY(-45deg) translateY(2vh);
+  70% {
+    transform: rotateX(-37deg) rotateY(-43deg) translateY(2vh);
   }
   100% {
     transform: rotateX(-35deg) rotateY(-45deg) translateY(0);
