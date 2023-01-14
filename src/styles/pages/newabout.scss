@@ -1,2 +1,122 @@
+$max-width: 1200px;
+$box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
+
 .new_about_page {
+  font-size: 16px;
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
+  }
+  p {
+    font-family: golos-regular;
+  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .greetings {
+    width: 100%;
+    height: 12em;
+    max-width: $max-width;
+    margin-top: 6em;
+    display: flex;
+    gap: 2em;
+    position: relative;
+    .body {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-right: 18em;
+      z-index: 2;
+      gap: 2em;
+      .button_group {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        .shadow {
+          box-shadow: $box-shadow-standart;
+          border-radius: 15px;
+          height: min-content;
+          &:hover:not(:active) {
+            transform: translate(-0.25em, -0.25em);
+          }
+        }
+        .link {
+          width: 160px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.1s ease-out;
+          color: #000;
+          padding: 0.5em 0;
+          gap: 0.5em;
+          text-align: left;
+          outline: none;
+          border: none;
+          font-size: 0.8em;
+          background-color: #fff;
+          border-radius: 15px;
+          overflow: visible;
+          text-transform: uppercase;
+          text-decoration: none;
+          &:hover {
+            color: #fff;
+            border: solid 1px #000;
+            background-color: $about-theme;
+          }
+          &:hover:not(:active) {
+            transform: translate(-0.25em, -0.25em);
+            box-shadow: 0.25em 0.25em #000;
+          }
+          &.github {
+            background-color: #000;
+            color: #fff;
+            flex-direction: row-reverse;
+            &:hover:not(:active) {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    .img_container {
+      padding: 0 2em;
+      justify-content: flex-end;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      img {
+        width: 16em;
+        border-radius: 15px;
+        box-shadow: $box-shadow-standart;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  .about {
+    display: flex;
+    width: 100%;
+    background-color: $about-theme;
+    color: #fff;
+    .content {
+      margin: 0 auto;
+      max-width: $max-width;
+      display: flex;
+      padding: 2em 20em 2em 2em;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        max-width: 40em;
+        text-align: center;
+      }
+    }
+  }
 }

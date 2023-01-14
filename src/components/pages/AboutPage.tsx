@@ -1,4 +1,4 @@
-import my_photo from "../../assets/me.png";
+import my_photo from "../../assets/about_page/me.png";
 import ButtonDefault from "../ui/ButtonDefault";
 import PagesNav from "../ui/PagesNav";
 import translation from "../../assets/translation.json";

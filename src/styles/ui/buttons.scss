@@ -165,6 +165,9 @@
 }
 
 .button_default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.1s ease-out;
   color: #000;
   cursor: pointer;
