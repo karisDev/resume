@@ -35,9 +35,9 @@ $box-shadow-small: 0px 0px 4px rgba(0, 0, 0, 0.25);
       .button_group {
         flex: 1;
         align-items: center;
-        z-index: 2;
         display: flex;
         gap: 2em;
+        z-index: 2;
         .shadow {
           box-shadow: $box-shadow-standart;
           border-radius: 15px;

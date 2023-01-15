@@ -1,6 +1,5 @@
 import PagesNav from "../ui/PagesNav";
 import my_photo from "../../assets/about_page/me.png";
-// import "../../assets/about_page/download.svg"; as svg component
 import DownloadSvg from "../../assets/about_page/icons/download.svg";
 import GithubSvg from "../../assets/about_page/icons/github.svg";
 import EducationTitleSvg from "../../assets/about_page/icons/education_title.svg";
@@ -15,11 +14,25 @@ import LanguageJS from "../../assets/about_page/icons/js.svg";
 import LanguagePython from "../../assets/about_page/icons/python.svg";
 import LanguageTS from "../../assets/about_page/icons/ts.svg";
 import LanguageDart from "../../assets/about_page/icons/dart.svg";
+import ReactJSSvg from "../../assets/about_page/icons/reactjs.svg";
+import NextJSSvg from "../../assets/about_page/icons/nextjs.svg";
+import SolidJSSvg from "../../assets/about_page/icons/solidjs.svg";
+import FlutterSvg from "../../assets/about_page/icons/flutter.svg";
+import FirebaseSvg from "../../assets/about_page/icons/firebase.svg";
+import MaterialUISvg from "../../assets/about_page/icons/mui.svg";
+import SassSvg from "../../assets/about_page/icons/sass.svg";
+import ThreeJSSvg from "../../assets/about_page/icons/threejs.svg";
+import ThinkingEmojiSvg from "../../assets/about_page/icons/thinking_emoji.svg";
+import GitSvg from "../../assets/about_page/icons/git.svg";
+import LinuxSvg from "../../assets/about_page/icons/linux.svg";
+import SeleniumSvg from "../../assets/about_page/icons/selenium.svg";
+import DockerSvg from "../../assets/about_page/icons/docker.svg";
+import FigmaSvg from "../../assets/about_page/icons/figma.svg";
 
 const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const educationItems = [
     {
-      title: "Стажровка",
+      title: "Стажировка",
       company: "DUC Technologies",
       year: "2022\n2023",
     },
@@ -67,6 +80,72 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
     {
       title: "Dart",
       icon: LanguageDart,
+    },
+  ];
+  const frameworksItems = [
+    {
+      title: "ReactJS",
+      icon: ReactJSSvg,
+    },
+    {
+      title: "NextJS",
+      icon: NextJSSvg,
+    },
+    {
+      title: "SolidJS",
+      icon: SolidJSSvg,
+    },
+    {
+      title: "Flutter",
+      icon: FlutterSvg,
+    },
+  ];
+  const librariesItems = [
+    {
+      title: "Firebase",
+      icon: FirebaseSvg,
+    },
+    {
+      title: "Material-UI",
+      icon: MaterialUISvg,
+    },
+    {
+      title: "Sass",
+      icon: SassSvg,
+    },
+    {
+      title: "ThreeJS",
+      icon: ThreeJSSvg,
+    },
+    {
+      title: "Axios",
+      icon: ThinkingEmojiSvg,
+    },
+  ];
+  const otherItems = [
+    {
+      title: "Git",
+      icon: GitSvg,
+    },
+    {
+      title: "Linux",
+      icon: LinuxSvg,
+    },
+    {
+      title: "Selenium",
+      icon: SeleniumSvg,
+    },
+    {
+      title: "Docker",
+      icon: DockerSvg,
+    },
+    {
+      title: "WPF",
+      icon: ThinkingEmojiSvg,
+    },
+    {
+      title: "Figma",
+      icon: FigmaSvg,
     },
   ];
   return (
@@ -190,6 +269,32 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
               <div class="title">
                 <StackTitleSvg />
                 <h2>Технологии</h2>
+              </div>
+              <div class="stack__group">
+                <h3 class="stack_title">Фреймворки</h3>
+                <div class="frameworks">
+                  {frameworksItems.map((item) => {
+                    return (
+                      <div class="frameworks__item">
+                        <item.icon />
+                        <p>{item.title}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div class="stack__group">
+                <h3 class="stack_title">Библиотеки</h3>
+                <div class="libraries">
+                  {librariesItems.map((item) => {
+                    return (
+                      <div class="libraries__item">
+                        <item.icon />
+                        <p>{item.title}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
