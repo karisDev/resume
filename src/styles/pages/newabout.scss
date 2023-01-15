@@ -1,8 +1,11 @@
 $max-width: 1200px;
 $box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
+$box-shadow-small: 0px 0px 4px rgba(0, 0, 0, 0.25);
 
 .new_about_page {
+  overflow-x: hidden;
   font-size: 16px;
+  padding-bottom: 6em;
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -28,7 +31,7 @@ $box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
       height: 100%;
       display: flex;
       flex-direction: column;
-      padding-right: 18em;
+      padding-right: 19em;
       .button_group {
         flex: 1;
         align-items: center;
@@ -132,6 +135,7 @@ $box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
       box-shadow: $box-shadow-standart;
       display: grid;
       grid-template-columns: 1fr auto 1fr auto 1fr;
+      grid-template-areas: "education sep1 languages sep2 stack";
       .category {
         flex: 1;
         min-width: 100%;
@@ -144,47 +148,117 @@ $box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
           display: flex;
           flex-direction: column;
           align-items: center;
+          font-weight: 700;
           gap: 0.5em;
         }
         &.education {
+          grid-area: education;
+          .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+          }
           .card {
             display: flex;
             align-items: center;
             gap: 0.5em;
             .body {
-              h3 {
-                width: min-content;
+              width: fit-content;
+              h3,
+              p {
+                white-space: pre-line;
                 line-height: 1.1em;
-              }
-              span {
-                font-family: golos-regular;
-                color: #00000099;
+                // second h3
               }
             }
+            span {
+              white-space: pre-line;
+              font-family: golos-regular;
+              color: #00000099;
+            }
+
             .horizontal_sep {
               flex: 1;
               height: 1px;
               background-color: #000;
               opacity: 0.16;
               min-width: 0.5em;
+              width: 100%;
             }
             .year {
+              white-space: pre-line;
               text-align: center;
               color: $about-theme;
-              line-height: 90%;
+              // line-height: 90%;
             }
           }
+        }
+        &.languages {
+          grid-area: languages;
+          .languages__group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            .languages_title {
+              color: $about-theme;
+            }
+            .language {
+              display: flex;
+              align-items: center;
+              gap: 0.25em;
+              box-shadow: $box-shadow-small;
+              border-radius: 15px;
+              padding: 0.25em;
+              padding-right: 0.5em;
+              .separator {
+                flex: 1;
+                height: 1px;
+              }
+              p {
+                font-size: 1em;
+              }
+            }
+            .programming {
+              display: grid;
+              // 2 row adaptive
+              grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+              gap: 0.5em;
+              .programming__item {
+                display: flex;
+                align-items: center;
+                gap: 0.25em;
+                box-shadow: $box-shadow-small;
+                border-radius: 8px;
+                padding: 0.25em;
+                p {
+                  font-size: 1em;
+                }
+              }
+            }
+          }
+        }
+        &.stack {
+          grid-area: stack;
         }
       }
       .separator {
         width: 1px;
         background-color: #000;
         opacity: 0.16;
+        &.sep1 {
+          grid-area: "sep1";
+        }
+        &.sep2 {
+          grid-area: "sep2";
+        }
       }
-      @media screen and (max-width: 860px) {
-        grid-template-columns: 1fr;
-        .separator {
-          width: 100%;
+      @media screen and (max-width: 860px) and (min-width: 600px) {
+        grid-template-areas: "education sep1 languages" "sep2 sep2 sep2" "stack stack stack";
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 1fr 1px 1fr;
+        .sep2 {
+          width: 200%;
+          height: 1px;
         }
       }
     }
