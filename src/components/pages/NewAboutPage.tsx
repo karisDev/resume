@@ -28,6 +28,8 @@ import LinuxSvg from "../../assets/about_page/icons/linux.svg";
 import SeleniumSvg from "../../assets/about_page/icons/selenium.svg";
 import DockerSvg from "../../assets/about_page/icons/docker.svg";
 import FigmaSvg from "../../assets/about_page/icons/figma.svg";
+import { For } from "solid-js";
+import HorizontalSlider from "../ui/HorizontalSlider";
 
 const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const educationItems = [
@@ -106,7 +108,7 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
       icon: FirebaseSvg,
     },
     {
-      title: "Material-UI",
+      title: "MUI",
       icon: MaterialUISvg,
     },
     {
@@ -215,8 +217,8 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                 <h2>Образование и опыт</h2>
               </div>
               <div class="cards">
-                {educationItems.map((item) => {
-                  return (
+                <For each={educationItems} fallback={<div />}>
+                  {(item) => (
                     <div class="card">
                       <div class="body">
                         <p>{item.title}</p>
@@ -225,8 +227,8 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                       <span class="horizontal_sep"></span>
                       <div class="year">{item.year}</div>
                     </div>
-                  );
-                })}
+                  )}
+                </For>
               </div>
             </div>
             <span class="separator sep1"></span>
@@ -253,14 +255,14 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
               <div class="languages__group">
                 <h3 class="languages_title">Программирования</h3>
                 <div class="programming">
-                  {programmingItems.map((item) => {
-                    return (
+                  <For each={programmingItems} fallback={<div />}>
+                    {(item) => (
                       <div class="programming__item">
                         <item.icon />
                         <p>{item.title}</p>
                       </div>
-                    );
-                  })}
+                    )}
+                  </For>
                 </div>
               </div>
             </div>
@@ -271,30 +273,13 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                 <h2>Технологии</h2>
               </div>
               <div class="stack__group">
-                <h3 class="stack_title">Фреймворки</h3>
-                <div class="frameworks">
-                  {frameworksItems.map((item) => {
-                    return (
-                      <div class="frameworks__item">
-                        <item.icon />
-                        <p>{item.title}</p>
-                      </div>
-                    );
-                  })}
-                </div>
+                <HorizontalSlider title="Фреймворки" items={frameworksItems} />
               </div>
               <div class="stack__group">
-                <h3 class="stack_title">Библиотеки</h3>
-                <div class="libraries">
-                  {librariesItems.map((item) => {
-                    return (
-                      <div class="libraries__item">
-                        <item.icon />
-                        <p>{item.title}</p>
-                      </div>
-                    );
-                  })}
-                </div>
+                <HorizontalSlider title="Библиотеки" items={librariesItems} />
+              </div>
+              <div class="stack__group">
+                <HorizontalSlider title="Другое" items={otherItems} />
               </div>
             </div>
           </div>
