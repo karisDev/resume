@@ -93,6 +93,7 @@
 // navbar small screen
 @media screen and (max-width: $layout-breakpoint-small) {
   .navigation {
+    z-index: 100;
     position: fixed;
     display: grid;
     grid-auto-flow: column;
