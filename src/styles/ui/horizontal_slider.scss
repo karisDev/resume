@@ -3,17 +3,20 @@
   flex-direction: column;
   width: 100%;
   .slider_title {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
     justify-content: space-between;
     h3 {
       color: $about-theme;
     }
     .slider_controls {
       display: flex;
+      justify-content: flex-end;
       .slider_control {
-        width: 30px;
-        height: 30px;
+        height: 100%;
+        // make squared
+        width: auto;
+        aspect-ratio: 1/1;
         border-radius: 8px;
         padding: 0;
         display: flex;
@@ -24,19 +27,22 @@
         outline: none;
         cursor: pointer;
         &:hover {
-          background-color: #f3f4f6;
+          background-color: #eaeaea;
         }
       }
     }
   }
   .slider_container {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     display: flex;
     align-items: center;
-    margin-top: 0.5em;
-    width: 100%;
-    overflow: hidden;
     margin: -0.25em;
-    margin-top: 0.5em;
+    margin-top: 0.25em;
     .slider_item {
       height: 100%;
       width: 100%;
