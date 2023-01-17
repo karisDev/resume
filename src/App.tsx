@@ -23,7 +23,7 @@ const App: Component = () => {
             path="/resume/ru/contacts"
             element={<ContactsPage russian />}
           />
-          <Route path="/resume/en/about" element={<AboutPage />} />
+          <Route path="/resume/en/about" element={<NewAboutPage />} />
           <Route path="/resume/en/projects" element={<ProjectsPage />} />
           <Route path="/resume/en/contacts" element={<ContactsPage />} />
           <Route path="/*" element={<Navigate href="/resume/cube" />} />

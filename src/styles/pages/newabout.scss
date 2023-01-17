@@ -14,6 +14,7 @@ $tablet: 900px;
     -webkit-font-smoothing: antialiased;
     font-smooth: always;
     text-rendering: optimizeLegibility;
+    white-space: pre-wrap;
   }
   p {
     font-family: golos-regular;
@@ -67,6 +68,9 @@ $tablet: 900px;
           overflow: visible;
           text-transform: uppercase;
           text-decoration: none;
+          p {
+            width: min-content;
+          }
           &:hover {
             color: #fff;
             border: solid 1px #000;
@@ -80,7 +84,7 @@ $tablet: 900px;
             background-color: #000;
             color: #fff;
             flex-direction: row-reverse;
-            &:hover:not(:active) {
+            &:hover {
               background-color: #fff;
               color: #000;
             }
@@ -163,9 +167,9 @@ $tablet: 900px;
       display: flex;
       padding: 1em 20em 8.5em 2em;
       .body {
+        z-index: 2;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         gap: 1em;
         max-width: 44em;
         p {

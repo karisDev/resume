@@ -14,6 +14,47 @@
     "about_colledge": "Moscow College of Business Technologies",
     "about_fav_pl": "Favorite programming languages",
     "about_full_resume": "Full resume",
+
+    "about_greetings": "Hello, my name is Kirill.\nNice to meet you!",
+    "about_resume": "Complete Resume",
+    "about_github": "Visit GitHub",
+    "about_header": "Frontend Developer, 20 years",
+    "about_body": "Born and raised in Moscow. Started programming in 5th grade on Quick Basic. Passion for automation and creating beautiful, intuitive interfaces. Also a big lover of the English language.",
+    "about_skills_header": "Education and Experience",
+    "about_languages_header": "Languages",
+    "about_languages_group1": "Natural",
+    "about_languages_group2": "Programming",
+    "about_education_items": [
+      {
+        "title": "Internship",
+        "company": "DUC Technologies",
+        "year": "2022\n2023"
+      },
+      {
+        "title": "Software\ninfrastructure",
+        "company": "CROC",
+        "year": "2022"
+      },
+      {
+        "title": "Information Systems\nand Technologies",
+        "company": "NUST MISiS",
+        "year": "2020\n2024"
+      },
+      {
+        "title": "3rd category bank agent",
+        "company": "Moscow College\nof Business Technologies",
+        "year": "2019"
+      }
+    ],
+    "about_russian": "Russian",
+    "about_russian_level": "Native",
+    "about_english": "English",
+    "about_english_level": "C1",
+    "about_technologies_header": "Technologies",
+    "about_technologies_group1": "Frameworks",
+    "about_technologies_group2": "Libraries",
+    "about_technologies_group3": "Tools",
+
     "projects_title": "My best projects",
     "projects_cos_description": "Client-server desktop app, which is based on the automation of the browser with a goal of filling in the correct answers on",
     "projects_cos_front": "Frontend",
@@ -56,6 +97,47 @@
     "about_colledge": "Московский колледж бизнес-технологий",
     "about_fav_pl": "Любимые ЯП",
     "about_full_resume": "Полное резюме",
+
+    "about_greetings": "Привет, я Кирилл\nПриятно познакомиться!",
+    "about_resume": "Полное Резюме",
+    "about_github": "Посетить GitHub",
+    "about_header": "Фронтенд разработчик, 20 лет",
+    "about_body": "Родился и живу в Москве. Начал заниматься программированием c 5 класса на Quick Basic. Любовь к автоматизации и созданию красивых, интуитивных интерфейсов. Еще очень люблю английский язык.",
+    "about_skills_header": "Образование и опыт",
+    "about_languages_header": "Языки",
+    "about_languages_group1": "Естественные",
+    "about_languages_group2": "Программирования",
+    "about_education_items": [
+      {
+        "title": "Стажировка",
+        "company": "DUC Technologies",
+        "year": "2022\n2023"
+      },
+      {
+        "title": "Программная\nинфраструктура",
+        "company": "КРОК",
+        "year": "2022"
+      },
+      {
+        "title": "Информационные\nСистемы и Технологии",
+        "company": "НИТУ МИСиС",
+        "year": "2020\n2024"
+      },
+      {
+        "title": "Агент банка 3 разряда",
+        "company": "Московский колледж\nбизнес технологий",
+        "year": "2019"
+      }
+    ],
+    "about_russian": "Русский",
+    "about_russian_level": "Родной",
+    "about_english": "Английский",
+    "about_english_level": "C1",
+    "about_technologies_header": "Технологии",
+    "about_technologies_group1": "Фреймворки",
+    "about_technologies_group2": "Библиотеки",
+    "about_technologies_group3": "Инструменты",
+
     "projects_title": "Мои лучшие проекты",
     "projects_cos_description": "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте",
     "projects_cos_front": "Фронт",

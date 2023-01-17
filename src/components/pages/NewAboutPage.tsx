@@ -35,28 +35,7 @@ import Mask from "../ui/Mask";
 
 const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const t = russian ? translation.ru : translation.en;
-  const educationItems = [
-    {
-      title: "Стажировка",
-      company: "DUC Technologies",
-      year: "2022\n2023",
-    },
-    {
-      title: "Программная\nинфраструктура",
-      company: "КРОК",
-      year: "2022",
-    },
-    {
-      title: "Информационные\nСистемы и Технологии",
-      company: "НИТУ МИСиС",
-      year: "2020\n2024",
-    },
-    {
-      title: "Агент банка 3 разряда",
-      company: "Московский колледж\nбизнес технологий",
-      year: "2019",
-    },
-  ];
+  const educationItems = t.about_education_items;
   const programmingItems = [
     {
       title: "TypeScript",
@@ -123,6 +102,10 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
       icon: ThreeJSSvg,
     },
     {
+      title: "i18next",
+      icon: LanguagesTitleSvg,
+    },
+    {
       title: "Axios",
       icon: ThinkingEmojiSvg,
     },
@@ -160,11 +143,7 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
       <main class="new_about_page">
         <section class="greetings">
           <div class="body">
-            <h1>
-              Привет, я Кирилл
-              <br />
-              Приятно познакомиться!
-            </h1>
+            <h1>{t.about_greetings}</h1>
             <div class="button_group">
               <div class="shadow">
                 <a
@@ -173,11 +152,7 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                   target="_blank"
                 >
                   <DownloadSvg />
-                  <p>
-                    Полное
-                    <br />
-                    Резюме
-                  </p>
+                  <p>{t.about_resume}</p>
                 </a>
               </div>
               <div class="shadow">
@@ -187,11 +162,7 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                   target="_blank"
                 >
                   <GithubSvg />
-                  <p>
-                    Посетить
-                    <br />
-                    GitHub
-                  </p>
+                  <p>{t.about_github}</p>
                 </a>
               </div>
             </div>
@@ -203,13 +174,8 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
         <section class="about">
           <div class="content">
             <div class="body">
-              <h1>Фронтенд разработчик, 20 лет</h1>
-              <p>
-                Родился и живу в Москве. Начал заниматься программированием c 5
-                класса на Quick Basic. Любовь к автоматизации и созданию
-                красивых, интуитивных интерфейсов. Еще очень люблю английский
-                язык.
-              </p>
+              <h1>{t.about_header}</h1>
+              <p>{t.about_body}</p>
             </div>
           </div>
         </section>
@@ -218,7 +184,7 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
             <div class="category education">
               <div class="title">
                 <EducationTitleSvg />
-                <h2>Образование и опыт</h2>
+                <h2>{t.about_skills_header}</h2>
               </div>
               <div class="cards">
                 <For each={educationItems} fallback={<div />}>
@@ -239,25 +205,25 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
             <div class="category languages">
               <div class="title">
                 <LanguagesTitleSvg />
-                <h2>Языки</h2>
+                <h2>{t.about_languages_header}</h2>
               </div>
               <div class="languages__group">
-                <h3 class="languages_title">Естественные</h3>
+                <h3 class="languages_title">{t.about_languages_group1}</h3>
                 <div class="language">
                   <RussiaSvg />
-                  <p>Русский</p>
+                  <p>{t.about_russian}</p>
                   <span class="separator"></span>
-                  <p>Родной</p>
+                  <p>{t.about_russian_level}</p>
                 </div>
                 <div class="language">
                   <UsSvg />
-                  <p>Английский</p>
+                  <p>{t.about_english}</p>
                   <span class="separator"></span>
-                  <p>C1</p>
+                  <p>{t.about_english_level}</p>
                 </div>
               </div>
               <div class="languages__group">
-                <h3 class="languages_title">Программирования</h3>
+                <h3 class="languages_title">{t.about_languages_group2}</h3>
                 <div class="programming">
                   <For each={programmingItems} fallback={<div />}>
                     {(item) => (
@@ -274,16 +240,25 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
             <div class="category stack">
               <div class="title">
                 <StackTitleSvg />
-                <h2>Технологии</h2>
+                <h2>{t.about_technologies_header}</h2>
               </div>
               <div class="stack__group">
-                <HorizontalSlider title="Фреймворки" items={frameworksItems} />
+                <HorizontalSlider
+                  title={t.about_technologies_group1}
+                  items={frameworksItems}
+                />
               </div>
               <div class="stack__group">
-                <HorizontalSlider title="Библиотеки" items={librariesItems} />
+                <HorizontalSlider
+                  title={t.about_technologies_group2}
+                  items={librariesItems}
+                />
               </div>
               <div class="stack__group">
-                <HorizontalSlider title="Другое" items={otherItems} />
+                <HorizontalSlider
+                  title={t.about_technologies_group3}
+                  items={otherItems}
+                />
               </div>
             </div>
           </div>
