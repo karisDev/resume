@@ -30,8 +30,11 @@ import DockerSvg from "../../assets/about_page/icons/docker.svg";
 import FigmaSvg from "../../assets/about_page/icons/figma.svg";
 import { For } from "solid-js";
 import HorizontalSlider from "../ui/HorizontalSlider";
+import translation from "../../assets/translation.json";
+import Mask from "../ui/Mask";
 
 const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
+  const t = russian ? translation.ru : translation.en;
   const educationItems = [
     {
       title: "Стажировка",
@@ -142,17 +145,18 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
       icon: DockerSvg,
     },
     {
-      title: "WPF",
-      icon: ThinkingEmojiSvg,
-    },
-    {
       title: "Figma",
       icon: FigmaSvg,
+    },
+    {
+      title: "WPF",
+      icon: ThinkingEmojiSvg,
     },
   ];
   return (
     <>
       <PagesNav russian={russian} />
+      <Mask colorClass="about_color" />
       <main class="new_about_page">
         <section class="greetings">
           <div class="body">

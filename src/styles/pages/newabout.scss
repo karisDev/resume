@@ -2,7 +2,7 @@ $max-width: 1200px;
 $box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
 $box-shadow-small: 0px 0px 4px rgba(0, 0, 0, 0.25);
 $mobile: 600px;
-$tablet: 860px;
+$tablet: 900px;
 
 .new_about_page {
   overflow-x: hidden;
@@ -155,29 +155,34 @@ $tablet: 860px;
     width: 100%;
     background-color: $about-theme;
     color: #fff;
-    min-height: 21.5em;
+    min-height: 22em;
     .content {
       width: 100%;
       margin: 0 auto;
       max-width: $max-width;
       display: flex;
-      padding: 1em 20em 10em 2em;
+      padding: 1em 20em 8.5em 2em;
       .body {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 1em;
-        max-width: 45em;
+        max-width: 44em;
         p {
-          font-size: 1.2em;
+          font-size: 1.4em;
         }
       }
     }
-    @media screen and (max-width: $tablet) and (max-width: $mobile) {
+    @media screen and (max-width: $mobile) {
+      min-height: 18em;
       .content {
         min-height: none;
         padding: 1em 1em 8em 1em;
-        p {
-          font-size: 1.4em;
+        h1 {
+          font-size: 1.6em;
+        }
+        .body p {
+          font-size: 1.2em;
         }
       }
     }
@@ -218,7 +223,7 @@ $tablet: 860px;
           .cards {
             display: flex;
             flex-direction: column;
-            gap: 0.5em;
+            gap: 1em;
           }
           .card {
             display: flex;
