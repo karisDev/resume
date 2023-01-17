@@ -1,7 +1,6 @@
 import "./styles/index.scss";
 import { Component } from "solid-js";
 import { Navigate, Route, Router, Routes } from "solid-app-router";
-import AboutPage from "./components/pages/AboutPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
 import ContactsPage from "./components/pages/ContactsPage";
 import ResumeBox from "./components/pages/ResumeBox";
