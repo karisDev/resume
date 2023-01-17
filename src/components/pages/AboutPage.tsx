@@ -33,7 +33,7 @@ import HorizontalSlider from "../ui/HorizontalSlider";
 import translation from "../../assets/translation.json";
 import Mask from "../ui/Mask";
 
-const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
+const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   const t = russian ? translation.ru : translation.en;
   const educationItems = t.about_education_items;
   const programmingItems = [
@@ -268,4 +268,4 @@ const NewAboutPage = ({ russian }: { russian?: boolean | undefined }) => {
   );
 };
 
-export default NewAboutPage;
+export default AboutPage;
