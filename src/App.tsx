@@ -5,6 +5,7 @@ import ProjectsPage from "./components/pages/ProjectsPage";
 import ContactsPage from "./components/pages/ContactsPage";
 import ResumeBox from "./components/pages/ResumeBox";
 import AboutPage from "./components/pages/AboutPage";
+import NewProjectsPage from "./components/pages/NewProjectsPage";
 
 const App: Component = () => {
   return (
@@ -12,11 +13,10 @@ const App: Component = () => {
       <Router>
         <Routes>
           <Route path="/resume/cube" element={<ResumeBox />} />
-          {/* <Route path="/resume/ru/about" element={<AboutPage russian />} /> */}
           <Route path="/resume/ru/about" element={<AboutPage russian />} />
           <Route
             path="/resume/ru/projects"
-            element={<ProjectsPage russian />}
+            element={<NewProjectsPage russian />}
           />
           <Route
             path="/resume/ru/contacts"
