@@ -1,10 +1,10 @@
-$max-width: 1200px;
+$max-width: 1300px;
 $box-shadow-standart: 0px 0px 12px rgba(0, 0, 0, 0.25);
 $box-shadow-small: 0px 0px 4px rgba(0, 0, 0, 0.25);
-$mobile: 600px;
+$mobile: 630px;
 $tablet: 900px;
 
-.new_about_page {
+.about_page {
   overflow-x: hidden;
 
   font-size: 16px;
@@ -290,7 +290,6 @@ $tablet: 900px;
             }
             .programming {
               display: grid;
-              // 2 row adaptive
               grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
               gap: 0.5em;
               .programming__item {
@@ -325,7 +324,7 @@ $tablet: 900px;
       @media screen and (max-width: $tablet) and (min-width: $mobile) {
         grid-template-areas: "education sep1 languages" "sep2 sep2 sep2" "stack stack stack";
         grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 1fr 1px 1fr;
+        grid-template-rows: 1fr 1px auto;
         .sep2 {
           width: 200%;
           height: 1px;

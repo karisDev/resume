@@ -140,7 +140,7 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
     <>
       <PagesNav russian={russian} />
       <Mask colorClass="about_color" />
-      <main class="new_about_page">
+      <main class="about_page">
         <section class="greetings">
           <div class="body">
             <h1>{t.about_greetings}</h1>
