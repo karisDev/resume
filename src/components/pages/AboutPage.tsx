@@ -29,7 +29,7 @@ import SeleniumSvg from "../../assets/icons/selenium.svg";
 import DockerSvg from "../../assets/icons/docker.svg";
 import FigmaSvg from "../../assets/icons/figma.svg";
 import { For } from "solid-js";
-import HorizontalSlider from "../ui/HorizontalSlider";
+import StackHorizontalSlider from "../ui/StackHorizontalSlider";
 import translation from "../../assets/translation.json";
 import Mask from "../ui/Mask";
 
@@ -243,19 +243,19 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                 <h2>{t.about_technologies_header}</h2>
               </div>
               <div class="stack__group">
-                <HorizontalSlider
+                <StackHorizontalSlider
                   title={t.about_technologies_group1}
                   items={frameworksItems}
                 />
               </div>
               <div class="stack__group">
-                <HorizontalSlider
+                <StackHorizontalSlider
                   title={t.about_technologies_group2}
                   items={librariesItems}
                 />
               </div>
               <div class="stack__group">
-                <HorizontalSlider
+                <StackHorizontalSlider
                   title={t.about_technologies_group3}
                   items={otherItems}
                 />

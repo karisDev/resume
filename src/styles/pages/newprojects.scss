@@ -17,7 +17,8 @@
   .projects_nav {
     padding-top: 10px;
     display: flex;
-    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
   }
   .active_project {
     display: flex;
@@ -68,7 +69,7 @@
 @media screen and (min-width: $layout-breakpoint-small) {
   .new_projects_page {
     .projects_nav {
-      margin-left: calc($navbar-height + 1em);
+      padding-left: calc($navbar-height + 1em);
     }
   }
 }

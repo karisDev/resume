@@ -4,17 +4,19 @@ import { Component, createSignal, For, createEffect } from "solid-js";
 import ChevronLeftSvg from "../../assets/icons/chevron_left.svg";
 import ChevronRightSvg from "../../assets/icons/chevron_right.svg";
 
-interface HorizontalSliderProps {
+interface StackHorizontalSliderProps {
   title: string;
-  items: SliderItem[];
+  items: StackSliderItem[];
 }
 
-interface SliderItem {
+interface StackSliderItem {
   title: string;
   icon: any;
 }
 
-const HorizontalSlider: Component<HorizontalSliderProps> = (props) => {
+const StackHorizontalSlider: Component<StackHorizontalSliderProps> = (
+  props
+) => {
   const incrementValue = 150;
   const speed = 10;
   const step = 10;
@@ -73,7 +75,7 @@ const HorizontalSlider: Component<HorizontalSliderProps> = (props) => {
   });
 
   return (
-    <div class="horizontal_slider">
+    <div class="stack_horizontal_slider">
       <div class="slider_title">
         <h3>{props.title}</h3>
         <div
@@ -115,4 +117,4 @@ const HorizontalSlider: Component<HorizontalSliderProps> = (props) => {
     </div>
   );
 };
-export default HorizontalSlider;
+export default StackHorizontalSlider;
