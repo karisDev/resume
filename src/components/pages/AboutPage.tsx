@@ -151,8 +151,8 @@ const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {
                   href="https://docs.google.com/document/d/1pKpImdxYfvlC2JvJl45pVnfhGKpyAvgh1SZSEQ52Paw/edit?usp=sharing"
                   target="_blank"
                 >
-                  <DownloadSvg />
                   <p>{t.about_resume}</p>
+                  <DownloadSvg />
                 </a>
               </div>
               <div class="shadow">

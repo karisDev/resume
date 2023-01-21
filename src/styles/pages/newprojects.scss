@@ -1,10 +1,12 @@
+$animation-duration: 0.5s;
+
 .new_projects_page {
   font-size: 16px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: $projects-theme;
-  transition: background 0.5s ease-in-out;
+  transition: background $animation-duration ease-in-out;
   .navigation {
     width: calc($navbar-height + 10px);
     &:hover {
@@ -15,10 +17,65 @@
     }
   }
   .projects_nav {
-    padding-top: 10px;
-    display: flex;
     width: 100%;
+    height: 120px;
+    display: flex;
+    gap: 1em;
     box-sizing: border-box;
+    background-color: #ffffff80;
+    border-bottom: 2px solid #ffffff60;
+    transition: background $animation-duration ease-in-out,
+      border $animation-duration ease-in-out,
+      color $animation-duration ease-in-out;
+    overflow: hidden;
+    .project {
+      margin: 4px 0;
+      display: flex;
+      cursor: pointer;
+      max-width: 366px;
+      min-width: 366px;
+      gap: 0.5em;
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.25em;
+        .heading {
+          h2 {
+            font-size: 1em;
+            line-height: 1em;
+          }
+        }
+        p {
+          font-size: 0.875em;
+          font-family: Golos;
+          line-height: 1.1em;
+        }
+      }
+      .bottom {
+        display: flex;
+        svg {
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.25em;
+          &:last-child {
+            margin-right: 0;
+            margin-left: auto;
+          }
+        }
+      }
+      .image {
+        width: 150px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &.dark {
+    .projects_nav {
+      background-color: #00000050;
+      border-bottom: 2px solid #ffffff20;
+    }
   }
   .active_project {
     display: flex;
@@ -35,6 +92,7 @@
         "header header"
         "image body"
         "info info";
+      transform-style: preserve-3d;
       .header {
         grid-area: header;
       }
@@ -64,6 +122,9 @@
       }
     }
   }
+  &.dark {
+    color: #fff;
+  }
 }
 
 @media screen and (min-width: $layout-breakpoint-small) {
@@ -72,4 +133,13 @@
       padding-left: calc($navbar-height + 1em);
     }
   }
+}
+
+.rotate-up-3d-enter-active,
+.rotate-up-3d-exit-active {
+  transition: transform 0.5s ease-in-out;
+}
+.rotate-up-3d-enter,
+.rotate-up-3d-exit-to {
+  transform: rotateX(90deg);
 }

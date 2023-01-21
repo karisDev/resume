@@ -245,21 +245,21 @@ $cube-sides: (".left", ".right", ".top", ".back", ".front", ".bottom");
   right: 0;
   color: #fff;
 }
-
-@each $side in $cube-sides {
-  #{$side}::after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid black;
+.box {
+  @each $side in $cube-sides {
+    #{$side}::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid black;
+    }
   }
 }
-
 @mixin fill-box($theme, $section) {
   @each $side in $cube-sides {
     #{$side}::after {

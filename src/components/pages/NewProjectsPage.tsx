@@ -15,12 +15,13 @@ import CsharpSvg from "../../assets/icons/csharp.svg";
 import PythonSvg from "../../assets/icons/python.svg";
 
 import { createSignal, For } from "solid-js";
+import { Transition } from "solid-transition-group";
 
 interface Project {
   name: string;
   shortDescription: string;
   fullDescription?: string;
-  backgroundColor?: string;
+  backgroundColor: string;
   textColor?: string;
   images: string[];
   info: {
@@ -32,9 +33,11 @@ interface Project {
     title: string;
     link: string;
   }[];
+  isDarkTheme?: boolean;
 }
 
 const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
+  const animationDuration = 500;
   const projects: Project[] = [
     {
       name: "Task board",
@@ -67,7 +70,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
       fullDescription:
         "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте",
       backgroundColor: "#303030",
-      images: [project_cs3, project_cs1, project_cs2],
+      images: [project_cs1, project_cs2, project_cs3],
       info: [
         {
           title: "Клиент",
@@ -84,44 +87,74 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
         },
       ],
       stackIcons: [CsharpSvg, PythonSvg, SeleniumSvg],
+      isDarkTheme: true,
     },
   ];
-  const [pageBackgroundColor, setPageBackgroundColor] = createSignal(
-    projects[0].backgroundColor ?? ""
+  const [activeProject, setActiveProject] = createSignal(projects[0]);
+  const [backgroundColor, setBackgroundColor] = createSignal(
+    projects[0].backgroundColor
   );
-  const [textColor, setTextColor] = createSignal(projects[0].textColor ?? "");
-  const [newActiveProject, setNewActiveProject] = createSignal(0);
-  const [activeProject, setActiveProject] = createSignal(0);
+  const [isDarkTheme, setIsDarkTheme] = createSignal(projects[0].isDarkTheme);
+  const [show, setShow] = createSignal(true);
 
-  const changeActiveProject = (index: number) => {
-    setNewActiveProject(index);
-    setPageBackgroundColor(projects[index].backgroundColor);
+  const handleProjectClick = (project: Project) => {
+    if (project === activeProject()) return;
+
+    setBackgroundColor(project.backgroundColor);
+    setIsDarkTheme(project.isDarkTheme);
+    setShow(false);
+    setTimeout(() => {
+      setActiveProject(project);
+      setShow(true);
+    }, animationDuration);
   };
 
   return (
     <div
       style={{
-        "background-color": pageBackgroundColor() ?? "",
-        "text-color": textColor() ?? "",
+        "background-color": backgroundColor() ?? "",
+        "text-color": activeProject().textColor ?? "",
       }}
-      class="new_projects_page"
+      class={`new_projects_page ${isDarkTheme() ? "dark" : ""}`}
     >
       <PagesNav russian={russian} />
-      <div class="projects_nav"></div>
+      <div class="projects_nav">
+        <For each={projects}>
+          {(project) => (
+            <div class="project" onClick={() => handleProjectClick(project)}>
+              <img class="image" src={project.images[0]} alt="" />
+              <div class="info">
+                <div class="heading">
+                  <h2>{project.name}</h2>
+                </div>
+                <p>{project.shortDescription}</p>
+                <div class="bottom">
+                  <div class="stack">
+                    <For each={project.stackIcons}>{(icon) => icon}</For>
+                  </div>
+                  <ChevronRightSvg />
+                </div>
+              </div>
+            </div>
+          )}
+        </For>
+      </div>
       <div class="active_project">
         <div class="active_container">
           <div class="header">
-            <h2>{projects[activeProject()].name}</h2>
+            <Transition name="rotate-up-3d">
+              {show() ? <h2>{activeProject().name}</h2> : <h2></h2>}
+            </Transition>
           </div>
           <div class="image">
-            <img src={projects[activeProject()].images[0]} alt="" />
+            <img src={activeProject().images[0]} alt="" />
           </div>
           <div class="body">
             <h3>Shots</h3>
             <div class="shots"></div>
             <div class="description">
               <h3>Description</h3>
-              {projects[activeProject()].fullDescription}
+              {activeProject().fullDescription}
             </div>
           </div>
         </div>
