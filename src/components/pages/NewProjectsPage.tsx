@@ -16,6 +16,8 @@ import PythonSvg from "../../assets/icons/python.svg";
 
 import { createSignal, For } from "solid-js";
 import { Transition } from "solid-transition-group";
+import { Swiper, SwiperSlide } from "swiper/solid";
+import "swiper/css";
 
 interface Project {
   name: string;
@@ -37,7 +39,7 @@ interface Project {
 }
 
 const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
-  const animationDuration = 500;
+  const animationDuration = 300;
   const projects: Project[] = [
     {
       name: "Task board",
@@ -97,7 +99,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
   const [isDarkTheme, setIsDarkTheme] = createSignal(projects[0].isDarkTheme);
   const [show, setShow] = createSignal(true);
 
-  const handleProjectClick = (project: Project) => {
+  const handleProjectChange = (project: Project) => {
     if (project === activeProject()) return;
 
     setBackgroundColor(project.backgroundColor);
@@ -119,30 +121,37 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
     >
       <PagesNav russian={russian} />
       <div class="projects_nav">
-        <For each={projects}>
-          {(project) => (
-            <div class="project" onClick={() => handleProjectClick(project)}>
-              <img class="image" src={project.images[0]} alt="" />
-              <div class="info">
-                <div class="heading">
-                  <h2>{project.name}</h2>
+        <Swiper slidesPerView={"auto"} spaceBetween={8}>
+          <For each={projects}>
+            {(project) => (
+              <SwiperSlide
+                class="project"
+                onClick={() => handleProjectChange(project)}
+              >
+                <div class="image">
+                  <img class="image" src={project.images[0]} alt="" />
                 </div>
-                <p>{project.shortDescription}</p>
-                <div class="bottom">
-                  <div class="stack">
-                    <For each={project.stackIcons}>{(icon) => icon}</For>
+                <div class="info">
+                  <div class="heading">
+                    <h2>{project.name}</h2>
+                    <ChevronRightSvg />
                   </div>
-                  <ChevronRightSvg />
+                  <p>{project.shortDescription}</p>
+                  <div class="bottom">
+                    <div class="stack">
+                      <For each={project.stackIcons}>{(icon) => icon}</For>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          )}
-        </For>
+              </SwiperSlide>
+            )}
+          </For>
+        </Swiper>
       </div>
       <div class="active_project">
         <div class="active_container">
           <div class="header">
-            <Transition name="rotate-up-3d">
+            <Transition name="slide-bottom">
               {show() ? <h2>{activeProject().name}</h2> : <h2></h2>}
             </Transition>
           </div>

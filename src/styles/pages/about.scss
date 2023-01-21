@@ -51,6 +51,7 @@ $tablet: 900px;
           }
         }
         .link {
+          height: 52px;
           width: 160px;
           display: flex;
           justify-content: center;
@@ -135,6 +136,7 @@ $tablet: 900px;
           font-size: 1.7em;
         }
         .button_group {
+          margin-top: 0.5em;
           width: 100%;
           .shadow {
             width: 100%;
