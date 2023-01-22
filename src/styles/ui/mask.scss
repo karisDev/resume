@@ -1,4 +1,4 @@
-.mask {
+.page-mask {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -7,11 +7,11 @@
   height: 100%;
   width: 100%;
   z-index: 100;
-  animation: appear 1s;
+  animation: mask-appear 1s;
   opacity: 0;
 }
 
-@keyframes appear {
+@keyframes mask-appear {
   0% {
     display: block;
     opacity: 1;

@@ -7,7 +7,7 @@ const Mask = ({ colorClass }: { colorClass: string }) => {
     setMaskHide(true);
   }, 1000);
 
-  return <>{!maskHide() && <div class={"mask " + colorClass}></div>}</>;
+  return <>{!maskHide() && <div class={"page-mask " + colorClass}></div>}</>;
 };
 
 export default Mask;

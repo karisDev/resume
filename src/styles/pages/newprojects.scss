@@ -110,6 +110,11 @@ $animation-duration: 0.3s;
     margin-bottom: $navbar-height;
     flex: 1;
     align-items: center;
+    p {
+      font-weight: 500;
+      font-family: Golos;
+      font-size: 1.2em;
+    }
     .active_container {
       margin: 0 auto;
       flex: 1;
@@ -176,9 +181,11 @@ $animation-duration: 0.3s;
             @keyframes appear {
               from {
                 opacity: 0;
+                translate: 0.5em;
               }
               to {
                 opacity: 1;
+                translate: 0;
               }
             }
             img {
@@ -212,11 +219,6 @@ $animation-duration: 0.3s;
           .description-body {
             overflow: hidden;
             margin-top: 0.5em;
-            p {
-              font-weight: 500;
-              font-family: Golos;
-              line-height: 1.1em;
-            }
           }
         }
         h3 {
@@ -224,15 +226,40 @@ $animation-duration: 0.3s;
           line-height: 1em;
         }
       }
+      .info {
+        height: 10em;
+        margin-top: 2em;
+        grid-area: info;
+        .info-container {
+          display: flex;
+          justify-content: space-between;
+          height: 100%;
+        }
+        h3 {
+          color: #00000099;
+          margin-bottom: 0.5em;
+        }
+        p {
+          white-space: pre-wrap;
+        }
+        .separator {
+          margin: 0 0.5em;
+          height: 100%;
+          width: 1px;
+          background-color: #00000020;
+        }
+      }
     }
   }
   &.dark {
     .active_project {
-      .body {
-        .shots .shot {
-        }
+      .body,
+      .info {
         h3 {
           color: #ffffff99;
+        }
+        .separator {
+          background-color: #ffffff60;
         }
       }
     }
@@ -282,12 +309,28 @@ $animation-duration: 0.3s;
 }
 
 .description-slide-enter-active {
-  transition: transform $animation-duration 0.25s ease-in-out,
-    opacity $animation-duration 0.25s ease-in-out;
+  transition: transform $animation-duration 0.25s ease-out,
+    opacity $animation-duration 0.25s ease-out;
 }
 
 .description-slide-enter,
 .description-slide-exit-to {
   transform: translateY(-120%);
   opacity: 0;
+}
+
+.info-slide-enter-active {
+  transition: transform calc($animation-duration / 2) ease-out,
+    opacity calc($animation-duration / 2) ease-out;
+}
+
+.info-slide-enter,
+.info-slide-exit-to {
+  opacity: 0;
+  transform: translateY(10%);
+}
+
+.info-slide-exit-active {
+  transition: transform $animation-duration ease-in-out,
+    opacity $animation-duration ease-in-out;
 }

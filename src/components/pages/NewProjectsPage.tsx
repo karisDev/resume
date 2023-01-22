@@ -51,11 +51,11 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
       info: [
         {
           title: "Фронт",
-          description: "React, TypeScript",
+          description: "React\nTypeScript",
         },
         {
           title: "Библиотеки",
-          description: "Firebase, Material UI, React Router, i18next",
+          description: "Firebase\nMaterial UI\nReact Router\ni18next",
         },
         {
           title: "Особенности",
@@ -223,6 +223,40 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                 </Transition>
               </div>
             </div>
+          </div>
+          <div class="info">
+            <Transition name="img-opacity">
+              {show() && (
+                <div class="info-container">
+                  <For each={activeProject().info}>
+                    {(info, index) => (
+                      <>
+                        <div style={`--index: ${index()}`} class="info-item">
+                          <h3>{info.title}</h3>
+                          <p>{info.description}</p>
+                        </div>
+                        <div class="separator"></div>
+                      </>
+                    )}
+                  </For>
+                  <div
+                    style={`--index: ${activeProject().info.length}`}
+                    class="info-item links"
+                  >
+                    <h3>Links</h3>
+                    <For each={activeProject().links}>
+                      {(link) => (
+                        <>
+                          <a href={link.url} target="_blank">
+                            {link.title}
+                          </a>
+                        </>
+                      )}
+                    </For>
+                  </div>
+                </div>
+              )}
+            </Transition>
           </div>
         </div>
       </div>
