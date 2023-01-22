@@ -24,7 +24,7 @@ interface Project {
   shortDescription: string;
   fullDescription?: string;
   backgroundColor: string;
-  textColor?: string;
+  themeColor?: string;
   images: string[];
   info: {
     title: string;
@@ -33,7 +33,7 @@ interface Project {
   stackIcons?: string[];
   links?: {
     title: string;
-    link: string;
+    url: string;
   }[];
   isDarkTheme?: boolean;
 }
@@ -64,6 +64,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
         },
       ],
       stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
+      isDarkTheme: false,
     },
     {
       name: "Cambridge Solver",
@@ -88,6 +89,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
             "120 000 решенных тестов\n900+ пользователей\n200+ человек в группе",
         },
       ],
+      themeColor: "#FFC107",
       stackIcons: [CsharpSvg, PythonSvg, SeleniumSvg],
       isDarkTheme: true,
     },
@@ -97,7 +99,9 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
     projects[0].backgroundColor
   );
   const [isDarkTheme, setIsDarkTheme] = createSignal(projects[0].isDarkTheme);
-  const [show, setShow] = createSignal(true);
+  const [selectedImage, setSelectedImage] = createSignal(0);
+  const [show, setShow] = createSignal(true); // required for transition effect
+  const [showImage, setShowImage] = createSignal(true);
 
   const handleProjectChange = (project: Project) => {
     if (project === activeProject()) return;
@@ -105,23 +109,43 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
     setBackgroundColor(project.backgroundColor);
     setIsDarkTheme(project.isDarkTheme);
     setShow(false);
+    setShowImage(false);
     setTimeout(() => {
       setActiveProject(project);
+      setSelectedImage(0);
       setShow(true);
+      setShowImage(true);
     }, animationDuration);
+  };
+
+  const handleImageChange = (index: number) => {
+    if (index === selectedImage()) return;
+
+    setShowImage(false);
+    setSelectedImage(index);
+    setTimeout(() => {
+      setShowImage(true);
+    }, animationDuration / 2);
   };
 
   return (
     <div
       style={{
         "background-color": backgroundColor() ?? "",
-        "text-color": activeProject().textColor ?? "",
+        "text-color": activeProject().themeColor ?? "",
       }}
       class={`new_projects_page ${isDarkTheme() ? "dark" : ""}`}
     >
       <PagesNav russian={russian} />
       <div class="projects_nav">
-        <Swiper slidesPerView={"auto"} spaceBetween={8}>
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={8}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+        >
           <For each={projects}>
             {(project) => (
               <SwiperSlide
@@ -152,18 +176,48 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
         <div class="active_container">
           <div class="header">
             <Transition name="slide-bottom">
-              {show() ? <h2>{activeProject().name}</h2> : <h2></h2>}
+              {show() ? (
+                <h2 style={{ color: activeProject().themeColor }}>
+                  {activeProject().name}
+                </h2>
+              ) : (
+                <h2></h2>
+              )}
             </Transition>
           </div>
           <div class="image">
-            <img src={activeProject().images[0]} alt="" />
+            <Transition name="img-opacity">
+              {showImage() && (
+                <img src={activeProject().images[selectedImage()]} alt="" />
+              )}
+            </Transition>
           </div>
           <div class="body">
             <h3>Shots</h3>
-            <div class="shots"></div>
+            <div class="shots">
+              <Transition name="opacity">
+                {show() && (
+                  <Swiper slidesPerView={"auto"}>
+                    <For each={activeProject().images}>
+                      {(image, index) => (
+                        <SwiperSlide
+                          style={`--index: ${index()}`}
+                          class={`shot ${
+                            selectedImage() == index() ? "active" : ""
+                          }`}
+                          onClick={() => handleImageChange(index())}
+                        >
+                          <img src={image} alt="" />
+                        </SwiperSlide>
+                      )}
+                    </For>
+                  </Swiper>
+                )}
+              </Transition>
+            </div>
             <div class="description">
               <h3>Description</h3>
-              {activeProject().fullDescription}
+              <p>{activeProject().fullDescription}</p>
             </div>
           </div>
         </div>

@@ -8,12 +8,11 @@ $animation-duration: 0.3s;
   background-color: $projects-theme;
   transition: background $animation-duration ease-in-out;
   .navigation {
-    width: calc($navbar-height + 10px);
-    &:hover {
-      width: auto;
-    }
-    @media screen and (max-width: $layout-breakpoint-small) {
-      width: 100%;
+    @media screen and (min-width: $layout-breakpoint-small) {
+      width: calc($navbar-height + 10px);
+      &:hover {
+        width: auto;
+      }
     }
   }
   .projects_nav {
@@ -44,6 +43,7 @@ $animation-duration: 0.3s;
       gap: 0.5em;
       box-shadow: $box-shadow-small;
       .info {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 0.25em;
@@ -81,6 +81,7 @@ $animation-duration: 0.3s;
       .image {
         img {
           border-radius: 8px;
+          max-width: 200px;
           height: 100%;
           object-fit: contain;
         }
@@ -105,44 +106,114 @@ $animation-duration: 0.3s;
   }
   .active_project {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: $navbar-height;
     flex: 1;
+    align-items: center;
     .active_container {
+      margin: 0 auto;
+      height: 600px;
+      flex: 1;
       display: grid;
-      grid-template-rows: 50px 500px auto;
-      grid-template-rows: auto 1fr auto;
       max-width: 1200px;
-      width: 100%;
+      padding: 0 1em;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
       grid-template-areas:
         "header header"
         "image body"
         "info info";
       .header {
         grid-area: header;
+        height: 2em;
+        h2 {
+          font-size: 1.5em;
+        }
       }
       .image {
+        min-width: 0;
+        height: 100%;
+        align-items: baseline;
+        object-fit: cover;
+        min-height: 0;
+        display: flex;
         grid-area: image;
+        max-height: 450px;
+        justify-content: center;
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          border-radius: 8px;
+          box-shadow: $box-shadow-standart;
         }
       }
       .body {
+        margin-left: 1em;
         grid-area: body;
+        height: fit-content;
+        transition: color $animation-duration ease-in-out;
         .shots {
-          height: 200px;
           width: 100%;
-          overflow: hidden;
-          overflow: hidden;
+          .swiper {
+            height: 140px;
+          }
           .shot {
+            margin-top: 0.5em;
+            margin-right: 0.5em;
+            max-width: 170px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: $box-shadow-small;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
             img {
+              display: block;
               width: 100%;
-              height: auto;
-              object-fit: cover;
+              height: 100%;
+              object-fit: contain;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0;
+              background-color: $projects-theme;
+              transition: height 0.25s ease-in-out;
+            }
+            &.active {
+              &::after {
+                height: 4px;
+              }
             }
           }
+        }
+        h3 {
+          color: #00000099;
+          line-height: 1em;
+        }
+        .description {
+          margin-top: 0.5em;
+          p {
+            font-weight: 500;
+            font-family: Golos;
+            line-height: 1.1em;
+          }
+        }
+      }
+    }
+  }
+  &.dark {
+    .active_project {
+      .body {
+        .shots .shot {
+          background-color: #00000020;
+        }
+        h3 {
+          color: #ffffff99;
         }
       }
     }
@@ -166,27 +237,33 @@ $animation-duration: 0.3s;
   }
 }
 
-.rotate-up-3d-enter-active,
-.rotate-up-3d-exit-active {
-  transition: transform $animation-duration ease-in-out;
-}
-.rotate-up-3d-enter {
-  transform: rotateX(90deg);
-}
-.rotate-up-3d-exit-to {
-  transform: rotateX(-90deg);
-}
-
 .slide-bottom-enter-active,
 .slide-bottom-exit-active {
   transition: transform $animation-duration ease-in-out,
     opacity $animation-duration ease-in-out;
 }
-.slide-bottom-enter {
-  transform: translateY(-50%);
-  opacity: 0;
-}
+.slide-bottom-enter,
 .slide-bottom-exit-to {
   transform: translateY(-50%);
   opacity: 0;
+}
+
+.img-opacity-enter-active,
+.img-opacity-exit-active {
+  transition: opacity calc($animation-duration / 2) ease-in-out;
+}
+.img-opacity-enter {
+  opacity: 0;
+}
+.img-opacity-exit-to {
+  opacity: 0;
+}
+
+.slide-right-enter-active,
+.slide-right-exit-active {
+  transition: transform $animation-duration ease-in-out;
+}
+.slide-right-enter,
+.slide-right-exit-to {
+  transform: translateX(100%) !important;
 }
