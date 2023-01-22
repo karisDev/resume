@@ -195,7 +195,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
           <div class="body">
             <h3>Shots</h3>
             <div class="shots">
-              <Transition name="opacity">
+              <Transition name="slide-in">
                 {show() && (
                   <Swiper slidesPerView={"auto"}>
                     <For each={activeProject().images}>
