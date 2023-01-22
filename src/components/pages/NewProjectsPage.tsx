@@ -153,7 +153,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                 onClick={() => handleProjectChange(project)}
               >
                 <div class="image">
-                  <img class="image" src={project.images[0]} alt="" />
+                  <img src={project.images[0]} alt="" />
                 </div>
                 <div class="info">
                   <div class="heading">
@@ -195,7 +195,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
           <div class="body">
             <h3>Shots</h3>
             <div class="shots">
-              <Transition name="slide-in">
+              <Transition name="img-opacity">
                 {show() && (
                   <Swiper slidesPerView={"auto"}>
                     <For each={activeProject().images}>
@@ -217,7 +217,11 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
             </div>
             <div class="description">
               <h3>Description</h3>
-              <p>{activeProject().fullDescription}</p>
+              <div class="description-body">
+                <Transition name="description-slide">
+                  {show() ? <p>{activeProject().fullDescription}</p> : <p></p>}
+                </Transition>
+              </div>
             </div>
           </div>
         </div>

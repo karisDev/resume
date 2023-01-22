@@ -79,6 +79,7 @@ $animation-duration: 0.3s;
         }
       }
       .image {
+        display: contents;
         img {
           border-radius: 8px;
           max-width: 200px;
@@ -111,7 +112,6 @@ $animation-duration: 0.3s;
     align-items: center;
     .active_container {
       margin: 0 auto;
-      height: 600px;
       flex: 1;
       display: grid;
       max-width: 1200px;
@@ -133,12 +133,12 @@ $animation-duration: 0.3s;
         min-width: 0;
         height: 100%;
         align-items: baseline;
+        justify-content: center;
         object-fit: cover;
-        min-height: 0;
+        min-height: 450px;
         display: flex;
         grid-area: image;
         max-height: 450px;
-        justify-content: center;
         img {
           max-width: 100%;
           max-height: 100%;
@@ -150,9 +150,14 @@ $animation-duration: 0.3s;
       .body {
         margin-left: 1em;
         grid-area: body;
-        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         transition: color $animation-duration ease-in-out;
         .shots {
+          margin-top: 0.25em;
+          overflow: hidden;
+          height: 140px;
           width: 100%;
           .swiper {
             height: 140px;
@@ -165,9 +170,17 @@ $animation-duration: 0.3s;
             display: flex;
             flex-direction: column;
             box-shadow: $box-shadow-small;
-            background-color: #fff;
             border-radius: 8px;
             overflow: hidden;
+            animation: appear calc(var(--index) * 0.25s + 0.25s) ease-in-out;
+            @keyframes appear {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
             img {
               display: block;
               width: 100%;
@@ -191,17 +204,24 @@ $animation-duration: 0.3s;
             }
           }
         }
+        .description {
+          flex: 1;
+          margin-top: 1em;
+          display: flex;
+          flex-direction: column;
+          .description-body {
+            overflow: hidden;
+            margin-top: 0.5em;
+            p {
+              font-weight: 500;
+              font-family: Golos;
+              line-height: 1.1em;
+            }
+          }
+        }
         h3 {
           color: #00000099;
           line-height: 1em;
-        }
-        .description {
-          margin-top: 0.5em;
-          p {
-            font-weight: 500;
-            font-family: Golos;
-            line-height: 1.1em;
-          }
         }
       }
     }
@@ -210,7 +230,6 @@ $animation-duration: 0.3s;
     .active_project {
       .body {
         .shots .shot {
-          background-color: #00000020;
         }
         h3 {
           color: #ffffff99;
@@ -252,18 +271,23 @@ $animation-duration: 0.3s;
 .img-opacity-exit-active {
   transition: opacity calc($animation-duration / 2) ease-in-out;
 }
-.img-opacity-enter {
-  opacity: 0;
-}
+.img-opacity-enter,
 .img-opacity-exit-to {
   opacity: 0;
 }
 
-.slide-right-enter-active,
-.slide-right-exit-active {
-  transition: transform $animation-duration ease-in-out;
+.description-slide-exit-active {
+  transition: transform $animation-duration ease-in-out,
+    opacity $animation-duration ease-in-out;
 }
-.slide-right-enter,
-.slide-right-exit-to {
-  transform: translateX(100%) !important;
+
+.description-slide-enter-active {
+  transition: transform $animation-duration 0.25s ease-in-out,
+    opacity $animation-duration 0.25s ease-in-out;
+}
+
+.description-slide-enter,
+.description-slide-exit-to {
+  transform: translateY(-120%);
+  opacity: 0;
 }
