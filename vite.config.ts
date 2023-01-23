@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/resume",
   plugins: [solidPlugin(), SVGInjectPlugin()],
   server: {
-    port: 3000,
+    port: 42069,
   },
   build: {
     target: "esnext",

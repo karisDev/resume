@@ -10,9 +10,16 @@ import project_tb4 from "../../assets/images/tb4.png";
 import project_cs1 from "../../assets/images/cambridge1.png";
 import project_cs2 from "../../assets/images/cambridge2.png";
 import project_cs3 from "../../assets/images/cambridge3.png";
+import project_aidoc1 from "../../assets/images/aidoc1.png";
+import project_aidoc2 from "../../assets/images/aidoc2.png";
+import project_aidoc3 from "../../assets/images/aidoc3.png";
+import project_aidoc4 from "../../assets/images/aidoc4.png";
 import SeleniumSvg from "../../assets/icons/selenium.svg";
 import CsharpSvg from "../../assets/icons/csharp.svg";
 import PythonSvg from "../../assets/icons/python.svg";
+import ReactSvg from "../../assets/icons/reactjs.svg";
+import JavaScriptSvg from "../../assets/icons/js.svg";
+import SassSvg from "../../assets/icons/sass.svg";
 
 import { createSignal, For } from "solid-js";
 import { Transition } from "solid-transition-group";
@@ -38,62 +45,94 @@ interface Project {
   isDarkTheme?: boolean;
 }
 
+const projects: Project[] = [
+  {
+    name: "AiDoc",
+    shortDescription: "Определение вида договора с интерпретацией результатов",
+    fullDescription:
+      "Кейс №1 в хакатоне Xmas Hack. 4 место. Задача была понять тип документа, поступающего на вход. Была проделана крупная работа вместе с дизайнером и бэкэнд разработчиком. Интеграция бэкэнд была сделана за 1 день.",
+    backgroundColor: "#1c8dd9",
+    themeColor: "#fff",
+    images: [project_aidoc1, project_aidoc2, project_aidoc3, project_aidoc4],
+    info: [
+      {
+        title: "Фронт",
+        description: "React\nJavaScipt",
+      },
+      {
+        title: "Библиотеки",
+        description: "SASS\nAxios\nReact Router\nVite",
+      },
+      {
+        title: "Особенности",
+        description: "Командная работа\nPixel Perfect\nАнимации",
+      },
+    ],
+    stackIcons: [ReactSvg, JavaScriptSvg, SassSvg],
+    isDarkTheme: true,
+    links: [
+      {
+        title: "Демо (без бэкэнда)",
+        url: "https://karisdev.github.io/",
+      },
+    ],
+  },
+  {
+    name: "Task board",
+    shortDescription: "Органайзер с большим стеком. Один из первых проектов",
+    fullDescription:
+      "Веб сайт на React для продуктивности. Один из первых проектов. Целью было изучить как можно больше практик. Был сделан собственный дизайн в Figma на основе доски Kanban",
+    backgroundColor: "#f1f1f1",
+    images: [project_tb1, project_tb2, project_tb3, project_tb4],
+    info: [
+      {
+        title: "Фронт",
+        description: "React\nTypeScript\nCSS Modules",
+      },
+      {
+        title: "Библиотеки",
+        description: "Firebase\nMaterial UI\nReact Router\ni18next",
+      },
+      {
+        title: "Особенности",
+        description:
+          "Облачное хранилище\nАдаптивность\nСмена языка\nСмена темы",
+      },
+    ],
+    stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
+    isDarkTheme: false,
+  },
+  {
+    name: "Cambridge Solver",
+    shortDescription:
+      "Приложение автоматизации сайта Cambridge для парсинга ответов",
+    fullDescription:
+      "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте. Приложение, которое знают 99% студентов мисис 24 и 23 года выпуска.",
+    backgroundColor: "#303030",
+    images: [project_cs1, project_cs2, project_cs3],
+    info: [
+      {
+        title: "Клиент",
+        description: "Selenium\nC# WPF\nChrome",
+      },
+      {
+        title: "Сервер",
+        description: "Python\nFastAPI",
+      },
+      {
+        title: "Статистика",
+        description:
+          "120 000 решенных тестов\n900+ пользователей\n200+ человек в группе",
+      },
+    ],
+    themeColor: "#FFC107",
+    stackIcons: [CsharpSvg, PythonSvg, SeleniumSvg],
+    isDarkTheme: true,
+  },
+];
+
 const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
   const animationDuration = 300;
-  const projects: Project[] = [
-    {
-      name: "Task board",
-      shortDescription: "Органайзер с большим стеком. Один из первых проектов.",
-      fullDescription:
-        "Веб сайт на React для продуктивности. Один из первых проектов. Целью было изучить как можно больше практик. Был сделан собственный дизайн в Figma на основе доски Kanban",
-      backgroundColor: "#f1f1f1",
-      images: [project_tb1, project_tb2, project_tb3, project_tb4],
-      info: [
-        {
-          title: "Фронт",
-          description: "React\nTypeScript",
-        },
-        {
-          title: "Библиотеки",
-          description: "Firebase\nMaterial UI\nReact Router\ni18next",
-        },
-        {
-          title: "Особенности",
-          description:
-            "Облачное хранилище\nАдаптивность\nСмена языка\nСмена темы",
-        },
-      ],
-      stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
-      isDarkTheme: false,
-    },
-    {
-      name: "Cambridge Solver",
-      shortDescription:
-        "Приложение автоматизации сайта Cambridge для парсинга ответов.",
-      fullDescription:
-        "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте",
-      backgroundColor: "#303030",
-      images: [project_cs1, project_cs2, project_cs3],
-      info: [
-        {
-          title: "Клиент",
-          description: "Selenium\nC# WPF\nChrome",
-        },
-        {
-          title: "Сервер",
-          description: "Python\nFastAPI",
-        },
-        {
-          title: "Статистика",
-          description:
-            "120 000 решенных тестов\n900+ пользователей\n200+ человек в группе",
-        },
-      ],
-      themeColor: "#FFC107",
-      stackIcons: [CsharpSvg, PythonSvg, SeleniumSvg],
-      isDarkTheme: true,
-    },
-  ];
   const [activeProject, setActiveProject] = createSignal(projects[0]);
   const [backgroundColor, setBackgroundColor] = createSignal(
     projects[0].backgroundColor
@@ -225,7 +264,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
             </div>
           </div>
           <div class="info">
-            <Transition name="img-opacity">
+            <Transition name="info-slide">
               {show() && (
                 <div class="info-container">
                   <For each={activeProject().info}>

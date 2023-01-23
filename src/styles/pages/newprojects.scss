@@ -115,11 +115,14 @@ $animation-duration: 0.3s;
       font-family: Golos;
       font-size: 1.2em;
     }
+    h3 {
+      transition: color $animation-duration ease-in-out;
+    }
     .active_container {
       margin: 0 auto;
       flex: 1;
       display: grid;
-      max-width: 1200px;
+      max-width: 1400px;
       padding: 0 1em;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto 1fr auto;
@@ -138,7 +141,6 @@ $animation-duration: 0.3s;
         min-width: 0;
         height: 100%;
         align-items: baseline;
-        justify-content: center;
         object-fit: cover;
         min-height: 450px;
         display: flex;
@@ -150,6 +152,16 @@ $animation-duration: 0.3s;
           object-fit: contain;
           border-radius: 8px;
           box-shadow: $box-shadow-standart;
+          transition: all $animation-duration ease-in-out;
+          z-index: 2;
+          cursor: pointer;
+          user-select: none;
+          @media screen and (min-width: $layout-breakpoint-small) {
+            &:active {
+              transform: translateX(30%);
+              scale: 1.5;
+            }
+          }
         }
       }
       .body {
@@ -160,6 +172,12 @@ $animation-duration: 0.3s;
         height: 100%;
         transition: color $animation-duration ease-in-out;
         .shots {
+          user-select: none;
+          cursor: grab;
+          &:active,
+          &:focus {
+            cursor: grabbing;
+          }
           margin-top: 0.25em;
           overflow: hidden;
           height: 140px;
@@ -242,6 +260,13 @@ $animation-duration: 0.3s;
         p {
           white-space: pre-wrap;
         }
+        .info-item {
+          transition: transform calc($animation-duration)
+              calc(var(--index) * 0.1s + 0.1s) ease-out,
+            opacity calc($animation-duration) calc(var(--index) * 0.1s + 0.1s)
+              ease-out,
+            color $animation-duration ease-in-out;
+        }
         .separator {
           margin: 0 0.5em;
           height: 100%;
@@ -322,15 +347,28 @@ $animation-duration: 0.3s;
 .info-slide-enter-active {
   transition: transform calc($animation-duration / 2) ease-out,
     opacity calc($animation-duration / 2) ease-out;
-}
-
-.info-slide-enter,
-.info-slide-exit-to {
-  opacity: 0;
-  transform: translateY(10%);
+  .info-item {
+    transition: transform calc($animation-duration)
+        calc(var(--index) * 0.1s + 0.1s) ease-out,
+      opacity calc($animation-duration) calc(var(--index) * 0.1s + 0.1s)
+        ease-out;
+  }
 }
 
 .info-slide-exit-active {
   transition: transform $animation-duration ease-in-out,
     opacity $animation-duration ease-in-out;
+}
+
+.info-slide-enter {
+  opacity: 0;
+  .info-item {
+    opacity: 0;
+    transform: translateX(10px) translateY(10px);
+  }
+}
+
+.info-slide-exit-to {
+  opacity: 0;
+  transform: translateY(10%);
 }
