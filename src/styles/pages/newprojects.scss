@@ -29,6 +29,12 @@ $animation-duration: 0.3s;
       color $animation-duration ease-in-out;
     overflow: hidden;
     .swiper {
+      cursor: grab;
+      &:active,
+      &:focus {
+        cursor: grabbing;
+      }
+      user-select: none;
       overflow: visible;
     }
     .project {
@@ -37,7 +43,6 @@ $animation-duration: 0.3s;
       box-sizing: border-box;
       padding: 0.5em;
       border-radius: 8px;
-      cursor: pointer;
       max-width: 366px;
       min-width: 366px;
       gap: 0.5em;
@@ -224,6 +229,7 @@ $animation-duration: 0.3s;
             }
             &.active {
               &::after {
+                box-shadow: $box-shadow-small;
                 height: 4px;
               }
             }
@@ -237,6 +243,9 @@ $animation-duration: 0.3s;
           .description-body {
             overflow: hidden;
             margin-top: 0.5em;
+            p {
+              white-space: pre-wrap;
+            }
           }
         }
         h3 {
@@ -259,6 +268,22 @@ $animation-duration: 0.3s;
         }
         p {
           white-space: pre-wrap;
+        }
+        .separator {
+          transition: all $animation-duration ease-out;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          a {
+            color: $projects-theme;
+            transition: color $animation-duration linear;
+            text-decoration: none;
+            font-size: 1.2em;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
         .info-item {
           transition: transform calc($animation-duration)
@@ -285,6 +310,9 @@ $animation-duration: 0.3s;
         }
         .separator {
           background-color: #ffffff60;
+        }
+        .links a {
+          color: #40f4ff;
         }
       }
     }
@@ -361,7 +389,9 @@ $animation-duration: 0.3s;
 }
 
 .info-slide-enter {
-  opacity: 0;
+  .separator {
+    opacity: 0;
+  }
   .info-item {
     opacity: 0;
     transform: translateX(10px) translateY(10px);
