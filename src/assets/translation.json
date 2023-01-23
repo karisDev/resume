@@ -121,6 +121,68 @@
     "projects_tb_statement_3": "Динамическая тема",
     "projects_tb_statement_4": "Поддержка нескольких языков",
     "projects_box_intro": "и конечно же...",
+
+    "projects_project_items": {
+      "aidoc": {
+        "name": "AiDoc",
+        "shortDescription": "Определение вида договора с интерпретацией результатов",
+        "fullDescription": "Кейс №1 в хакатоне Xmas Hack 2022. 4 место. Задача была понять тип документа с помощью нейросетей. Была тесная работа вместе с дизайнером и бэкэнд разработчиком. Участие в создании прототипа.",
+        "info": [
+          {
+            "title": "Фронт",
+            "description": "React"
+          },
+          {
+            "title": "Библиотеки",
+            "description": "Sass\nAxios\nReact Router\nVite"
+          },
+          {
+            "title": "Особенности",
+            "description": "Загрузка с анимацией\nКомандная работа\nPixel Perfect\nАвторизация"
+          }
+        ],
+        "links": [
+          {
+            "title": "Демо (без бэкэнда)",
+            "url": "https://denmalbas007.github.io/AiDoc/"
+          },
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/denmalbas007/AiDoc/"
+          }
+        ]
+      },
+      "task_board": {
+        "name": "Task board",
+        "shortDescription": "Органайзер с большим стеком. Один из первых проектов",
+        "fullDescription": "Веб сайт на React для продуктивности. Один из первых проектов. Целью было получить как можно больше знаний на старте. Был сделан собственный дизайн в Figma на основе доски Kanban",
+        "info": [
+          {
+            "title": "Фронт",
+            "description": "React\nTypeScript\nCSS Modules"
+          },
+          {
+            "title": "Библиотеки",
+            "description": "Firebase\nMaterial UI\nReact Router\ni18next"
+          },
+          {
+            "title": "Особенности",
+            "description": "Облачное хранилище\nАдаптивность\nСмена языка\nСмена темы"
+          }
+        ],
+        "links": [
+          {
+            "title": "Демо",
+            "url": "https://karisdev.github.io/react-task-board/"
+          },
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/karisDev/react-task-board/"
+          }
+        ]
+      }
+    },
+
     "contacts_title": "Контакты",
     "contacts_via": "Связаться через соц. сети:",
     "contacts_under_development": "страница в разработке",
