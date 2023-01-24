@@ -9,6 +9,7 @@ import PythonSvg from "../../assets/icons/python.svg";
 import ReactSvg from "../../assets/icons/reactjs.svg";
 import JavaScriptSvg from "../../assets/icons/js.svg";
 import SassSvg from "../../assets/icons/sass.svg";
+import SolidSvg from "../../assets/icons/solidjs.svg";
 import project_tb1 from "../../assets/images/tb1.png";
 import project_tb2 from "../../assets/images/tb2.png";
 import project_tb3 from "../../assets/images/tb3.png";
@@ -27,12 +28,16 @@ import project_lct4 from "../../assets/images/lct4.png";
 import project_directions1 from "../../assets/images/directions1.png";
 import project_directions2 from "../../assets/images/directions2.png";
 import project_directions3 from "../../assets/images/directions3.png";
+import project_resume1 from "../../assets/images/resume1.png";
+import project_resume2 from "../../assets/images/resume2.png";
+import project_resume3 from "../../assets/images/resume3.png";
 import translation from "../../assets/translation.json";
 
 import { createSignal, For } from "solid-js";
 import { Transition } from "solid-transition-group";
 import { Swiper, SwiperSlide } from "swiper/solid";
 import "swiper/css";
+import Mask from "../ui/Mask";
 
 interface Project {
   name?: string;
@@ -67,13 +72,14 @@ const NewProjectsPage = ({ russian }: { russian?: boolean }) => {
       isDarkTheme: true,
     },
     {
-      // task board
-      ...t.projects_project_items.task_board,
-      backgroundColor: "#f1f1f1",
-      images: [project_tb1, project_tb2, project_tb3, project_tb4],
-      stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
-      isDarkTheme: false,
+      // lct
+      ...t.projects_project_items.lct,
+      backgroundColor: "#9b1827",
+      images: [project_lct1, project_lct2, project_lct3, project_lct4],
+      isDarkTheme: true,
+      stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
     },
+
     {
       // cambridge solver
       ...t.projects_project_items.cos,
@@ -84,13 +90,12 @@ const NewProjectsPage = ({ russian }: { russian?: boolean }) => {
       isDarkTheme: true,
     },
     {
-      // lct
-
-      ...t.projects_project_items.lct,
-      backgroundColor: "#9b1827",
-      images: [project_lct1, project_lct2, project_lct3, project_lct4],
-      isDarkTheme: true,
-      stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
+      // task board
+      ...t.projects_project_items.task_board,
+      backgroundColor: "#f1f1f1",
+      images: [project_tb1, project_tb2, project_tb3, project_tb4],
+      stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
+      isDarkTheme: false,
     },
     {
       // directions
@@ -98,6 +103,15 @@ const NewProjectsPage = ({ russian }: { russian?: boolean }) => {
       backgroundColor: "#3f51b5",
       isDarkTheme: true,
       images: [project_directions1, project_directions2, project_directions3],
+      stackIcons: [CsharpSvg],
+    },
+    {
+      // resume
+      ...t.projects_project_items.resume,
+      backgroundColor: "#221d41",
+      images: [project_resume1, project_resume2, project_resume3],
+      stackIcons: [SolidSvg, TypescriptSvg, SassSvg],
+      isDarkTheme: true,
     },
   ];
 
@@ -139,11 +153,12 @@ const NewProjectsPage = ({ russian }: { russian?: boolean }) => {
   return (
     <div
       style={{
-        "background-color": backgroundColor() ?? "",
+        background: backgroundColor() ?? "",
         "text-color": activeProject().themeColor ?? "",
       }}
       class={`new_projects_page ${isDarkTheme() ? "dark" : ""}`}
     >
+      <Mask colorClass="projects_color" />
       <PagesNav russian={russian} />
       <div class="projects_nav">
         <Swiper slidesPerView={"auto"} spaceBetween={8}>

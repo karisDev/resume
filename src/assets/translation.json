@@ -188,6 +188,27 @@
             "url": "https://github.com/karisDev/DirectionsInformation/"
           }
         ]
+      },
+      "resume": {
+        "name": "Portfolio",
+        "shortDescription": "The current website",
+        "fullDescription": "My most creative project. It all started with the idea of making a cube that changes color on hover, then came up with the opening transition to the other pages. The screenshots show how the design evolved. The site is adaptive and works on all devices.",
+        "info": [
+          {
+            "title": "Frontend",
+            "description": "SolidJS\nTypeScript\nWebGL"
+          },
+          {
+            "title": "Libraries",
+            "description": "Sass\nSwiper\nTransition-Group\nFormspree"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repo",
+            "url": "https://github.com/karisDev/resume"
+          }
+        ]
       }
     },
     "projects_description_header": "Description",
@@ -394,6 +415,27 @@
           {
             "title": "Репозиторий",
             "url": "https://github.com/karisDev/DirectionsInformation/"
+          }
+        ]
+      },
+      "resume": {
+        "name": "Портфолио",
+        "shortDescription": "Сайт на котором вы находитесь",
+        "fullDescription": "Мой самый креативный проект. Все началось с идеи сделать куб, меняющий цвет при наведении, потом придумал открытие и переход на остальные страницы. На скриншотах видно как развивался дизайн. Сайт адаптивен и работает на всех устройствах.",
+        "info": [
+          {
+            "title": "Фронт",
+            "description": "SolidJS\nTypeScript\nWebGL"
+          },
+          {
+            "title": "Библиотеки",
+            "description": "Sass\nSwiper\nTransition-Group\nFormspree"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/karisDev/resume"
           }
         ]
       }
