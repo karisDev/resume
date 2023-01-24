@@ -1,7 +1,9 @@
 @font-face {
-  font-family: "golos-regular";
-  src: url("../assets/fonts/Golos_Medium.woff2") format("woff2"),
+  font-family: "golos";
+  src: url("../assets/fonts/Golos_Medium.ttf") format("truetype"),
+    url("../assets/fonts/Golos_Medium.woff2") format("woff2"),
     url("../assets/fonts/Golos_Medium.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
