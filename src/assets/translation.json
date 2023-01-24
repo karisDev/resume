@@ -88,7 +88,7 @@
       "task_board": {
         "name": "Task board",
         "shortDescription": "Organizer with a rich stack. One of the first projects",
-        "fullDescription": "A React web site for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the start. A custom design was made in Figma based on a Kanban board",
+        "fullDescription": "A React web site for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the start. A custom design was made in Figma based on a Kanban board from Dribbble.",
         "info": [
           {
             "title": "Frontend",
@@ -111,6 +111,10 @@
           {
             "title": "Repo",
             "url": "https://github.com/karisDev/react-task-board/"
+          },
+          {
+            "title": "Inspiration",
+            "url": "https://dribbble.com/shots/16651551-Simple-kanban-board-Dark-Mode"
           }
         ]
       },
@@ -339,6 +343,10 @@
           {
             "title": "Репозиторий",
             "url": "https://github.com/karisDev/react-task-board/"
+          },
+          {
+            "title": "Вдохновление",
+            "url": "https://dribbble.com/shots/16651551-Simple-kanban-board-Dark-Mode"
           }
         ]
       },
