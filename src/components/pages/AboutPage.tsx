@@ -1,5 +1,5 @@
 import PagesNav from "../ui/PagesNav";
-import my_photo from "../../assets/about_page/me.png";
+import my_photo from "../../assets/images/me.png";
 import DownloadSvg from "../../assets/icons/download.svg";
 import GithubSvg from "../../assets/icons/github.svg";
 import EducationTitleSvg from "../../assets/icons/education_title.svg";
