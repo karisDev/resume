@@ -333,9 +333,66 @@ $animation-duration: 0.3s;
   }
 }
 @media screen and (max-width: $layout-breakpoint-small) {
-  .new_projects_page .projects_nav .project {
-    min-width: 100%;
-    max-width: 100%;
+  .new_projects_page {
+    .projects_nav .project {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .active_project {
+      align-items: start;
+      margin-top: 1em;
+      width: 100%;
+      overflow-x: hidden;
+      .active_container {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .image {
+          display: none;
+        }
+        .body {
+          max-height: none;
+          margin-left: 0;
+          width: 100%;
+          h3 {
+            display: none;
+          }
+          .shots {
+            height: fit-content;
+            overflow: visible;
+            .swiper {
+              overflow: visible;
+              height: fit-content;
+            }
+            .shot {
+              margin-top: 0;
+              height: auto;
+              max-width: 100%;
+              &::after {
+                display: none;
+              }
+            }
+          }
+          .description {
+            margin-top: 0.5em;
+          }
+        }
+        .info {
+          margin-top: 1em;
+          height: fit-content;
+          .info-container {
+            // adaptive grid
+            display: grid;
+            gap: 0.5em;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .separator {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
