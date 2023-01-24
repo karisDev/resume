@@ -53,11 +53,12 @@ interface Project {
   isDarkTheme?: boolean;
 }
 
-const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
-  const t = translation.ru;
+const NewProjectsPage = ({ russian }: { russian?: boolean }) => {
+  const t = russian ? translation.ru : translation.en;
 
   const projects: Project[] = [
     {
+      // aidoc
       ...t.projects_project_items.aidoc,
       backgroundColor: "#1c8dd9",
       themeColor: "#fff",
@@ -66,104 +67,37 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
       isDarkTheme: true,
     },
     {
+      // task board
       ...t.projects_project_items.task_board,
       backgroundColor: "#f1f1f1",
       images: [project_tb1, project_tb2, project_tb3, project_tb4],
-
       stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
       isDarkTheme: false,
     },
     {
-      name: "Cambridge Solver",
-      shortDescription: "Автоматизация сайта Cambridge для парсинга ответов",
-      fullDescription:
-        "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте Cambridge One. Знают 99% студентов мисис 2023 и 2024 года выпуска. Позже было сделано расширение. Платформа перестала работать в России",
+      // cambridge solver
+      ...t.projects_project_items.cos,
       backgroundColor: "#303030",
       images: [project_cs1, project_cs2, project_cs3],
-      info: [
-        {
-          title: "Клиент",
-          description: "Selenium\nC# WPF\nChrome\nMaterial Design",
-        },
-        {
-          title: "Сервер",
-          description: "Python\nFastAPI",
-        },
-        {
-          title: "Статистика",
-          description:
-            "120 000 решенных тестов\n900+ пользователей\n200+ человек в группе",
-        },
-      ],
-      links: [
-        {
-          title: "Репозиторий",
-          url: "https://github.com/karisDev/CambridgeOneSolver/",
-        },
-        {
-          title: "VK",
-          url: "https://vk.com/cambridgeonesolver",
-        },
-        {
-          title: "Telegram",
-          url: "https://t.me/cambridgeonesolver",
-        },
-      ],
       themeColor: "#FFC107",
       stackIcons: [CsharpSvg, PythonSvg, SeleniumSvg],
       isDarkTheme: true,
     },
     {
-      name: "ЛЦТ 2022",
-      shortDescription: "Анализ перспективных ниш для инвестирования",
-      fullDescription:
-        "Кейс №4 хакатона Лидеры Цифровой Трансформации 2022. Единственная молодая команда прошедшая в финал. Целью было найти перспективные отрасли для импортозамещения. 12 API запросов были интегрированы за один день. Первый опыт создания полного дизайна приложения.\nВход для демо: user/user. Возможно уже не работает.",
+      // lct
+
+      ...t.projects_project_items.lct,
       backgroundColor: "#9b1827",
       images: [project_lct1, project_lct2, project_lct3, project_lct4],
-      info: [
-        {
-          title: "Фронт",
-          description: "React\nTypescript\nSCSS\nAxios",
-        },
-        {
-          title: "Особенности",
-          description:
-            "Командная работа\nСобственный дизайн\nАдаптивность\nАвторизация",
-        },
-      ],
-      links: [
-        {
-          title: "Репозиторий",
-          url: "https://github.com/denmalbas007/RecSys_LCT",
-        },
-        {
-          title: "Демо (может не работать)",
-          url: "http://37.230.196.148:2002/",
-        },
-      ],
       isDarkTheme: true,
       stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
     },
     {
-      name: "Directions",
-      shortDescription: "Запись трафика между улицами или городами",
-      fullDescription:
-        "Приложение для сбора статистики в Excel о трафике между 2-10 разными точками на карте, работает с помощью Google Directions API. Понадобилось для автоматизации действий в курсовой работе. Умеет работать в фоне, чтобы собирать данные по таймерам. Красивый дизайн :)",
+      // directions
+      ...t.projects_project_items.directions,
       backgroundColor: "#3f51b5",
       isDarkTheme: true,
       images: [project_directions1, project_directions2, project_directions3],
-      info: [
-        {
-          title: "Стек",
-          description: "C# WPF\nDirections API\nMaterial Design\nBallonTip",
-        },
-      ],
-      links: [
-        {
-          title: "Репозиторий",
-          url: "https://github.com/karisDev/DirectionsInformation/",
-        },
-      ],
     },
   ];
 
@@ -260,7 +194,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
             </Transition>
           </div>
           <div class="body">
-            <h3>Shots</h3>
+            <h3>{t.projects_shots_header}</h3>
             <div class="shots">
               <Transition name="img-opacity">
                 {show() && (
@@ -283,7 +217,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
               </Transition>
             </div>
             <div class="description">
-              <h3>Description</h3>
+              <h3>{t.projects_description_header}</h3>
               <div class="description-body">
                 <Transition name="description-slide">
                   {show() ? <p>{activeProject().fullDescription}</p> : <p></p>}
@@ -310,7 +244,7 @@ const NewProjectsPage = ({ russian }: { russian?: boolean | undefined }) => {
                     style={`--index: ${activeProject().info.length}`}
                     class="info-item links"
                   >
-                    <h3>Links</h3>
+                    <h3>{t.projects_links_header}</h3>
                     <For each={activeProject().links}>
                       {(link) => (
                         <>

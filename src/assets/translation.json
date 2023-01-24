@@ -54,6 +54,146 @@
     "projects_tb_statement_3": "Dynamic theme",
     "projects_tb_statement_4": "Multi-language support",
     "projects_box_intro": "and of course...",
+
+    "projects_project_items": {
+      "aidoc": {
+        "name": "AiDoc",
+        "shortDescription": "Identifying the type of document with the interpretation of results",
+        "fullDescription": "Case #1 in the Xmas Hack 2022 hack - 4th place. The task was to understand the type of document using AI. Coordinated work with a designer and a backend developer was established. Participation in creating the Figma prototype.",
+        "info": [
+          {
+            "title": "Frontend",
+            "description": "React"
+          },
+          {
+            "title": "Libraries",
+            "description": "Sass\nAxios\nReact Router\nVite"
+          },
+          {
+            "title": "Features",
+            "description": "Loading with animation\nTeamwork\nPixel Perfect\nAuthorization"
+          }
+        ],
+        "links": [
+          {
+            "title": "Demo (no backend)",
+            "url": "https://denmalbas007.github.io/AiDoc/"
+          },
+          {
+            "title": "Repo",
+            "url": "https://github.com/denmalbas007/AiDoc/"
+          }
+        ]
+      },
+      "task_board": {
+        "name": "Task board",
+        "shortDescription": "Organizer with a rich stack. One of the first projects",
+        "fullDescription": "A React web site for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the start. A custom design was made in Figma based on a Kanban board",
+        "info": [
+          {
+            "title": "Frontend",
+            "description": "React\nTypeScript\nCSS Modules"
+          },
+          {
+            "title": "Libraries",
+            "description": "Firebase\nMaterial UI\nReact Router\ni18next"
+          },
+          {
+            "title": "Features",
+            "description": "Cloud storage\nResponsive\nMulti-language\nLight/dark theme"
+          }
+        ],
+        "links": [
+          {
+            "title": "Demo",
+            "url": "https://karisdev.github.io/react-task-board/"
+          },
+          {
+            "title": "Repo",
+            "url": "https://github.com/karisDev/react-task-board/"
+          }
+        ]
+      },
+      "cos": {
+        "name": "Cambridge Solver",
+        "shortDescription": "Automating the Cambridge site to fill out answers",
+        "fullDescription": "A client-server app based on automating a browser to enter the correct answers on the Cambridge One website. Known by 99% of MISiS 2023 and 2024 students. Later, an extension was made. The platform stopped working in Russia",
+        "info": [
+          {
+            "title": "Client",
+            "description": "Selenium\nC# WPF\nChrome\nMaterial Design"
+          },
+          {
+            "title": "Server",
+            "description": "Python\nFastAPI"
+          },
+          {
+            "title": "Statistics",
+            "description": "120 000 solved tests\n900+ users\n200+ people in the group"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repo",
+            "url": "https://github.com/karisDev/CambridgeOneSolver/"
+          },
+          {
+            "title": "VK",
+            "url": "https://vk.com/cambridgeonesolver"
+          },
+          {
+            "title": "Telegram",
+            "url": "https://t.me/cambridgeonesolver"
+          }
+        ]
+      },
+      "lct": {
+        "name": "Leaders 2022",
+        "shortDescription": "Import/export research for investment",
+        "fullDescription": "Case #4 of the Leaders of Digital Transformation hack 2022. The only young team that made it to the finals. The goal was to find promising industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Probably not working anymore.",
+        "info": [
+          {
+            "title": "Frontend",
+            "description": "React\nTypescript\nSCSS\nAxios"
+          },
+          {
+            "title": "Features",
+            "description": "Командная работа\nСобственный дизайн\nАдаптивность\nАвторизация"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repo",
+            "url": "https://github.com/denmalbas007/RecSys_LCT"
+          },
+          {
+            "title": "Demo (may not work)",
+            "url": "http://37.230.196.148:2002/"
+          }
+        ]
+      },
+      "directions": {
+        "name": "Directions",
+        "shortDescription": "Record traffic between streets and cities",
+        "fullDescription": "App for exporting statistics in Excel about traffic between 2-10 different points on the map, works with Google Directions API. Needed it to automate actions in course work. Can work in the background and collect data by timers. Love the UI/UX :)",
+        "info": [
+          {
+            "title": "Stack",
+            "description": "C# WPF\nDirections API\nMaterial Design\nBallonTip"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repo",
+            "url": "https://github.com/karisDev/DirectionsInformation/"
+          }
+        ]
+      }
+    },
+    "projects_description_header": "Description",
+    "projects_links_header": "Links",
+    "projects_shots_header": "Shots",
+
     "contacts_title": "Contacts",
     "contacts_via": "Contact me via:",
     "contacts_under_development": "this page is under construction",
@@ -126,7 +266,7 @@
       "aidoc": {
         "name": "AiDoc",
         "shortDescription": "Определение вида договора с интерпретацией результатов",
-        "fullDescription": "Кейс №1 в хакатоне Xmas Hack 2022. 4 место. Задача была понять тип документа с помощью нейросетей. Была тесная работа вместе с дизайнером и бэкэнд разработчиком. Участие в создании прототипа.",
+        "fullDescription": "Кейс №1 в хакатоне Xmas Hack 2022 - 4 место. Задача была понять тип документа с помощью нейросетей. Была тесная работа вместе с дизайнером и бэкэнд разработчиком. Участие в создании прототипа в Figma.",
         "info": [
           {
             "title": "Фронт",
@@ -180,8 +320,87 @@
             "url": "https://github.com/karisDev/react-task-board/"
           }
         ]
+      },
+      "cos": {
+        "name": "Cambridge Solver",
+        "shortDescription": "Автоматизация сайта Cambridge для ввода ответов",
+        "fullDescription": "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте Cambridge One. Знают 99% студентов МИСиС 2023 и 2024 года выпуска. Позже было сделано расширение. Платформа перестала работать в России",
+        "info": [
+          {
+            "title": "Клиент",
+            "description": "Selenium\nC# WPF\nChrome\nMaterial Design"
+          },
+          {
+            "title": "Сервер",
+            "description": "Python\nFastAPI"
+          },
+          {
+            "title": "Статистика",
+            "description": "120 000 решенных тестов\n900+ пользователей\n200+ человек в группе"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/karisDev/CambridgeOneSolver/"
+          },
+          {
+            "title": "VK",
+            "url": "https://vk.com/cambridgeonesolver"
+          },
+          {
+            "title": "Telegram",
+            "url": "https://t.me/cambridgeonesolver"
+          }
+        ]
+      },
+      "lct": {
+        "name": "ЛЦТ 2022",
+        "shortDescription": "Анализ перспективных ниш для инвестирования",
+        "fullDescription": "Кейс №4 хакатона Лидеры Цифровой Трансформации 2022. Единственная молодая команда прошедшая в финал. Целью было найти перспективные отрасли для импортозамещения. 12 API запросов были интегрированы за один день. Первый опыт создания полного дизайна приложения.\nВход для демо: user/user. Возможно уже не работает.",
+        "info": [
+          {
+            "title": "Фронт",
+            "description": "React\nTypescript\nSCSS\nAxios"
+          },
+          {
+            "title": "Особенности",
+            "description": "Командная работа\nСобственный дизайн\nАдаптивность\nАвторизация"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/denmalbas007/RecSys_LCT"
+          },
+          {
+            "title": "Демо (может не работать)",
+            "url": "http://37.230.196.148:2002/"
+          }
+        ]
+      },
+      "directions": {
+        "name": "Directions",
+        "shortDescription": "Запись трафика между улицами или городами",
+        "fullDescription": "Приложение для сбора статистики в Excel о трафике между 2-10 разными точками на карте, работает с помощью Google Directions API. Понадобилось для автоматизации действий в курсовой работе. Умеет работать в фоне, чтобы собирать данные по таймерам. Красивый дизайн :)",
+
+        "info": [
+          {
+            "title": "Стек",
+            "description": "C# WPF\nDirections API\nMaterial Design\nBallonTip"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/karisDev/DirectionsInformation/"
+          }
+        ]
       }
     },
+    "projects_description_header": "Описание",
+    "projects_links_header": "Ссылки",
+    "projects_shots_header": "Скриншоты",
 
     "contacts_title": "Контакты",
     "contacts_via": "Связаться через соц. сети:",
