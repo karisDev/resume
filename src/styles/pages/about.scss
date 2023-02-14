@@ -46,9 +46,9 @@ $tablet: 900px;
           box-shadow: $box-shadow-standart;
           border-radius: 15px;
           height: min-content;
-          &:hover:not(:active) {
-            // transform: translate(-0.25em, -0.25em);
-          }
+          // &:hover:not(:active) {
+          //   transform: translate(-0.25em, -0.25em);
+          // }
         }
         .link {
           height: 52px;

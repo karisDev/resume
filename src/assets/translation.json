@@ -4,7 +4,7 @@
     "about_resume": "Complete Resume",
     "about_github": "Visit GitHub",
     "about_header": "Frontend Developer, 20 years",
-    "about_body": "Born and raised in Moscow. Started programming in 5th grade on Quick Basic. Passion for automation and creating beautiful, intuitive interfaces. Also a big lover of the English language.",
+    "about_body": "I was born and raised in Moscow and started programming in 5th grade using Quick Basic. I have a passion for automating tasks and creating beautiful and intuitive user interfaces for web applications. Additionally, I am a big lover of the English language.",
     "about_skills_header": "Education and Experience",
     "about_languages_header": "Languages",
     "about_languages_group1": "Natural",
@@ -44,7 +44,7 @@
       "aidoc": {
         "name": "AiDoc",
         "shortDescription": "Document type prediction with the interpretation of results",
-        "fullDescription": "Case #1 in the Xmas Hack 2022 - 4th place. The task was to predict document type using Artificial Intelligence. Coordinated work with a designer and a backend developer. Participation in creating the Figma prototype.",
+        "fullDescription": "Case #1 in the Xmas Hack 2022 - 4th place. The task was to predict document type using Artificial Intelligence. Coordinated work with a designer and a backend developer. Participation in creation of the Figma prototype.",
         "info": [
           {
             "title": "Frontend",
@@ -73,7 +73,7 @@
       "task_board": {
         "name": "Task board",
         "shortDescription": "Organizer with a rich stack. One of the first projects",
-        "fullDescription": "A React web site for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the start of the long journey. A custom design was made in Figma based on a Kanban board from Dribbble.",
+        "fullDescription": "A React website for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the beginning of a long journey. A custom design was made in Figma inspired by a Kanban board from Dribbble.",
         "info": [
           {
             "title": "Frontend",
@@ -106,7 +106,7 @@
       "cos": {
         "name": "Cambridge Solver",
         "shortDescription": "Automating the Cambridge site to fill out answers",
-        "fullDescription": "A client-server app based on automating a browser to enter the correct answers on the Cambridge One website. Known by 99% of MISiS 2023 and 2024 students. Later, an extension was made. The platform stopped working in Russia",
+        "fullDescription": "A client-server app was developed as a browser automation script to enter the correct answers on the Cambridge One website. This app was well-known among 99% of MISiS 2023 and 2024 students. Later, an extension was made. However, the platform stopped working in Russia.",
         "info": [
           {
             "title": "Client",
@@ -139,7 +139,7 @@
       "lct": {
         "name": "Leaders 2022",
         "shortDescription": "Import/export research for investment",
-        "fullDescription": "Case #4 of the Leaders of Digital Transformation hack 2022. The only young team that made it to the finals. The goal was to find trending industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Probably not working anymore.",
+        "fullDescription": "Case #4 of the Leaders of Digital Transformation hackathon 2022. The only young team that made it to the finals. The goal was to find trending industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Probably not working anymore.",
         "info": [
           {
             "title": "Frontend",
@@ -164,7 +164,7 @@
       "directions": {
         "name": "Directions",
         "shortDescription": "Record traffic between streets and cities",
-        "fullDescription": "App for exporting statistics in Excel about traffic between 2-10 different points on the map, works with Google Directions API. Needed it to automate actions in course work. Can work in the background and collect data by timers. Love the UI/UX :)",
+        "fullDescription": "App for exporting statistics in Excel about traffic between 2-10 different points on the map, works with Google Directions API. Needed it to automate actions for coursework. Runs in the background and collects data at timed intervals. Love the UI/UX :)",
         "info": [
           {
             "title": "Stack",
@@ -181,7 +181,7 @@
       "resume": {
         "name": "Portfolio",
         "shortDescription": "The current website",
-        "fullDescription": "My most creative project. It all started with the idea of making a cube that changes color on hover, then came up with the opening transition to the other pages. The screenshots show how the design evolved. The site is adaptive and works on all devices.",
+        "fullDescription": "This was my most creative project. It all started with the idea of making a cube that changes color on hover, and then I came up with an opening transition to the other pages. The screenshots demonstrate how the design of the site evolved over time. The site is responsive and works on all types of devices.",
         "info": [
           {
             "title": "Frontend",
