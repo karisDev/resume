@@ -240,7 +240,8 @@ $cube-sides: (".left", ".right", ".top", ".back", ".front", ".bottom");
 .watermark {
   text-transform: none;
   position: absolute;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-family: golos, sans-serif;
   top: 0;
   right: 0;
   color: #fff;

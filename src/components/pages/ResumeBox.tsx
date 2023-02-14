@@ -1,6 +1,7 @@
 import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
 import Watermark from "../ui/Watermark";
+import operator from "../../assets/images/operator.png";
 
 const ResumeBox: Component = () => {
   const navigate = useNavigate();
@@ -128,6 +129,8 @@ const ResumeBox: Component = () => {
       color. improves webkit perfomance  */}
         <div class="mouse_catcher" onMouseEnter={mouseLeave}></div>
       </div>
+      {/* preload */}
+      <img style="display: none;" src={operator} />
     </>
   );
 };
