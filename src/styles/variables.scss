@@ -1,9 +1,9 @@
 $font-heading: "Exo 2", sans-serif;
 $box-theme: #221d41;
-// $contacts-theme: #226ce0;
 $about-theme: #ffba08;
 $projects-theme: #1c8dd9;
 $contacts-theme: #ff595e;
+
 // darker colors for left side of the box
 $about-darker: adjust-color($about-theme, $blackness: 10%);
 $projects-darker: adjust-color($projects-theme, $blackness: 10%);

@@ -39,27 +39,12 @@
     "about_technologies_group1": "Frameworks",
     "about_technologies_group2": "Libraries",
     "about_technologies_group3": "Tools",
-    "projects_title": "My best projects",
-    "projects_cos_description": "Client-server desktop app, which is based on the automation of the browser with a goal of filling in the correct answers on",
-    "projects_cos_front": "Frontend",
-    "projects_cos_back": "Backend",
-    "projects_cos_count_tests": "Solved tests",
-    "projects_cos_count_users": "Users",
-    "projects_cos_count_group_members": "People following",
-    "projects_cos_thanks": "Thank you so much for your support!",
-    "projects_cos_vk_group": "VK group",
-    "projects_tb_description": "Productivity website made with React. The goal was to learn as much as possible. The most technically difficult project. The app is available on",
-    "projects_tb_statement_1": "Adaptive design",
-    "projects_tb_statement_2": "Cloud storage",
-    "projects_tb_statement_3": "Dynamic theme",
-    "projects_tb_statement_4": "Multi-language support",
-    "projects_box_intro": "and of course...",
 
     "projects_project_items": {
       "aidoc": {
         "name": "AiDoc",
-        "shortDescription": "Identifying the type of document with the interpretation of results",
-        "fullDescription": "Case #1 in the Xmas Hack 2022 hack - 4th place. The task was to understand the type of document using AI. Coordinated work with a designer and a backend developer was established. Participation in creating the Figma prototype.",
+        "shortDescription": "Document type prediction with the interpretation of results",
+        "fullDescription": "Case #1 in the Xmas Hack 2022 - 4th place. The task was to predict document type using Artificial Intelligence. Coordinated work with a designer and a backend developer. Participation in creating the Figma prototype.",
         "info": [
           {
             "title": "Frontend",
@@ -88,7 +73,7 @@
       "task_board": {
         "name": "Task board",
         "shortDescription": "Organizer with a rich stack. One of the first projects",
-        "fullDescription": "A React web site for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the start. A custom design was made in Figma based on a Kanban board from Dribbble.",
+        "fullDescription": "A React web site for productivity. One of the first projects. The goal was to gain as much knowledge as possible at the start of the long journey. A custom design was made in Figma based on a Kanban board from Dribbble.",
         "info": [
           {
             "title": "Frontend",
@@ -154,7 +139,7 @@
       "lct": {
         "name": "Leaders 2022",
         "shortDescription": "Import/export research for investment",
-        "fullDescription": "Case #4 of the Leaders of Digital Transformation hack 2022. The only young team that made it to the finals. The goal was to find promising industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Probably not working anymore.",
+        "fullDescription": "Case #4 of the Leaders of Digital Transformation hack 2022. The only young team that made it to the finals. The goal was to find trending industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Probably not working anymore.",
         "info": [
           {
             "title": "Frontend",

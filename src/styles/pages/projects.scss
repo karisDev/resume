@@ -419,18 +419,16 @@ $animation-duration: 0.3s;
 }
 
 .description-slide-exit-active {
-  transition: transform $animation-duration ease-in-out,
-    opacity $animation-duration ease-in-out;
+  transition: opacity $animation-duration ease-in-out;
 }
 
 .description-slide-enter-active {
-  transition: transform $animation-duration 0.25s ease-out,
-    opacity $animation-duration 0.25s ease-out;
+  transition: opacity $animation-duration 0.25s ease-out;
 }
 
 .description-slide-enter,
 .description-slide-exit-to {
-  transform: translateY(-120%);
+  // transform: translateY(-120%);
   opacity: 0;
 }
 

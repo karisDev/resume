@@ -47,7 +47,7 @@ $tablet: 900px;
           border-radius: 15px;
           height: min-content;
           &:hover:not(:active) {
-            transform: translate(-0.25em, -0.25em);
+            // transform: translate(-0.25em, -0.25em);
           }
         }
         .link {
