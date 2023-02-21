@@ -34,13 +34,42 @@
     "about_russian": "Russian",
     "about_russian_level": "Native",
     "about_english": "English",
-    "about_english_level": "C1",
+    "about_english_level": "C2",
     "about_technologies_header": "Technologies",
     "about_technologies_group1": "Frameworks",
     "about_technologies_group2": "Libraries",
     "about_technologies_group3": "Tools",
 
     "projects_project_items": {
+      "vknft": {
+        "name": "NFT VK",
+        "shortDescription": "Service for creating and authorizing NFT tickets",
+        "fullDescription": "Case #1 in the Definition hack 2023 - a winner. Created a service for creating and receiving NFT tickets with a cool idea. The VKUI / VK Mini Apps framework was fully learned from scratch, which is significantly different from standard websites. Authorization of crypto wallets from the user's side has been studied.",
+        "info": [
+          {
+            "title": "Base",
+            "description": "React\nTypeScript\nVK Mini Apps\nVite"
+          },
+          {
+            "title": "Libraries",
+            "description": "Redux toolkit\nVKUI\nSolana Web3\nSass"
+          },
+          {
+            "title": "Features",
+            "description": "Responsive\nIntegration into VK\nPop-up windows\n2 days of development"
+          }
+        ],
+        "links": [
+          {
+            "title": "Demo (may not work)",
+            "url": "https://vk.com/app51550685"
+          },
+          {
+            "title": "Repo",
+            "url": "https://github.com/karisDev/misis-tolerance-frontend"
+          }
+        ]
+      },
       "aidoc": {
         "name": "AiDoc",
         "shortDescription": "Document type prediction with the interpretation of results",
@@ -152,12 +181,12 @@
         ],
         "links": [
           {
-            "title": "Repo",
-            "url": "https://github.com/denmalbas007/RecSys_LCT"
-          },
-          {
             "title": "Demo (may not work)",
             "url": "http://37.230.196.148:2002/"
+          },
+          {
+            "title": "Repo",
+            "url": "https://github.com/denmalbas007/RecSys_LCT"
           }
         ]
       },
@@ -251,7 +280,7 @@
     "about_russian": "Русский",
     "about_russian_level": "Родной",
     "about_english": "Английский",
-    "about_english_level": "C1",
+    "about_english_level": "C2",
     "about_technologies_header": "Технологии",
     "about_technologies_group1": "Фреймворки",
     "about_technologies_group2": "Библиотеки",
@@ -273,6 +302,35 @@
     "projects_box_intro": "и конечно же...",
 
     "projects_project_items": {
+      "vknft": {
+        "name": "NFT VK",
+        "shortDescription": "Сервис по созданию и авторизации NFT билетов",
+        "fullDescription": "Кейс №1 в хакатоне Definition hack 2023 - призёр. Создали сервис для создания и получения NFT билетов с крутой идеей. Был с нуля полностью изучен фреймворк VKUI / VK Mini Apps, который значительно отличается от стандартных веб сайтов. Изучена авторизация криптокошельков со стороны пользователя",
+        "info": [
+          {
+            "title": "Основа",
+            "description": "React\nTypeScript\nVK Mini Apps\nVite"
+          },
+          {
+            "title": "Библиотеки",
+            "description": "Redux toolkit\nVKUI\nSolana Web3\nSass"
+          },
+          {
+            "title": "Особенности",
+            "description": "Адаптивность\nИнтеграция в ВК\nВсплывающие окна\n2 дня разработки"
+          }
+        ],
+        "links": [
+          {
+            "title": "Демо (может не работать)",
+            "url": "https://vk.com/app51550685"
+          },
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/karisDev/misis-tolerance-frontend"
+          }
+        ]
+      },
       "aidoc": {
         "name": "AiDoc",
         "shortDescription": "Определение вида договора с интерпретацией результатов",
@@ -330,7 +388,7 @@
             "url": "https://github.com/karisDev/react-task-board/"
           },
           {
-            "title": "Вдохновление",
+            "title": "Вдохновение",
             "url": "https://dribbble.com/shots/16651551-Simple-kanban-board-Dark-Mode"
           }
         ]
@@ -384,12 +442,12 @@
         ],
         "links": [
           {
-            "title": "Репозиторий",
-            "url": "https://github.com/denmalbas007/RecSys_LCT"
-          },
-          {
             "title": "Демо (может не работать)",
             "url": "http://37.230.196.148:2002/"
+          },
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/denmalbas007/RecSys_LCT"
           }
         ]
       },

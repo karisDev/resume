@@ -10,6 +10,7 @@ import ReactSvg from "../../assets/icons/reactjs.svg";
 import JavaScriptSvg from "../../assets/icons/js.svg";
 import SassSvg from "../../assets/icons/sass.svg";
 import SolidSvg from "../../assets/icons/solidjs.svg";
+import ReduxSvg from "../../assets/icons/redux.svg";
 import project_tb1 from "../../assets/images/tb1.png";
 import project_tb2 from "../../assets/images/tb2.png";
 import project_tb3 from "../../assets/images/tb3.png";
@@ -21,6 +22,11 @@ import project_aidoc1 from "../../assets/images/aidoc1.png";
 import project_aidoc2 from "../../assets/images/aidoc2.png";
 import project_aidoc3 from "../../assets/images/aidoc3.png";
 import project_aidoc4 from "../../assets/images/aidoc4.png";
+import project_vknft1 from "../../assets/images/vknft1.png";
+import project_vknft2 from "../../assets/images/vknft2.png";
+import project_vknft3 from "../../assets/images/vknft3.png";
+import project_vknft4 from "../../assets/images/vknft4.png";
+import project_vknft5 from "../../assets/images/vknft5.png";
 import project_lct1 from "../../assets/images/lct1.png";
 import project_lct2 from "../../assets/images/lct2.png";
 import project_lct3 from "../../assets/images/lct3.png";
@@ -62,6 +68,20 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   const t = russian ? translation.ru : translation.en;
 
   const projects: Project[] = [
+    {
+      // vk nft
+      ...t.projects_project_items.vknft,
+      backgroundColor: "#EDEEF0",
+      themeColor: "#3275F6",
+      images: [
+        project_vknft1,
+        project_vknft2,
+        project_vknft3,
+        project_vknft4,
+        project_vknft5,
+      ],
+      stackIcons: [ReduxSvg, ReactSvg, TypescriptSvg, SassSvg],
+    },
     {
       // aidoc
       ...t.projects_project_items.aidoc,
