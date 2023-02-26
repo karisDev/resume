@@ -31,6 +31,7 @@ import project_lct1 from "../../assets/images/lct1.png";
 import project_lct2 from "../../assets/images/lct2.png";
 import project_lct3 from "../../assets/images/lct3.png";
 import project_lct4 from "../../assets/images/lct4.png";
+import project_lct5 from "../../assets/images/lct5.png";
 import project_directions1 from "../../assets/images/directions1.png";
 import project_directions2 from "../../assets/images/directions2.png";
 import project_directions3 from "../../assets/images/directions3.png";
@@ -95,7 +96,13 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
       // lct
       ...t.projects_project_items.lct,
       backgroundColor: "#9b1827",
-      images: [project_lct1, project_lct2, project_lct3, project_lct4],
+      images: [
+        project_lct5,
+        project_lct1,
+        project_lct2,
+        project_lct3,
+        project_lct4,
+      ],
       isDarkTheme: true,
       stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
     },
