@@ -16,12 +16,12 @@ import SassSvg from "../assets/icons/sass.svg";
 import ThreeJSSvg from "../assets/icons/threejs.svg";
 import ReduxSvg from "../assets/icons/redux.svg";
 import VkUiSvg from "../assets/icons/vkui.svg";
-import ThinkingEmojiSvg from "../../assets/icons/thinking_emoji.svg";
-import GitSvg from "../../assets/icons/git.svg";
-import LinuxSvg from "../../assets/icons/linux.svg";
-import SeleniumSvg from "../../assets/icons/selenium.svg";
-import DockerSvg from "../../assets/icons/docker.svg";
-import FigmaSvg from "../../assets/icons/figma.svg";
+import ThinkingEmojiSvg from "../assets/icons/thinking_emoji.svg";
+import GitSvg from "../assets/icons/git.svg";
+import LinuxSvg from "../assets/icons/linux.svg";
+import SeleniumSvg from "../assets/icons/selenium.svg";
+import DockerSvg from "../assets/icons/docker.svg";
+import FigmaSvg from "../assets/icons/figma.svg";
 
 const useAboutItems = () => {
   const programmingItems = [
