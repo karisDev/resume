@@ -1,7 +1,10 @@
 import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
 import Watermark from "../ui/Watermark";
+// preload
 import operator from "../../assets/images/operator.png";
+import project_first_pic from "../../assets/images/vknft1.png";
+import my_photo from "../../assets/images/me.png";
 
 const ResumeBox: Component = () => {
   const navigate = useNavigate();
@@ -131,6 +134,8 @@ const ResumeBox: Component = () => {
       </div>
       {/* preload */}
       <img style="display: none;" src={operator} />
+      <img style="display: none;" src={project_first_pic} />
+      <img style="display: none;" src={my_photo} />
     </>
   );
 };

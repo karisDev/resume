@@ -44,7 +44,7 @@
       "vknft": {
         "name": "NFT VK",
         "shortDescription": "Service for creating and authorizing NFT tickets",
-        "fullDescription": "Case #1 in the Definition hack 2023 - a winner. Created a service for creating and receiving NFT tickets with a cool idea. The VKUI / VK Mini Apps framework was fully learned from scratch, which is significantly different from standard websites. Authorization of crypto wallets from the user's side has been studied.",
+        "fullDescription": "Case #1 in the Definition hack 2023 - a winner. Created a service for publishing and receiving NFT tickets with a cool idea. The VKUI / VK Mini Apps framework was fully learned from scratch, which is significantly different from standard websites. Authorization of crypto wallets from the user's side has been studied.",
         "info": [
           {
             "title": "Base",
@@ -135,7 +135,7 @@
       "cos": {
         "name": "Cambridge Solver",
         "shortDescription": "Automating the Cambridge site to fill out answers",
-        "fullDescription": "A client-server app was developed as a browser automation script to enter the correct answers on the Cambridge One website. This app was well-known among 99% of MISiS 2023 and 2024 students. Later, an extension was made. However, the platform stopped working in Russia.",
+        "fullDescription": "A client-server app was developed as a browser automation script to enter the correct answers on the Cambridge One website. This app was well-known among 99% of MISiS 2024 and 2025 graduation year students. Later, an extension was made. However, the platform stopped working in Russia.",
         "info": [
           {
             "title": "Client",
@@ -396,7 +396,7 @@
       "cos": {
         "name": "Cambridge Solver",
         "shortDescription": "Автоматизация сайта Cambridge для ввода ответов",
-        "fullDescription": "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте Cambridge One. Знают 99% студентов МИСиС 2023 и 2024 года выпуска. Позже было сделано расширение. Платформа перестала работать в России",
+        "fullDescription": "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте Cambridge One. Знают 99% студентов МИСиС 2024 и 2025 года выпуска. Позже было сделано расширение. Платформа перестала работать в России",
         "info": [
           {
             "title": "Клиент",
