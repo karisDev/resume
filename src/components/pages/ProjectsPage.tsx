@@ -149,7 +149,8 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   );
   const [isDarkTheme, setIsDarkTheme] = createSignal(projects[0].isDarkTheme);
   const [selectedImage, setSelectedImage] = createSignal(0);
-  const [show, setShow] = createSignal(true); // required for transition effect
+  // required for transition effect
+  const [show, setShow] = createSignal(true);
   const [showImage, setShowImage] = createSignal(true);
 
   const handleProjectChange = (project: Project) => {
