@@ -7,9 +7,12 @@ import AboutPage from "./components/pages/AboutPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
 
 const App: Component = () => {
+  const params = new URLSearchParams(window.location.search);
+
   return (
     <>
       <Router>
+        {params.get("p") && <Navigate href={`/resume${params.get("p")}`} />}
         <Routes>
           <Route path="/resume/cube" element={<ResumeBox />} />
           <Route path="/resume/ru/about" element={<AboutPage russian />} />

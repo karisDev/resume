@@ -22,6 +22,8 @@ import LinuxSvg from "../assets/icons/linux.svg";
 import SeleniumSvg from "../assets/icons/selenium.svg";
 import DockerSvg from "../assets/icons/docker.svg";
 import FigmaSvg from "../assets/icons/figma.svg";
+import LeafletSvg from "../assets/icons/leaflet.svg";
+import SocketIoSvg from "../assets/icons/socketio.svg";
 
 const useAboutItems = () => {
   const programmingItems = [
@@ -76,6 +78,14 @@ const useAboutItems = () => {
     {
       title: "Redux",
       icon: ReduxSvg,
+    },
+    {
+      title: "Leaflet",
+      icon: LeafletSvg,
+    },
+    {
+      title: "Socket.io",
+      icon: SocketIoSvg,
     },
     {
       title: "Firebase",
