@@ -12,8 +12,8 @@ const App: Component = () => {
   return (
     <>
       <Router>
-        {params.get("p") && <Navigate href={`/resume${params.get("p")}`} />}
         <Routes>
+          {}
           <Route path="/resume/cube" element={<ResumeBox />} />
           <Route path="/resume/ru/about" element={<AboutPage russian />} />
           <Route
@@ -27,7 +27,16 @@ const App: Component = () => {
           <Route path="/resume/en/about" element={<AboutPage />} />
           <Route path="/resume/en/projects" element={<ProjectsPage />} />
           <Route path="/resume/en/contacts" element={<ContactsPage />} />
-          <Route path="/*" element={<Navigate href="/resume/cube" />} />
+          <Route
+            path="/*"
+            element={
+              params.get("p") ? (
+                <Navigate href={`/resume${params.get("p")}`} />
+              ) : (
+                <Navigate href="/resume/cube" />
+              )
+            }
+          />
         </Routes>
       </Router>
     </>
