@@ -10,6 +10,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overscroll-behavior: none;
 }
 html {
   font-size: 1.6vmin;
@@ -39,6 +40,7 @@ html {
 @import "ui/inputs";
 @import "ui/mask";
 @import "ui/sliders";
+@import "ui/pullToRefresh";
 
 @import "pages/contacts";
 @import "pages/about";

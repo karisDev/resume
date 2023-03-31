@@ -5,6 +5,7 @@ import ContactsPage from "./components/pages/ContactsPage";
 import ResumeBox from "./components/pages/ResumeBox";
 import AboutPage from "./components/pages/AboutPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
+import TestPage from "./components/pages/TestPage";
 
 const App: Component = () => {
   const params = new URLSearchParams(window.location.search);
@@ -14,6 +15,7 @@ const App: Component = () => {
       <Router>
         <Routes>
           {}
+          <Route path="/resume/test" element={<TestPage />} />
           <Route path="/resume/cube" element={<ResumeBox />} />
           <Route path="/resume/ru/about" element={<AboutPage russian />} />
           <Route

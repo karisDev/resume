@@ -1,0 +1,31 @@
+.pull_to_refresh {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .refresh_modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    background-color: rgb(6, 182, 240);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .refresh_chevron {
+    margin-top: 1em;
+    display: flex;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease-in-out;
+    &.reached {
+      color: #8de14c;
+      color: rgb(141, 225, 76, 1);
+    }
+    // 8de14c in rgb
+    color: rgba(255, 225, 255, 0.6);
+  }
+}
