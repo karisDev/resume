@@ -44,20 +44,6 @@ const StackHorizontalSlider: Component<StackHorizontalSliderProps> = (
     }, speed);
   };
 
-  createEffect(() => {
-    if (slider()) {
-      const sliderElement = slider();
-      sliderElement.addEventListener("wheel", (e) => {
-        e.preventDefault();
-        if (e.deltaY < 0) {
-          sideScroll(sliderElement, "left", 10, 10, 10);
-        } else if (e.deltaY > 0) {
-          sideScroll(sliderElement, "right", 10, 10, 10);
-        }
-      });
-    }
-  });
-
   // if no overflow, hide controls, check on resize
   createEffect(() => {
     const checkWidth = () => {
@@ -85,9 +71,7 @@ const StackHorizontalSlider: Component<StackHorizontalSliderProps> = (
           <button
             class="slider_control"
             onClick={() => {
-              if (slider()) {
-                sideScroll(slider(), "left", speed, incrementValue, step);
-              }
+              sideScroll(slider(), "left", speed, incrementValue, step);
             }}
           >
             <ChevronLeftSvg />
@@ -95,16 +79,22 @@ const StackHorizontalSlider: Component<StackHorizontalSliderProps> = (
           <button
             class="slider_control"
             onClick={() => {
-              if (slider()) {
-                sideScroll(slider(), "right", speed, incrementValue, step);
-              }
+              sideScroll(slider(), "right", speed, incrementValue, step);
             }}
           >
             <ChevronRightSvg />
           </button>
         </div>
       </div>
-      <div ref={setSlider} class="slider_container">
+      <div
+        ref={setSlider}
+        class="slider_container"
+        onWheel={(e) => {
+          e.preventDefault();
+          console.log(e);
+          slider().scrollLeft += e.deltaY;
+        }}
+      >
         <For each={props.items}>
           {(item) => (
             <div class="slider_item">
