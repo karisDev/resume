@@ -43,7 +43,7 @@
       "true_tech": {
         "name": "True Tech",
         "shortDescription": "Adapting movies for people with special needs",
-        "fullDescription": "Case #1 of the True Tech hackathon by MTS. Website for the KION video service with a strong focus on people with disabilities. ML-based voice commands, skip to content button, my design with compliance to WCAG 2.1 AAA standards",
+        "fullDescription": "Case #1 of the True Tech hackathon by MTS - 4th place. Website for the KION video service with a strong focus on people with disabilities. ML-based voice commands, skip to content button, my design with compliance to WCAG 2.1 AAA standards",
         "info": [
           {
             "title": "Libraries",
@@ -68,7 +68,7 @@
       "map_quiz": {
         "name": "Map Quiz",
         "shortDescription": "Geographical online game with a map",
-        "fullDescription": "A game where the host shows a photo of a landmark, and other players must find the location on an interactive map from their devices. The closer to the location, the more points you get. Backend on sockets made from scratch, easy join via QR code. To play, enter the name \"karis\"",
+        "fullDescription": "A game, made for english classes, where the host shows a photo of a landmark, and players must find the location on a map from their devices. The closer to the location, the more points you get. Backend on sockets made from scratch, easy join via QR code. To play, enter the name \"karis\"",
         "info": [
           {
             "title": "Frontend",
@@ -337,7 +337,7 @@
       "true_tech": {
         "name": "True Tech",
         "shortDescription": "Адаптация фильмов для людей с особыми потребностями",
-        "fullDescription": "Кейс №1 хакатона True Tech от МТС. Сайт для видеосервиса KION с большим вниманием к людям с ограниченными возможностями. Голосовые команды на основе ML, кнопка для пропуска навигации, полностью мой дизайн с соответствием стандартам WCAG 2.1 AAA",
+        "fullDescription": "Кейс №1 хакатона True Tech от МТС - 4 место. Сайт для видеосервиса KION с большим вниманием к людям с ограниченными возможностями. Голосовые команды на основе ML, кнопка для пропуска навигации, полностью мой дизайн с соответствием стандартам WCAG 2.1 AAA",
         "info": [
           {
             "title": "Библиотеки",
@@ -362,7 +362,7 @@
       "map_quiz": {
         "name": "Map Quiz",
         "shortDescription": "Географическая онлайн игра с картой",
-        "fullDescription": "Игра, где хост показывает фотографию достопримечательности, а другие игроки должны найти это место на интерактивной карте со своих устройств. Чем ближе к месту, тем больше очков. Собственный бэкэнд на сокетах, удобное подключение через QR код. Чтобы сыграть зайдите с именем \"karis\"",
+        "fullDescription": "Игра, где хост показывает фотографию достопримечательности, а другие игроки должны найти это место на карте со своих устройств. Чем ближе к месту, тем больше очков. Делал для урока по английскому. Собственный бэкэнд на сокетах, удобное подключение через QR код. Чтобы сыграть зайдите с именем \"karis\"",
         "info": [
           {
             "title": "Frontend",

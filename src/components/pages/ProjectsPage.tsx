@@ -81,6 +81,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
       // true tech hack
       ...t.projects_project_items.true_tech,
       backgroundColor: "#282828",
+      themeColor: "#F90B1B",
       images: [project_tth1, project_tth2, project_tth3],
       stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
       isDarkTheme: true,
@@ -88,8 +89,8 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     {
       // map quiz
       ...t.projects_project_items.map_quiz,
-      backgroundColor: "#ddebff",
-      // themeColor: "#3275F6",
+      backgroundColor: "#DDEBFF",
+      themeColor: "#3275F6",
       images: [project_mapquiz1, project_mapquiz2, project_mapquiz3],
       stackIcons: [ReactSvg, JavaScriptSvg, SassSvg, LeafletSvg, SocketIoSvg],
       isDarkTheme: false,
