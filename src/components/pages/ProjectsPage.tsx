@@ -11,6 +11,8 @@ import JavaScriptSvg from "../../assets/icons/js.svg";
 import SassSvg from "../../assets/icons/sass.svg";
 import SolidSvg from "../../assets/icons/solidjs.svg";
 import ReduxSvg from "../../assets/icons/redux.svg";
+import LeafletSvg from "../../assets/icons/leaflet.svg";
+import SocketIoSvg from "../../assets/icons/socketio.svg";
 import project_tb1 from "../../assets/images/tb1.png";
 import project_tb2 from "../../assets/images/tb2.png";
 import project_tb3 from "../../assets/images/tb3.png";
@@ -38,6 +40,12 @@ import project_directions3 from "../../assets/images/directions3.png";
 import project_resume1 from "../../assets/images/resume1.png";
 import project_resume2 from "../../assets/images/resume2.png";
 import project_resume3 from "../../assets/images/resume3.png";
+import project_mapquiz1 from "../../assets/images/map_quiz1.png";
+import project_mapquiz2 from "../../assets/images/map_quiz2.png";
+import project_mapquiz3 from "../../assets/images/map_quiz3.png";
+import project_tth1 from "../../assets/images/tth1.png";
+import project_tth2 from "../../assets/images/tth2.png";
+import project_tth3 from "../../assets/images/tth3.png";
 import translation from "../../assets/translation.json";
 
 import { createSignal, For } from "solid-js";
@@ -69,6 +77,23 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   const t = russian ? translation.ru : translation.en;
 
   const projects: Project[] = [
+    {
+      // true tech hack
+      ...t.projects_project_items.true_tech,
+      backgroundColor: "#282828",
+      images: [project_tth1, project_tth2, project_tth3],
+      stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
+      isDarkTheme: true,
+    },
+    {
+      // map quiz
+      ...t.projects_project_items.map_quiz,
+      backgroundColor: "#ddebff",
+      // themeColor: "#3275F6",
+      images: [project_mapquiz1, project_mapquiz2, project_mapquiz3],
+      stackIcons: [ReactSvg, JavaScriptSvg, SassSvg, LeafletSvg, SocketIoSvg],
+      isDarkTheme: false,
+    },
     {
       // vk nft
       ...t.projects_project_items.vknft,
@@ -106,7 +131,6 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
       isDarkTheme: true,
       stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
     },
-
     {
       // cambridge solver
       ...t.projects_project_items.cos,

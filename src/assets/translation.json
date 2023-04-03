@@ -40,6 +40,56 @@
     "about_technologies_group2": "Libraries",
     "about_technologies_group3": "Tools",
     "projects_project_items": {
+      "true_tech": {
+        "name": "True Tech",
+        "shortDescription": "Adapting movies for people with special needs",
+        "fullDescription": "Case #1 of the True Tech hackathon by MTS. Website for the KION video service with a strong focus on people with disabilities. ML-based voice commands, skip to content button, my design with compliance to WCAG 2.1 AAA standards",
+        "info": [
+          {
+            "title": "Libraries",
+            "description": "React\nPubSub\nWeb Speech API"
+          },
+          {
+            "title": "Features",
+            "description": "Voice control\nHotkeys\nHigh contrast\nResponsive\nSemantics"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repository",
+            "url": "https://github.com/itatmisis/mts-epileptic-hack"
+          },
+          {
+            "title": "Demo",
+            "url": "https://solving-tree-mts.vercel.app"
+          }
+        ]
+      },
+      "map_quiz": {
+        "name": "Map Quiz",
+        "shortDescription": "Geographical online game with a map",
+        "fullDescription": "A game where the host shows a photo of a landmark, and other players must find the location on an interactive map from their devices. The closer to the location, the more points you get. Backend on sockets made from scratch, easy join via QR code. To play, enter the name \"karis\"",
+        "info": [
+          {
+            "title": "Frontend",
+            "description": "Leaflet\nReact\nSCSS"
+          },
+          {
+            "title": "Backend",
+            "description": "Socket.io\nNode\nExpress"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repository",
+            "url": "https://github.com/karisDev/map-quiz"
+          },
+          {
+            "title": "Demo",
+            "url": "http://138.124.180.37/"
+          }
+        ]
+      },
       "vknft": {
         "name": "NFT VK",
         "shortDescription": "Service for creating and authorizing NFT tickets",
@@ -284,6 +334,56 @@
     "about_technologies_group2": "Библиотеки",
     "about_technologies_group3": "Инструменты",
     "projects_project_items": {
+      "true_tech": {
+        "name": "True Tech",
+        "shortDescription": "Адаптация фильмов для людей с особыми потребностями",
+        "fullDescription": "Кейс №1 хакатона True Tech от МТС. Сайт для видеосервиса KION с большим вниманием к людям с ограниченными возможностями. Голосовые команды на основе ML, кнопка для пропуска навигации, полностью мой дизайн с соответствием стандартам WCAG 2.1 AAA",
+        "info": [
+          {
+            "title": "Библиотеки",
+            "description": "React\nPubSub\nWeb Speech API"
+          },
+          {
+            "title": "Особенности",
+            "description": "Голосовое управление\nГорячие клавиши\nВысокая контрастность\nАдаптивность\nСемантика"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/itatmisis/mts-epileptic-hack"
+          },
+          {
+            "title": "Демо",
+            "url": "https://solving-tree-mts.vercel.app"
+          }
+        ]
+      },
+      "map_quiz": {
+        "name": "Map Quiz",
+        "shortDescription": "Географическая онлайн игра с картой",
+        "fullDescription": "Игра, где хост показывает фотографию достопримечательности, а другие игроки должны найти это место на интерактивной карте со своих устройств. Чем ближе к месту, тем больше очков. Собственный бэкэнд на сокетах, удобное подключение через QR код. Чтобы сыграть зайдите с именем \"karis\"",
+        "info": [
+          {
+            "title": "Frontend",
+            "description": "Leaflet\nReact\nSCSS"
+          },
+          {
+            "title": "Backend",
+            "description": "Socket.io\nNode\nExpress"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/karisDev/map-quiz"
+          },
+          {
+            "title": "Демо",
+            "url": "http://138.124.180.37"
+          }
+        ]
+      },
       "vknft": {
         "name": "NFT VK",
         "shortDescription": "Сервис по созданию и авторизации NFT билетов",
@@ -319,7 +419,7 @@
         "fullDescription": "Кейс №1 в хакатоне Xmas Hack 2022 - 4 место. Задача была понять тип документа с помощью нейросетей. Была тесная работа вместе с дизайнером и бэкэнд разработчиком. Участие в создании прототипа в Figma.",
         "info": [
           {
-            "title": "Фронт",
+            "title": "Фронтенд",
             "description": "React"
           },
           {
@@ -348,7 +448,7 @@
         "fullDescription": "Веб сайт на React для продуктивности. Один из первых проектов. Целью было получить как можно больше знаний на старте. Был сделан собственный дизайн в Figma на основе доски Kanban",
         "info": [
           {
-            "title": "Фронт",
+            "title": "Фронтенд",
             "description": "React\nTypeScript\nCSS Modules"
           },
           {
@@ -414,7 +514,7 @@
         "fullDescription": "Кейс №4 хакатона Лидеры Цифровой Трансформации 2022. Единственная молодая команда прошедшая в финал. Целью было найти перспективные отрасли для импортозамещения. 12 API запросов были интегрированы за один день. Первый опыт создания полного дизайна приложения.\nВход для демо: user/user. Возможно уже не работает.",
         "info": [
           {
-            "title": "Фронт",
+            "title": "Фронтенд",
             "description": "React\nTypescript\nSCSS\nAxios"
           },
           {
@@ -457,7 +557,7 @@
         "fullDescription": "Мой самый креативный проект. Все началось с идеи сделать куб, меняющий цвет при наведении, потом придумал открытие и переход на остальные страницы. На скриншотах видно как развивался дизайн. Сайт адаптивен и работает на всех устройствах.",
         "info": [
           {
-            "title": "Фронт",
+            "title": "Фронтенд",
             "description": "SolidJS\nTypeScript\nWebGL"
           },
           {
