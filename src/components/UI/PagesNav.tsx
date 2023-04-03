@@ -6,6 +6,7 @@ interface PagesNavProps {
   russian?: boolean;
 }
 const PagesNav: Component<PagesNavProps> = ({ russian }) => {
+  const isNavigatedFromCube = window.location.pathname.includes("cube");
   const [translatedPage, setTranslatedPage] = createSignal("");
   const letters = (russian ? "КУБ\xa0РЕЗЮМЕ" : "RESUME\xa0CUBE").split("");
 
@@ -18,7 +19,7 @@ const PagesNav: Component<PagesNavProps> = ({ russian }) => {
     }
   }, 500);
   return (
-    <div class="navigation">
+    <div class={`navigation ${isNavigatedFromCube && "animated"}`}>
       <NavLink href="/resume/cube">
         <img src={cube} />
         <For each={letters}>

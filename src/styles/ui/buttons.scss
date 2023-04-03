@@ -5,12 +5,14 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    animation: navigation_desktop_slide_in 0.5s ease-out;
     box-sizing: border-box;
     overflow: hidden;
     max-height: 80px;
     font-size: 20px;
     text-transform: uppercase;
+    &.animated {
+      animation: navigation_desktop_slide_in 0.5s ease-out;
+    }
     a {
       opacity: 0;
       overflow: hidden;
@@ -103,7 +105,9 @@
     text-transform: uppercase;
     height: $navbar-height;
     box-sizing: border-box;
-    animation: navigation_mobile_slide_in 0.5s ease-out;
+    &.animated {
+      animation: navigation_mobile_slide_in 0.5s ease-out;
+    }
     img {
       max-height: calc($navbar-height - 5px);
       height: 10vw;
