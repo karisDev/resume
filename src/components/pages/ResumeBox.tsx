@@ -3,7 +3,7 @@ import { Component, createSignal } from "solid-js";
 import Watermark from "../ui/Watermark";
 // preload
 import operator from "../../assets/images/operator.png";
-import project_first_pic from "../../assets/images/vknft1.png";
+import project_first_pic from "../../assets/images/tth1.png";
 import my_photo from "../../assets/images/me.png";
 
 const ResumeBox: Component = () => {

@@ -79,15 +79,11 @@ export default function PullToRefresh(props: PullToRefreshProps) {
   }, [refreshing()]);
 
   return (
-    <div
-      class="pull_to_refresh"
-      style={`position: relative;`}
-      onTouchStart={touchStartHandler}
-    >
-      {currentDrag()}
+    <div class="pull_to_refresh" onTouchStart={touchStartHandler}>
+      {/* {currentDrag()}
       <br />
-      {logs()}
-      <div id="inner_content">{props.children}</div>
+      {logs()} */}
+      {props.children}
       <div id="refresh_modal" class="refresh_modal" style="height: 0">
         <div class={`refresh_chevron ${dragGoalReached() && "reached"}`}>
           <svg

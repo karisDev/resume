@@ -2,6 +2,8 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  flex: 1;
   .refresh_modal {
     position: fixed;
     bottom: 0;
@@ -22,7 +24,6 @@
     justify-content: center;
     transition: color 0.3s ease-in-out;
     &.reached {
-      color: #8de14c;
       color: rgb(141, 225, 76, 1);
     }
     // 8de14c in rgb
