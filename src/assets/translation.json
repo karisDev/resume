@@ -39,7 +39,6 @@
     "about_technologies_group1": "Frameworks",
     "about_technologies_group2": "Libraries",
     "about_technologies_group3": "Tools",
-
     "projects_project_items": {
       "vknft": {
         "name": "NFT VK",
@@ -232,7 +231,6 @@
     "projects_description_header": "Description",
     "projects_links_header": "Links",
     "projects_shots_header": "Shots",
-
     "contacts_title": "Contacts",
     "contacts_via": "Contact me via:",
     "contacts_under_development": "this page is under construction",
@@ -285,22 +283,6 @@
     "about_technologies_group1": "Фреймворки",
     "about_technologies_group2": "Библиотеки",
     "about_technologies_group3": "Инструменты",
-    "projects_title": "Мои лучшие проекты",
-    "projects_cos_description": "Клиент-серверный проект, в основу которого входит автоматизация браузера с целью ввода правильных ответов на сайте",
-    "projects_cos_front": "Фронт",
-    "projects_cos_back": "Бэк",
-    "projects_cos_count_tests": "Решенных тестов",
-    "projects_cos_count_users": "Пользователей",
-    "projects_cos_count_group_members": "Человек в группе",
-    "projects_cos_thanks": "Огромное спасибо за поддержку!",
-    "projects_cos_vk_group": "Группа ВК",
-    "projects_tb_description": "Веб сайт на React для продуктивности. Целью было изучить как можно больше практик. Самый сложный технически проект. Приложение доступно на",
-    "projects_tb_statement_1": "Адаптивный дизайн",
-    "projects_tb_statement_2": "Облачное хранилище",
-    "projects_tb_statement_3": "Динамическая тема",
-    "projects_tb_statement_4": "Поддержка нескольких языков",
-    "projects_box_intro": "и конечно же...",
-
     "projects_project_items": {
       "vknft": {
         "name": "NFT VK",
@@ -494,7 +476,6 @@
     "projects_description_header": "Описание",
     "projects_links_header": "Ссылки",
     "projects_shots_header": "Скриншоты",
-
     "contacts_title": "Контакты",
     "contacts_via": "Связаться через соц. сети:",
     "contacts_under_development": "страница в разработке",
