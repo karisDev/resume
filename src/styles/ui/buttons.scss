@@ -1,6 +1,7 @@
 // navbar wide screen
 @media screen and (min-width: $layout-breakpoint-small) {
   .navigation {
+    user-select: none;
     z-index: 100;
     position: fixed;
     display: flex;

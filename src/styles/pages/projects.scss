@@ -154,7 +154,7 @@ $animation-duration: 0.3s;
           @media screen and (min-width: $layout-breakpoint-small) {
             // on press scale image to see better (desktop only)
             &:active {
-              transform: translateX(30%);
+              transform: translateX(25%);
               scale: 1.8;
             }
           }
@@ -325,6 +325,9 @@ $animation-duration: 0.3s;
 }
 @media screen and (max-width: $layout-breakpoint-small) {
   .new_projects_page {
+    .projects_nav {
+      // display: none;
+    }
     .projects_nav .project {
       min-width: 100%;
       max-width: 100%;

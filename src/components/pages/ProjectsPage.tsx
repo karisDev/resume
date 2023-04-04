@@ -53,8 +53,9 @@ import { Transition } from "solid-transition-group";
 import { Swiper, SwiperSlide } from "swiper/solid";
 import "swiper/css";
 import Mask from "../ui/Mask";
+// import NextProjectGesture from "../UI/NextProjectGesture";
 
-interface Project {
+export interface Project {
   name?: string;
   shortDescription?: string;
   fullDescription?: string;
@@ -167,8 +168,9 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     },
   ];
 
-  const animationDuration = 300;
+  const animationDuration = 250;
   const [activeProject, setActiveProject] = createSignal(projects[0]);
+  const [projectIndex, setProjectIndex] = createSignal(0);
   const [backgroundColor, setBackgroundColor] = createSignal(
     projects[0].backgroundColor
   );
@@ -178,7 +180,8 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   const [show, setShow] = createSignal(true);
   const [showImage, setShowImage] = createSignal(true);
 
-  const handleProjectChange = (project: Project) => {
+  const handleProjectChange = (index: number) => {
+    const project = projects[index];
     if (project === activeProject()) return;
 
     setBackgroundColor(project.backgroundColor);
@@ -187,6 +190,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     setShowImage(false);
     setTimeout(() => {
       setActiveProject(project);
+      setProjectIndex(index);
       setSelectedImage(0);
       setShow(true);
       setShowImage(true);
@@ -213,13 +217,19 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     >
       <Mask colorClass="projects_color" />
       <PagesNav russian={russian} />
+      {/* <NextProjectGesture
+        changeProject={handleProjectChange}
+        isDarkTheme={isDarkTheme()}
+        nextProject={projects[projectIndex() + 1]}
+        nextProjectIndex={projectIndex() + 1}
+      /> */}
       <div class="projects_nav">
         <Swiper slidesPerView={"auto"} spaceBetween={8}>
           <For each={projects}>
-            {(project) => (
+            {(project, index) => (
               <SwiperSlide
                 class="project"
-                onClick={() => handleProjectChange(project)}
+                onClick={() => handleProjectChange(index())}
               >
                 <div class="image">
                   <img src={project.images[0]} alt="" />
