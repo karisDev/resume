@@ -21,6 +21,8 @@ const NextProjectGesture: Component<Props> = ({
   let draggingHeight = 0;
   let modal = null;
 
+  createEffect(() => {}, [isDarkTheme, nextProject, nextProjectIndex]);
+
   const touchStartHandler = (e: TouchEvent) => {
     if (window.scrollY + window.innerHeight + 5 < document.body.scrollHeight)
       return;

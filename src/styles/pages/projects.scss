@@ -326,7 +326,7 @@ $animation-duration: 0.3s;
 @media screen and (max-width: $layout-breakpoint-small) {
   .new_projects_page {
     .projects_nav {
-      // display: none;
+      display: none;
     }
     .projects_nav .project {
       min-width: 100%;
