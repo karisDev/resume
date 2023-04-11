@@ -11,6 +11,11 @@
     "about_languages_group2": "Programming",
     "about_education_items": [
       {
+        "title": "Frontend\nDeveloper",
+        "company": "Perfema",
+        "year": "now"
+      },
+      {
         "title": "Internship",
         "company": "DUC Technologies",
         "year": "2022\n2023"
@@ -304,6 +309,11 @@
     "about_languages_group1": "Естественные",
     "about_languages_group2": "Программирования",
     "about_education_items": [
+      {
+        "title": "Frontend\nразработчик",
+        "company": "Perfema",
+        "year": "2023\nн.в"
+      },
       {
         "title": "Стажировка",
         "company": "DUC Technologies",
