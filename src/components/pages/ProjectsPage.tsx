@@ -53,7 +53,6 @@ import { Transition } from "solid-transition-group";
 import { Swiper, SwiperSlide } from "swiper/solid";
 import "swiper/css";
 import Mask from "../ui/Mask";
-import NextProjectGesture from "../UI/NextProjectGesture";
 
 export interface Project {
   name?: string;
@@ -217,12 +216,6 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     >
       <Mask colorClass="projects_color" />
       <PagesNav russian={russian} />
-      <NextProjectGesture
-        changeProject={handleProjectChange}
-        isDarkTheme={isDarkTheme()}
-        nextProject={projects[projectIndex() + 1]}
-        nextProjectIndex={projectIndex() + 1}
-      />
       <div class="projects_nav">
         <Swiper slidesPerView={"auto"} spaceBetween={8}>
           <For each={projects}>
