@@ -33,7 +33,7 @@ const PagesNav: Component<PagesNavProps> = ({ russian }) => {
         {russian ? "Проекты" : "Projects"}
       </NavLink>
       <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/contacts"}>
-        {russian ? "Конткаты" : "Contacts"}
+        {russian ? "Контакты" : "Contacts"}
       </NavLink>
       <NavLink href={translatedPage()}>
         {russian ? "English" : "Русский"}

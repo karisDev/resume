@@ -1,6 +1,6 @@
 import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
-import Watermark from "../ui/Watermark";
+import Watermark from "../UI/Watermark";
 // preload
 import operator from "../../assets/images/operator.png";
 import project_first_pic from "../../assets/images/tth1.png";
