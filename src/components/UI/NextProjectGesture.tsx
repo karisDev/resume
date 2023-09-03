@@ -1,4 +1,10 @@
-import { Accessor, Component, createEffect, createSignal } from "solid-js";
+import {
+  Accessor,
+  Component,
+  createEffect,
+  createSignal,
+  onCleanup,
+} from "solid-js";
 import { Project } from "../../hooks/useProjectItems";
 
 interface Props {
@@ -77,9 +83,9 @@ const NextProjectGesture: Component<Props> = ({
     requestAnimationFrame(drawModal);
 
     window.addEventListener("touchstart", touchStartHandler);
-    return () => {
+    onCleanup(() => {
       window.removeEventListener("touchstart", touchStartHandler);
-    };
+    });
   }, []);
 
   return (
