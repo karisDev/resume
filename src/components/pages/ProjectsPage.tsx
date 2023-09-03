@@ -1,175 +1,35 @@
 import PagesNav from "../ui/PagesNav";
 import ChevronRightSvg from "../../assets/icons/chevron_right.svg";
-import FirebaseSvg from "../../assets/icons/firebase.svg";
-import MuiSvg from "../../assets/icons/mui.svg";
-import TypescriptSvg from "../../assets/icons/ts.svg";
-import SeleniumSvg from "../../assets/icons/selenium.svg";
-import CsharpSvg from "../../assets/icons/csharp.svg";
-import PythonSvg from "../../assets/icons/python.svg";
-import ReactSvg from "../../assets/icons/reactjs.svg";
-import JavaScriptSvg from "../../assets/icons/js.svg";
-import SassSvg from "../../assets/icons/sass.svg";
-import SolidSvg from "../../assets/icons/solidjs.svg";
-import ReduxSvg from "../../assets/icons/redux.svg";
-import LeafletSvg from "../../assets/icons/leaflet.svg";
-import SocketIoSvg from "../../assets/icons/socketio.svg";
-import project_tb1 from "../../assets/images/tb1.png";
-import project_tb2 from "../../assets/images/tb2.png";
-import project_tb3 from "../../assets/images/tb3.png";
-import project_tb4 from "../../assets/images/tb4.png";
-import project_cs1 from "../../assets/images/cambridge1.png";
-import project_cs2 from "../../assets/images/cambridge2.png";
-import project_cs3 from "../../assets/images/cambridge3.png";
-import project_aidoc1 from "../../assets/images/aidoc1.png";
-import project_aidoc2 from "../../assets/images/aidoc2.png";
-import project_aidoc3 from "../../assets/images/aidoc3.png";
-import project_aidoc4 from "../../assets/images/aidoc4.png";
-import project_vknft1 from "../../assets/images/vknft1.png";
-import project_vknft2 from "../../assets/images/vknft2.png";
-import project_vknft3 from "../../assets/images/vknft3.png";
-import project_vknft4 from "../../assets/images/vknft4.png";
-import project_vknft5 from "../../assets/images/vknft5.png";
-import project_lct1 from "../../assets/images/lct1.png";
-import project_lct2 from "../../assets/images/lct2.png";
-import project_lct3 from "../../assets/images/lct3.png";
-import project_lct4 from "../../assets/images/lct4.png";
-import project_lct5 from "../../assets/images/lct5.png";
-import project_directions1 from "../../assets/images/directions1.png";
-import project_directions2 from "../../assets/images/directions2.png";
-import project_directions3 from "../../assets/images/directions3.png";
-import project_resume1 from "../../assets/images/resume1.png";
-import project_resume2 from "../../assets/images/resume2.png";
-import project_resume3 from "../../assets/images/resume3.png";
-import project_mapquiz1 from "../../assets/images/map_quiz1.png";
-import project_mapquiz2 from "../../assets/images/map_quiz2.png";
-import project_mapquiz3 from "../../assets/images/map_quiz3.png";
-import project_tth1 from "../../assets/images/tth1.png";
-import project_tth2 from "../../assets/images/tth2.png";
-import project_tth3 from "../../assets/images/tth3.png";
+import BackSvg from "../../assets/icons/back.svg";
 import translation from "../../assets/translation.json";
-
-import { createSignal, For } from "solid-js";
+import { createMemo, createSignal, For } from "solid-js";
 import { Transition } from "solid-transition-group";
 import { Swiper, SwiperSlide } from "swiper/solid";
 import "swiper/css";
 import Mask from "../ui/Mask";
+import NextProjectGesture from "../UI/NextProjectGesture";
+import { useProjectItems } from "../../hooks/useProjectItems";
 
-export interface Project {
-  name?: string;
-  shortDescription?: string;
-  fullDescription?: string;
-  backgroundColor: string;
-  themeColor?: string;
-  images?: string[];
-  info?: {
-    title: string;
-    description: string;
-  }[];
-  stackIcons?: string[];
-  links?: {
-    title: string;
-    url: string;
-  }[];
-  isDarkTheme?: boolean;
-}
+const ANIMATION_DURATION = 250;
 
 const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   const t = russian ? translation.ru : translation.en;
+  const projects = useProjectItems({ russian });
 
-  const projects: Project[] = [
-    {
-      // true tech hack
-      ...t.projects_project_items.true_tech,
-      backgroundColor: "#282828",
-      themeColor: "#F90B1B",
-      images: [project_tth1, project_tth2, project_tth3],
-      stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
-      isDarkTheme: true,
-    },
-    {
-      // map quiz
-      ...t.projects_project_items.map_quiz,
-      backgroundColor: "#DDEBFF",
-      themeColor: "#3275F6",
-      images: [project_mapquiz1, project_mapquiz2, project_mapquiz3],
-      stackIcons: [ReactSvg, JavaScriptSvg, SassSvg, LeafletSvg, SocketIoSvg],
-      isDarkTheme: false,
-    },
-    {
-      // vk nft
-      ...t.projects_project_items.vknft,
-      backgroundColor: "#EDEEF0",
-      themeColor: "#3275F6",
-      images: [
-        project_vknft1,
-        project_vknft2,
-        project_vknft3,
-        project_vknft4,
-        project_vknft5,
-      ],
-      stackIcons: [ReduxSvg, ReactSvg, TypescriptSvg, SassSvg],
-    },
-    {
-      // aidoc
-      ...t.projects_project_items.aidoc,
-      backgroundColor: "#1c8dd9",
-      themeColor: "#fff",
-      images: [project_aidoc1, project_aidoc2, project_aidoc3, project_aidoc4],
-      stackIcons: [ReactSvg, JavaScriptSvg, SassSvg],
-      isDarkTheme: true,
-    },
-    {
-      // lct
-      ...t.projects_project_items.lct,
-      backgroundColor: "#9b1827",
-      images: [
-        project_lct5,
-        project_lct1,
-        project_lct2,
-        project_lct3,
-        project_lct4,
-      ],
-      isDarkTheme: true,
-      stackIcons: [ReactSvg, TypescriptSvg, SassSvg],
-    },
-    {
-      // cambridge solver
-      ...t.projects_project_items.cos,
-      backgroundColor: "#303030",
-      images: [project_cs1, project_cs2, project_cs3],
-      themeColor: "#FFC107",
-      stackIcons: [CsharpSvg, PythonSvg, SeleniumSvg],
-      isDarkTheme: true,
-    },
-    {
-      // task board
-      ...t.projects_project_items.task_board,
-      backgroundColor: "#f1f1f1",
-      images: [project_tb1, project_tb2, project_tb3, project_tb4],
-      stackIcons: [FirebaseSvg, MuiSvg, TypescriptSvg],
-      isDarkTheme: false,
-    },
-    {
-      // directions
-      ...t.projects_project_items.directions,
-      backgroundColor: "#3f51b5",
-      isDarkTheme: true,
-      images: [project_directions1, project_directions2, project_directions3],
-      stackIcons: [CsharpSvg],
-    },
-    {
-      // resume
-      ...t.projects_project_items.resume,
-      backgroundColor: "#221d41",
-      images: [project_resume1, project_resume2, project_resume3],
-      stackIcons: [SolidSvg, TypescriptSvg, SassSvg],
-      isDarkTheme: true,
-    },
-  ];
-
-  const animationDuration = 250;
   const [activeProject, setActiveProject] = createSignal(projects[0]);
-  const [projectIndex, setProjectIndex] = createSignal(0);
+
+  const nextProjectIndex = createMemo(() => {
+    const currentIndex = projects.indexOf(activeProject());
+
+    return currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+  }, [activeProject]);
+
+  const prevProjectIndex = createMemo(() => {
+    const currentIndex = projects.indexOf(activeProject());
+
+    return currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+  }, [activeProject]);
+
   const [backgroundColor, setBackgroundColor] = createSignal(
     projects[0].backgroundColor
   );
@@ -189,11 +49,10 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     setShowImage(false);
     setTimeout(() => {
       setActiveProject(project);
-      setProjectIndex(index);
       setSelectedImage(0);
       setShow(true);
       setShowImage(true);
-    }, animationDuration);
+    }, ANIMATION_DURATION);
   };
 
   const handleImageChange = (index: number) => {
@@ -203,19 +62,35 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
     setSelectedImage(index);
     setTimeout(() => {
       setShowImage(true);
-    }, animationDuration);
+    }, ANIMATION_DURATION);
   };
 
   return (
     <div
       style={{
         background: backgroundColor() ?? "",
-        "text-color": activeProject().themeColor ?? "",
       }}
       class={`new_projects_page ${isDarkTheme() ? "dark" : ""}`}
     >
       <Mask colorClass="projects_color" />
       <PagesNav russian={russian} />
+      <NextProjectGesture
+        navigateNextProject={handleProjectChange}
+        isDarkTheme={isDarkTheme}
+        nextProjectIndex={nextProjectIndex}
+        projects={projects}
+      />
+      {projects[0] !== activeProject() && (
+        <div
+          class="previous_project"
+          onClick={() => handleProjectChange(prevProjectIndex())}
+        >
+          <BackSvg />
+          <Transition name="img-opacity">
+            {show() && <p>{projects[prevProjectIndex()].name}</p>}
+          </Transition>
+        </div>
+      )}
       <div class="projects_nav">
         <Swiper slidesPerView={"auto"} spaceBetween={8}>
           <For each={projects}>

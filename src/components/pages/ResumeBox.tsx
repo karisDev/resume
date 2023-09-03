@@ -1,16 +1,16 @@
-import { useNavigate } from "solid-app-router";
 import { Component, createSignal } from "solid-js";
 import Watermark from "../UI/Watermark";
 // preload
 import operator from "../../assets/images/operator.png";
 import project_first_pic from "../../assets/images/tth1.png";
 import my_photo from "../../assets/images/me.png";
+import { useNavigate } from "@solidjs/router";
 
 const ResumeBox: Component = () => {
-  const navigate = useNavigate();
   const isFirstVariant = Math.random() >= 0.5;
   const [fillBox, setFillBox] = createSignal("");
   const [navigatingColorClasses, setNavigatingColorClasses] = createSignal("");
+  const navigate = useNavigate();
   const mouseOver = (target: string) => {
     setFillBox(target);
   };
@@ -20,18 +20,14 @@ const ResumeBox: Component = () => {
   const beforeNavigate = async (href: string) => {
     const color = href.split("/").pop() as string;
     setNavigatingColorClasses("box_open fill_" + color);
-    await timeout(3000);
-    navigate(href);
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    navigate(href, { replace: true });
   };
 
-  function timeout(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
   return (
     <>
-      <div class="box_background">
-        <Watermark />
-      </div>
+      <div class="box_bg" />
+      <Watermark />
       <div
         class={
           "box_container box_breathe " +

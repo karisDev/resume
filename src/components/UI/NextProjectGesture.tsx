@@ -1,18 +1,18 @@
-import { Component, createEffect, createSignal } from "solid-js";
-import { Project } from "../pages/ProjectsPage";
+import { Accessor, Component, createEffect, createSignal } from "solid-js";
+import { Project } from "../../hooks/useProjectItems";
 
 interface Props {
-  isDarkTheme: boolean;
-  nextProject: Project;
-  nextProjectIndex: number;
-  changeProject: (index: number) => void;
+  isDarkTheme: Accessor<boolean>;
+  nextProjectIndex: Accessor<number>;
+  projects: Project[];
+  navigateNextProject: (index: number) => void;
 }
 
 const NextProjectGesture: Component<Props> = ({
   isDarkTheme,
-  nextProject,
   nextProjectIndex,
-  changeProject,
+  projects,
+  navigateNextProject,
 }) => {
   const DRAG_GOAL = 250;
   const [draggedHeight, setDraggedHeight] = createSignal(0);
@@ -21,12 +21,10 @@ const NextProjectGesture: Component<Props> = ({
   let draggingHeight = 0;
   let modal = null;
 
-  createEffect(() => {}, [isDarkTheme, nextProject, nextProjectIndex]);
-
   const touchStartHandler = (e: TouchEvent) => {
     if (window.scrollY + window.innerHeight + 5 < document.body.scrollHeight)
       return;
-    let startY = e.touches[0].clientY;
+    const startY = e.touches[0].clientY;
     const touchMoveHandler = (e: TouchEvent) => {
       const currentY = e.touches[0].clientY;
       if (currentY + draggingHeight > startY + 5) {
@@ -45,8 +43,8 @@ const NextProjectGesture: Component<Props> = ({
       setDraggedHeight(draggingHeight);
     };
     const touchEndHandler = () => {
-      if (draggingHeight > DRAG_GOAL) {
-        changeProject(nextProjectIndex);
+      if (draggingHeight > DRAG_GOAL - 20) {
+        navigateNextProject(nextProjectIndex());
         window.scrollTo({ top: 0 });
       }
       dragging = false;
@@ -82,18 +80,21 @@ const NextProjectGesture: Component<Props> = ({
     return () => {
       window.removeEventListener("touchstart", touchStartHandler);
     };
-  });
+  }, []);
 
   return (
     <div
       id="next_project_popup"
-      class={isDarkTheme ? "dark" : ""}
+      class={isDarkTheme() ? "dark" : ""}
       style={{
-        color: nextProject.themeColor ?? "",
-        "--gradientColor": nextProject.backgroundColor ?? "",
+        "--gradientColor": projects[nextProjectIndex()].backgroundColor ?? "",
       }}
     >
-      <div class={`popup_chevron ${draggedHeight() >= DRAG_GOAL && "reached"}`}>
+      <div
+        class={`popup_chevron ${
+          draggedHeight() >= DRAG_GOAL - 20 && "reached"
+        }`}
+      >
         <svg
           width="64"
           height="64"
@@ -108,11 +109,11 @@ const NextProjectGesture: Component<Props> = ({
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-          ></path>
+          />
         </svg>
       </div>
-      <img class="image" src={nextProject.images[0]} alt="" />
-      <p class="next_project_title">{nextProject.name}</p>
+      <img class="image" src={projects[nextProjectIndex()].images[0]} alt="" />
+      <p class="next_project_title">{projects[nextProjectIndex()].name}</p>
     </div>
   );
 };

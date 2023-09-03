@@ -55,8 +55,8 @@ $animation-duration: 0.3s;
         }
         p {
           font-size: 0.875em;
-          font-family: golos;
           line-height: 1.1em;
+          font-weight: 300;
         }
         .bottom {
           display: flex;
@@ -296,6 +296,7 @@ $animation-duration: 0.3s;
     }
   }
   &.dark {
+    color: #fff;
     .active_project {
       .body,
       .info {
@@ -311,8 +312,17 @@ $animation-duration: 0.3s;
       }
     }
   }
-  &.dark {
-    color: #fff;
+  .previous_project {
+    display: none;
+    padding-top: 1em;
+    padding-left: 1em;
+    align-items: center;
+    gap: 0.4em;
+    svg {
+      transition: color $animation-duration ease-in-out;
+      width: 1.4em;
+      height: 1.4em;
+    }
   }
 }
 
@@ -325,8 +335,11 @@ $animation-duration: 0.3s;
 }
 @media screen and (max-width: $layout-breakpoint-small) {
   .new_projects_page {
+    .previous_project {
+      display: flex;
+    }
     .projects_nav {
-      // display: none;
+      display: none;
     }
     .projects_nav .project {
       min-width: 100%;

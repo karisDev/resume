@@ -1,8 +1,6 @@
 $animation-duration: 0.3s;
 #next_project_popup {
   will-change: height;
-  // height: 200px !important;
-  // opacity: 1 !important;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -13,12 +11,15 @@ $animation-duration: 0.3s;
   flex-direction: column;
   align-items: center;
   transition: opacity $animation-duration ease-in-out;
+  transition-property: background-color opacity;
   // linear gradient form top to bottom
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
     var(--gradientColor) 100%
   );
+  color: #fff;
+  text-shadow: 0 0 1em #232323, 0 0 0.2em #232323;
   .popup_chevron {
     margin-top: 1em;
     display: flex;
@@ -31,18 +32,14 @@ $animation-duration: 0.3s;
       opacity: 1;
       color: rgb(141, 225, 76, 1);
     }
-    // 8de14c in rgb
-    // color: rgba(255, 225, 255, 0.6);
     color: #000;
   }
   &.dark {
-    // background: linear-gradient(
-    //   180deg,
-    //   rgba(255, 255, 255, 0) 0%,
-    //   rgba(255, 255, 255, 0.2) 50%,
-    //   rgba(255, 255, 255, 0.3) 100%
-    // );
-    color: #fff;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      var(--gradientColor) 100%
+    );
     .popup_chevron {
       color: #fff;
       &.reached {

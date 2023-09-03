@@ -45,6 +45,31 @@
     "about_technologies_group2": "Libraries",
     "about_technologies_group3": "Tools",
     "projects_project_items": {
+      "doctor_ai": {
+        "name": "Doctor Ai",
+        "shortDescription": "Dashboard for the head of a medical institution",
+        "fullDescription": "Case #18 of the Leaders of Digital Transformation hackathon 2023. We were required to create a dashboard fot he head of the medical institution. Amazing adaptive layout, interface auto-load before navigation. Dark theme support.",
+        "info": [
+          {
+            "title": "Libraries",
+            "description": "Tailwind\nMobX\nAxios\nTransition Group"
+          },
+          {
+            "title": "Features",
+            "description": "Responsive\nAuto-fetch\nSmooth animations"
+          }
+        ],
+        "links": [
+          {
+            "title": "Repo",
+            "url": "https://github.com/daniilda/DoctorAi"
+          },
+          {
+            "title": "Mock demo",
+            "url": "https://doctor-ai-rouge.vercel.app"
+          }
+        ]
+      },
       "true_tech": {
         "name": "True Tech",
         "shortDescription": "Adapting movies for people with special needs",
@@ -222,7 +247,7 @@
       "lct": {
         "name": "Leaders 2022",
         "shortDescription": "Import/export research for investment",
-        "fullDescription": "Case #4 of the Leaders of Digital Transformation hackathon 2022. The only young team that made it to the finals. The goal was to find trending industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Probably not working anymore.",
+        "fullDescription": "Case #4 of the Leaders of Digital Transformation hackathon 2022. The only young team that made it to the finals. The goal was to find trending industries for import substitution. 12 API queries were integrated in one day. First experience in creating a full application design.\nCredentials for demo: user/user. Demo is dead :(",
         "info": [
           {
             "title": "Frontend",
@@ -235,7 +260,7 @@
         ],
         "links": [
           {
-            "title": "Demo (may not work)",
+            "title": "Demo",
             "url": "http://37.230.196.148:2002/"
           },
           {
@@ -344,6 +369,31 @@
     "about_technologies_group2": "Библиотеки",
     "about_technologies_group3": "Инструменты",
     "projects_project_items": {
+      "doctor_ai": {
+        "name": "Doctor Ai",
+        "shortDescription": "Электронный помощник глав врача",
+        "fullDescription": "Кейс №18 хакатона Лидеры Цифровой Трансформации 2023. Требовалось создать дэшборд для руководителя медицинского учреждения. Потрясающая адаптивная верстка, автообновление и загрузка нужных данных до перехода на страницу. Поддержка темной темы",
+        "info": [
+          {
+            "title": "Библиотеки",
+            "description": "Tailwind\nMobX\nAxios\nTransition Group"
+          },
+          {
+            "title": "Особенности",
+            "description": "Адаптивность\nРабота без загрузок\nВнимение к деталям\nАнимации"
+          }
+        ],
+        "links": [
+          {
+            "title": "Репозиторий",
+            "url": "https://github.com/daniilda/DoctorAi"
+          },
+          {
+            "title": "Демо",
+            "url": "https://doctor-ai-rouge.vercel.app"
+          }
+        ]
+      },
       "true_tech": {
         "name": "True Tech",
         "shortDescription": "Адаптация фильмов для людей с особыми потребностями",

@@ -1,10 +1,11 @@
-import { NavLink } from "solid-app-router";
-import { Component, createEffect, createSignal, For } from "solid-js";
+import { Component, createSignal, For } from "solid-js";
 import cube from "../../assets/images/cube_transparent.png";
+import { A } from "@solidjs/router";
 
 interface PagesNavProps {
   russian?: boolean;
 }
+
 const PagesNav: Component<PagesNavProps> = ({ russian }) => {
   const isNavigatedFromCube = window.location.pathname.includes("cube");
   const [translatedPage, setTranslatedPage] = createSignal("");
@@ -20,24 +21,22 @@ const PagesNav: Component<PagesNavProps> = ({ russian }) => {
   }, 500);
   return (
     <div class={`navigation ${isNavigatedFromCube && "animated"}`}>
-      <NavLink href="/resume/cube">
+      <A href="/resume/cube">
         <img src={cube} />
         <For each={letters}>
-          {(char) => (char != "\xa0" ? <span>{char}</span> : "\xa0")}
+          {(char) => (char == "\xa0" ? "\xa0" : <span>{char}</span>)}
         </For>
-      </NavLink>
-      <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/about"}>
+      </A>
+      <A href={`/resume/${russian ? "ru" : "en"}/about`}>
         {russian ? "Обо мне" : "About"}
-      </NavLink>
-      <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/projects"}>
+      </A>
+      <A href={`/resume/${russian ? "ru" : "en"}/projects`}>
         {russian ? "Проекты" : "Projects"}
-      </NavLink>
-      <NavLink href={"/resume/" + (russian ? "ru" : "en") + "/contacts"}>
+      </A>
+      <A href={`/resume/${russian ? "ru" : "en"}/contacts`}>
         {russian ? "Контакты" : "Contacts"}
-      </NavLink>
-      <NavLink href={translatedPage()}>
-        {russian ? "English" : "Русский"}
-      </NavLink>
+      </A>
+      <A href={translatedPage()}>{russian ? "English" : "Русский"}</A>
     </div>
   );
 };

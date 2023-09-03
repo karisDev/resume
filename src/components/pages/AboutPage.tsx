@@ -8,7 +8,7 @@ import StackTitleSvg from "../../assets/icons/stack_title.svg";
 import RussiaSvg from "../../assets/icons/russia.svg";
 import UsSvg from "../../assets/icons/us.svg";
 import { For } from "solid-js";
-import StackHorizontalSlider from "../ui/StackHorizontalSlider";
+import StackHorizontalSlider from "../UI/StackHorizontalSlider";
 import translation from "../../assets/translation.json";
 import Mask from "../ui/Mask";
 import useAboutItems from "../../hooks/useAboutItems";

@@ -224,6 +224,7 @@ $cube-sides: (".left", ".right", ".top", ".back", ".front", ".bottom");
   right: 0;
   color: #fff;
 }
+
 .box {
   @each $side in $cube-sides {
     #{$side}::after {
