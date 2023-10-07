@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "gh-pages-404": "echo \"404\" > dist/404.html",
+    "publish": "vite build && gh-pages -d dist",
     "serve": "vite preview"
   },
   "license": "MIT",
