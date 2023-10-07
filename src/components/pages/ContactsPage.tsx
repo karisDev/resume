@@ -1,10 +1,10 @@
 import operator from "../../assets/images/operator.png";
 import { createSignal, JSX, Match, Switch } from "solid-js";
-import PagesNav from "../ui/PagesNav";
+import PagesNav from "../UI/PagesNav";
 import translation from "../../assets/translation.json";
-import InputDefault from "../ui/InputDefault";
-import TextareaDeafult from "../ui/TextareaDeault";
-import Mask from "../ui/Mask";
+import InputDefault from "../UI/InputDefault";
+import TextareaDeafult from "../UI/TextareaDeault";
+import Mask from "../UI/Mask";
 
 enum emailStatus {
   filling,

@@ -1,4 +1,4 @@
-import PagesNav from "../ui/PagesNav";
+import PagesNav from "../UI/PagesNav";
 import my_photo from "../../assets/images/me.png";
 import DownloadSvg from "../../assets/icons/download.svg";
 import GithubSvg from "../../assets/icons/github.svg";
@@ -10,7 +10,7 @@ import UsSvg from "../../assets/icons/us.svg";
 import { For } from "solid-js";
 import StackHorizontalSlider from "../UI/StackHorizontalSlider";
 import translation from "../../assets/translation.json";
-import Mask from "../ui/Mask";
+import Mask from "../UI/Mask";
 import useAboutItems from "../../hooks/useAboutItems";
 
 const AboutPage = ({ russian }: { russian?: boolean | undefined }) => {

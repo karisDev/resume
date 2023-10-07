@@ -1,0 +1,10 @@
+name: GitHub Pages deploy
+run-name: ${{ github.actor }} is started a new deploy 🚀
+on: [push]
+jobs:
+  deploy-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v1.2.9
+            

@@ -1,4 +1,4 @@
-import PagesNav from "../ui/PagesNav";
+import PagesNav from "../UI/PagesNav";
 import ChevronRightSvg from "../../assets/icons/chevron_right.svg";
 import BackSvg from "../../assets/icons/back.svg";
 import translation from "../../assets/translation.json";
@@ -6,7 +6,7 @@ import { createMemo, createSignal, For } from "solid-js";
 import { Transition } from "solid-transition-group";
 import { Swiper, SwiperSlide } from "swiper/solid";
 import "swiper/css";
-import Mask from "../ui/Mask";
+import Mask from "../UI/Mask";
 import NextProjectGesture from "../UI/NextProjectGesture";
 import { useProjectItems } from "../../hooks/useProjectItems";
 
@@ -35,7 +35,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   );
   const [isDarkTheme, setIsDarkTheme] = createSignal(projects[0].isDarkTheme);
   const [selectedImage, setSelectedImage] = createSignal(0);
-  // required for transition effect
+  // reqUIred for transition effect
   const [show, setShow] = createSignal(true);
   const [showImage, setShowImage] = createSignal(true);
 

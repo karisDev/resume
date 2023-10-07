@@ -1,4 +1,3 @@
-import React from "react";
 import { createEffect } from "solid-js";
 import PullToRefresh from "../UI/PullToRefresh";
 
