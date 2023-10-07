@@ -24,6 +24,11 @@ jobs:
     - name: Build Vite React app
       run: npm run build
 
+    - name: Set Git user
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
     - name: Deploy to gh-pages
       run: npx gh-pages -d dist
       env:
