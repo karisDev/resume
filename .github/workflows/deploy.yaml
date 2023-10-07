@@ -31,6 +31,6 @@ jobs:
 
     - name: Deploy to gh-pages
       run: |
-        npx gh-pages -d dist -r https://${{ secrets.GITHUB_TOKEN }}@github.com/karisDev/resume
+        npx gh-pages -d dist -r https://GH_TOKEN@github.com/karisDev/resume.git
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
