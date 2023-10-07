@@ -35,13 +35,12 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   );
   const [isDarkTheme, setIsDarkTheme] = createSignal(projects[0].isDarkTheme);
   const [selectedImage, setSelectedImage] = createSignal(0);
-  // reqUIred for transition effect
+  // required for transition effect
   const [show, setShow] = createSignal(true);
   const [showImage, setShowImage] = createSignal(true);
 
   const handleProjectChange = (index: number) => {
     const project = projects[index];
-    if (project === activeProject()) return;
 
     setBackgroundColor(project.backgroundColor);
     setIsDarkTheme(project.isDarkTheme);
@@ -68,7 +67,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   return (
     <div
       style={{
-        background: backgroundColor() ?? "",
+        background: backgroundColor(),
       }}
       class={`new_projects_page ${isDarkTheme() ? "dark" : ""}`}
     >
@@ -205,6 +204,13 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               )}
             </Transition>
           </div>
+          {
+            projects[0] === activeProject() && (
+              <div class="hint">
+                <p>{t.projects_swipe_hint}</p>
+              </div>
+            )
+          }
         </div>
       </div>
     </div>

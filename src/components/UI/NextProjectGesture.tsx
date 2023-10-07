@@ -28,9 +28,7 @@ const NextProjectGesture: Component<Props> = ({
   let modal = null;
 
   const touchStartHandler = (e: TouchEvent) => {
-    if (window.scrollY + window.innerHeight + 5 < document.body.scrollHeight)
-      return;
-    const startY = e.touches[0].clientY;
+    let startY = e.touches[0].clientY;
     const touchMoveHandler = (e: TouchEvent) => {
       const currentY = e.touches[0].clientY;
       if (currentY + draggingHeight > startY + 5) {
@@ -45,8 +43,12 @@ const NextProjectGesture: Component<Props> = ({
       }
 
       dragging = true;
-      draggingHeight = startY - currentY;
-      setDraggedHeight(draggingHeight);
+      if (window.scrollY + window.innerHeight + 5 > document.body.scrollHeight) {
+        draggingHeight = startY - currentY;
+        setDraggedHeight(draggingHeight);
+      } else {
+        startY = e.touches[0].clientY
+      }
     };
     const touchEndHandler = () => {
       if (draggingHeight > DRAG_GOAL - 20) {
@@ -66,8 +68,7 @@ const NextProjectGesture: Component<Props> = ({
 
   const drawModal = () => {
     requestAnimationFrame(drawModal);
-    if (!dragging) return;
-    if (draggingHeight < 0) return;
+    if (!dragging || draggingHeight < 0) return;
 
     const modalHeight = draggingHeight < DRAG_GOAL ? draggingHeight : DRAG_GOAL;
     modal.style.height = `${modalHeight}px`;
