@@ -116,7 +116,7 @@
           },
           {
             "title": "Demo",
-            "url": "http://138.124.180.37/"
+            "url": "http://79.137.197.233/map-quiz/"
           }
         ]
       },
@@ -311,6 +311,7 @@
     "projects_description_header": "Description",
     "projects_links_header": "Links",
     "projects_shots_header": "Shots",
+    "projects_swipe_hint": "Swipe up for the next project",
     "contacts_title": "Contacts",
     "contacts_via": "Contact me via:",
     "contacts_under_development": "this page is under construction",
@@ -440,7 +441,7 @@
           },
           {
             "title": "Демо",
-            "url": "http://138.124.180.37"
+            "url": "http://79.137.197.233/map-quiz/"
           }
         ]
       },
@@ -636,6 +637,7 @@
     "projects_description_header": "Описание",
     "projects_links_header": "Ссылки",
     "projects_shots_header": "Скриншоты",
+    "projects_swipe_hint": "Потяните вверх для перехода к следующему проекту",
     "contacts_title": "Контакты",
     "contacts_via": "Связаться через соц. сети:",
     "contacts_under_development": "страница в разработке",

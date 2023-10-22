@@ -1,4 +1,4 @@
-import PagesNav from "../ui/PagesNav";
+import PagesNav from "../UI/PagesNav";
 import ChevronRightSvg from "../../assets/icons/chevron_right.svg";
 import BackSvg from "../../assets/icons/back.svg";
 import translation from "../../assets/translation.json";
@@ -6,7 +6,7 @@ import { createMemo, createSignal, For } from "solid-js";
 import { Transition } from "solid-transition-group";
 import { Swiper, SwiperSlide } from "swiper/solid";
 import "swiper/css";
-import Mask from "../ui/Mask";
+import Mask from "../UI/Mask";
 import NextProjectGesture from "../UI/NextProjectGesture";
 import { useProjectItems } from "../../hooks/useProjectItems";
 
@@ -41,7 +41,6 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
 
   const handleProjectChange = (index: number) => {
     const project = projects[index];
-    if (project === activeProject()) return;
 
     setBackgroundColor(project.backgroundColor);
     setIsDarkTheme(project.isDarkTheme);
@@ -68,7 +67,7 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
   return (
     <div
       style={{
-        background: backgroundColor() ?? "",
+        background: backgroundColor(),
       }}
       class={`new_projects_page ${isDarkTheme() ? "dark" : ""}`}
     >
@@ -205,6 +204,13 @@ const ProjectsPage = ({ russian }: { russian?: boolean }) => {
               )}
             </Transition>
           </div>
+          {
+            projects[0] === activeProject() && (
+              <div class="hint">
+                <p>{t.projects_swipe_hint}</p>
+              </div>
+            )
+          }
         </div>
       </div>
     </div>

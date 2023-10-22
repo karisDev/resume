@@ -124,7 +124,8 @@ $animation-duration: 0.3s;
       grid-template-areas:
         "header header"
         "image body"
-        "info info";
+        "info info"
+        "hint hint";
       .header {
         grid-area: header;
         height: 2em;
@@ -293,6 +294,12 @@ $animation-duration: 0.3s;
           background-color: #00000020;
         }
       }
+      .hint {
+        display: none;
+        text-align: center;
+        margin-top: 2em;
+        color: #00000050    
+      }
     }
   }
   &.dark {
@@ -309,6 +316,9 @@ $animation-duration: 0.3s;
         .links a {
           color: #40f4ff;
         }
+      }
+      .hint {
+        color: #ffffff99;
       }
     }
   }
@@ -404,6 +414,9 @@ $animation-duration: 0.3s;
           h3 {
             margin-bottom: 0.25em;
           }
+        }
+        .hint {
+          display: block;
         }
       }
     }
